@@ -1,0 +1,10 @@
+{
+  "values": [
+    "tsotd:dark_crystal_block",
+    "tsotd:light_crystal_block",
+    "tsotd:dark_crystal_ore",
+    "tsotd:light_crystal_ore",
+    "tsotd:coal_crystal_ore",
+    "tsotd:coal_crystal_block"
+  ]
+}

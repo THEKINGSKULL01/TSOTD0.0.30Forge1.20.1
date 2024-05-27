@@ -1,0 +1,31 @@
+{
+  "item.tsotd.dark_crystal": "Dark Crystal",
+  "item.tsotd.light_crystal": "Light Crystal",
+  "item.tsotd.crystallized_coal": "Crystallized Coal",
+
+
+  "block.tsotd.dark_crystal_block": "Block Of Dark Crystal",
+  "block.tsotd.light_crystal_block": "Block Of Light Crystal",
+  "block.tsotd.coal_crystal_block": "Block Of Crystallized Coal",
+
+
+  "block.tsotd.dark_crystal_ore": "Dark Crystal Ore",
+  "block.tsotd.light_crystal_ore": "Light Crystal Ore",
+  "block.tsotd.coal_crystal_ore": "Crystallized Coal Ore",
+
+
+  "item.tsotd.dark_crystal_detector": "Dark Crystal Detector",
+  "item.tsotd.light_crystal_detector": "Light Crystal Detector",
+
+
+  "item.tsotd.dark_crystal_steak": "Dark Crystallized Steak",
+  "item.tsotd.light_crystal_steak": "Light Crystallized Steak",
+
+
+  "tooltip.tsotd.dark_crystal_detector.tooltip": "Finds Dark Crystal In The End",
+  "tooltip.tsotd.light_crystal_detector.tooltip": "Finds Light Crystal In The End",
+
+
+  "creative.tsotd_tab": "The Source Of The Darkness"
+
+}
