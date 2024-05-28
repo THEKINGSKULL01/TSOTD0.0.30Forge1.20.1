@@ -13,6 +13,15 @@
   "block.tsotd.coal_crystal_slab": "Crystallized Coal Slab",
 
 
+  "block.tsotd.dark_crystal_button": "Dark Crystal Button",
+  "block.tsotd.light_crystal_button": "Light Crystal Button",
+  "block.tsotd.coal_crystal_button": "Crystallized Coal Button",
+
+  "block.tsotd.dark_crystal_pressure_plate": "Dark Crystal Pressure Plate",
+  "block.tsotd.light_crystal_pressure_plate": "Light Crystal Pressure Plate",
+  "block.tsotd.coal_crystal_pressure_plate": "Crystallized Coal Pressure Plate",
+
+
   "block.tsotd.dark_crystal_ore": "Dark Crystal Ore",
   "block.tsotd.light_crystal_ore": "Light Crystal Ore",
   "block.tsotd.coal_crystal_ore": "Crystallized Coal Ore",

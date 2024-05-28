@@ -19,11 +19,22 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creative.tsotd_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        //Tools
+
+                        output.accept(ModItems.Dark_Crystal_Detector.get());
+                        output.accept(ModItems.Light_Crystal_Detector.get());
+
                         //Items
 
                         output.accept(ModItems.Dark_Crystal.get());
                         output.accept(ModItems.Light_Crystal.get());
                         output.accept(ModItems.Crystallized_Coal.get());
+
+                        //Ores
+
+                        output.accept(ModBlocks.Dark_Crystal_Ore.get());
+                        output.accept(ModBlocks.Light_Crystal_Ore.get());
+                        output.accept(ModBlocks.Coal_Crystal_Ore.get());
 
                         //Blocks
 
@@ -43,16 +54,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Light_Crystal_Slab.get());
                         output.accept(ModBlocks.Coal_Crystal_Slab.get());
 
-                        //Ores
+                        //Buttons
 
-                        output.accept(ModBlocks.Dark_Crystal_Ore.get());
-                        output.accept(ModBlocks.Light_Crystal_Ore.get());
-                        output.accept(ModBlocks.Coal_Crystal_Ore.get());
+                        output.accept(ModBlocks.Dark_Crystal_Button.get());
+                        output.accept(ModBlocks.Light_Crystal_Button.get());
+                        output.accept(ModBlocks.Coal_Crystal_Button.get());
 
-                        //Tools
+                        //PressurePlates
 
-                        output.accept(ModItems.Dark_Crystal_Detector.get());
-                        output.accept(ModItems.Light_Crystal_Detector.get());
+                        output.accept(ModBlocks.Dark_Crystal_Pressure_Plate.get());
+                        output.accept(ModBlocks.Light_Crystal_Pressure_Plate.get());
+                        output.accept(ModBlocks.Coal_Crystal_Pressure_Plate.get());
 
                         //Food
 

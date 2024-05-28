@@ -48,6 +48,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.Light_Crystal_Slab.get(),
                 block -> createSlabItemTable(ModBlocks.Light_Crystal_Slab.get()));
 
+        //Buttons
+
+        this.dropSelf(ModBlocks.Coal_Crystal_Button.get());
+        this.dropSelf(ModBlocks.Dark_Crystal_Button.get());
+        this.dropSelf(ModBlocks.Light_Crystal_Button.get());
+
+        //PressurePlates
+
+        this.dropSelf(ModBlocks.Coal_Crystal_Pressure_Plate.get());
+        this.dropSelf(ModBlocks.Dark_Crystal_Pressure_Plate.get());
+        this.dropSelf(ModBlocks.Light_Crystal_Pressure_Plate.get());
+
         //Ores
 
         this.add(ModBlocks.Coal_Crystal_Ore.get(),

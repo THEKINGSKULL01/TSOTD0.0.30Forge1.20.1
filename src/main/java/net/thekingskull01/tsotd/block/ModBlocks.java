@@ -5,6 +5,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -61,6 +62,27 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Coal_Crystal_Slab = registerBlock("coal_crystal_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+
+            //Buttons, Buttons, Buttons, Buttons, Buttons
+
+    public static final RegistryObject<Block> Dark_Crystal_Button = registerBlock("dark_crystal_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
+    public static final RegistryObject<Block> Light_Crystal_Button = registerBlock("light_crystal_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
+    public static final RegistryObject<Block> Coal_Crystal_Button = registerBlock("coal_crystal_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
+
+            //Pressure Plates, Pressure Plates, Pressure Plates
+
+    public static final RegistryObject<Block> Dark_Crystal_Pressure_Plate = registerBlock("dark_crystal_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK),
+                BlockSetType.STONE));
+    public static final RegistryObject<Block> Light_Crystal_Pressure_Plate = registerBlock("light_crystal_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK),
+            BlockSetType.STONE));
+    public static final RegistryObject<Block> Coal_Crystal_Pressure_Plate = registerBlock("coal_crystal_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK),
+            BlockSetType.STONE));
 
     //Extra, Dont touch
 
