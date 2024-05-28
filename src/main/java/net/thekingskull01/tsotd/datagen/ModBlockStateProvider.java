@@ -55,6 +55,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
     pressurePlateBlock((PressurePlateBlock) ModBlocks.Light_Crystal_Pressure_Plate.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     pressurePlateBlock((PressurePlateBlock) ModBlocks.Coal_Crystal_Pressure_Plate.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
 
+        //Walls
+
+    wallBlock((WallBlock) ModBlocks.Dark_Crystal_Wall.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
+    wallBlock((WallBlock) ModBlocks.Light_Crystal_Wall.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
+    wallBlock((WallBlock) ModBlocks.Coal_Crystal_Wall.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+
+        //Fences
+
+    fenceBlock((FenceBlock) ModBlocks.Coal_Crystal_Fence.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
+    fenceBlock((FenceBlock) ModBlocks.Coal_Crystal_Fence.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
+    fenceBlock((FenceBlock) ModBlocks.Coal_Crystal_Fence.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+
+        //Fencegates
+
+    fenceGateBlock((FenceGateBlock) ModBlocks.Dark_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
+    fenceGateBlock((FenceGateBlock) ModBlocks.Light_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
+    fenceGateBlock((FenceGateBlock) ModBlocks.Coal_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+
 
         //Stairs blockItem
 
@@ -75,6 +93,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.Dark_Crystal_Pressure_Plate);
         blockItem(ModBlocks.Light_Crystal_Pressure_Plate);
         blockItem(ModBlocks.Coal_Crystal_Pressure_Plate);
+
+        //Walls are in ModItemModelProvider for the "blockItem"
+
+
+        //Fences are in ModItemModelProvider for the "blockItem"
+
+        //FenceGate
+
+        blockItem(ModBlocks.Dark_Crystal_Fence_Gate);
+        blockItem(ModBlocks.Light_Crystal_Fence_Gate);
+        blockItem(ModBlocks.Coal_Crystal_Fence_Gate);
 
 
 

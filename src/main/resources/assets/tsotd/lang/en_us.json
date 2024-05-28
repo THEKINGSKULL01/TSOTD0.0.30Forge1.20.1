@@ -17,9 +17,25 @@
   "block.tsotd.light_crystal_button": "Light Crystal Button",
   "block.tsotd.coal_crystal_button": "Crystallized Coal Button",
 
+
   "block.tsotd.dark_crystal_pressure_plate": "Dark Crystal Pressure Plate",
   "block.tsotd.light_crystal_pressure_plate": "Light Crystal Pressure Plate",
   "block.tsotd.coal_crystal_pressure_plate": "Crystallized Coal Pressure Plate",
+
+
+  "block.tsotd.dark_crystal_walls": "Dark Crystal Walls",
+  "block.tsotd.light_crystal_walls": "Light Crystal Walls",
+  "block.tsotd.coal_crystal_walls": "Crystallized Coal Walls",
+
+
+  "block.tsotd.dark_crystal_fence": "Dark Crystal Fence",
+  "block.tsotd.light_crystal_fence": "Light Crystal Fence",
+  "block.tsotd.coal_crystal_fence": "Crystallized Coal Fence",
+
+
+  "block.tsotd.dark_crystal_fence_gate": "Dark Crystal Fence Gate",
+  "block.tsotd.light_crystal_fence_gate": "Light Crystal Fence Gate",
+  "block.tsotd.coal_crystal_fence_gate": "Crystallized Coal Fence Gate",
 
 
   "block.tsotd.dark_crystal_ore": "Dark Crystal Ore",

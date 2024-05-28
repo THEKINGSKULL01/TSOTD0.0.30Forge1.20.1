@@ -1,5 +1,6 @@
 package net.thekingskull01.tsotd.block;
 
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -84,7 +85,37 @@ public class ModBlocks {
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK),
             BlockSetType.STONE));
 
+            //Walls, Walls, Walls, Walls, Walls, Walls, Walls
+
+    public static final RegistryObject<Block> Dark_Crystal_Wall = registerBlock("dark_crystal_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> Light_Crystal_Wall = registerBlock("light_crystal_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> Coal_Crystal_Wall = registerBlock("coal_crystal_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
+            //Fence, Fence, Fence, Fence, Fence, Fence, Fence
+
+    public static final RegistryObject<Block> Dark_Crystal_Fence = registerBlock("dark_crystal_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> Light_Crystal_Fence = registerBlock("light_crystal_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> Coal_Crystal_Fence = registerBlock("coal_crystal_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
+            //Gates, Gates, Gates, Gates, Gates, Gates, Gates
+
+    public static final RegistryObject<Block> Dark_Crystal_Fence_Gate = registerBlock("dark_crystal_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> Light_Crystal_Fence_Gate = registerBlock("light_crystal_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> Coal_Crystal_Fence_Gate = registerBlock("coal_crystal_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+
+
     //Extra, Dont touch
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
