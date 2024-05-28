@@ -70,7 +70,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> Light_Crystal_Button = registerBlock("light_crystal_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
     public static final RegistryObject<Block> Coal_Crystal_Button = registerBlock("coal_crystal_button",
-            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 30, true));
 
             //Pressure Plates, Pressure Plates, Pressure Plates
 
