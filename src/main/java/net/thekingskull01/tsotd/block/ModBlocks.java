@@ -50,7 +50,7 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.Dark_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Light_Crystal_Stairs = registerBlock("light_crystal_stairs",
             () -> new StairBlock(() -> ModBlocks.Light_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> Coal_Crystal_stair = registerBlock("coal_crystal_stair",
+    public static final RegistryObject<Block> Coal_Crystal_Stairs = registerBlock("coal_crystal_stair",
             () -> new StairBlock(() -> ModBlocks.Coal_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
 
             //Slabs, Slabs, Slabs, Slabs, Slabs, Slabs
