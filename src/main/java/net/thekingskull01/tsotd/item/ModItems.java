@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
+import net.thekingskull01.tsotd.item.custom.DarkCrystalDetectorItem;
 import net.thekingskull01.tsotd.item.custom.LightCrystalDetectorItem;
 import net.thekingskull01.tsotd.item.custom.FuelItem;
 
@@ -27,7 +28,7 @@ public class ModItems{
             //tools
 
     public static final RegistryObject<Item> Dark_Crystal_Detector = ITEMS.register("dark_crystal_detector",
-            () -> new LightCrystalDetectorItem(new Item.Properties().durability(256)));
+            () -> new DarkCrystalDetectorItem(new Item.Properties().durability(256)));
     public static final RegistryObject<Item> Light_Crystal_Detector = ITEMS.register("light_crystal_detector",
             () -> new LightCrystalDetectorItem(new Item.Properties().durability(256)));
 
