@@ -73,6 +73,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
     fenceGateBlock((FenceGateBlock) ModBlocks.Light_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     fenceGateBlock((FenceGateBlock) ModBlocks.Coal_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
 
+        //Doors
+
+        doorBlockWithRenderType((DoorBlock)ModBlocks.Dark_Crystal_Door.get(),
+                modLoc("block/dark_crystal_door_bottom"),
+                modLoc("block/dark_crystal_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock)ModBlocks.Light_Crystal_Door.get(),
+                modLoc("block/light_crystal_door_bottom"),
+                modLoc("block/light_crystal_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock)ModBlocks.Coal_Crystal_Door.get(),
+                modLoc("block/coal_crystal_door_bottom"),
+                modLoc("block/coal_crystal_door_top"), "cutout");
+
+        //trapdoors
+
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Dark_Crystal_Trapdoor.get(),
+                modLoc("block/dark_crystal_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Light_Crystal_Trapdoor.get(),
+                modLoc("block/light_crystal_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Coal_Crystal_Trapdoor.get(),
+                modLoc("block/coal_crystal_trapdoor"), true, "cutout");
 
         //Stairs blockItem
 
@@ -105,10 +125,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.Light_Crystal_Fence_Gate);
         blockItem(ModBlocks.Coal_Crystal_Fence_Gate);
 
+        //Doors are in ModItemModelProvider for the "blockItem"
+
+        //Trapdoors
+
+        blockItem(ModBlocks.Dark_Crystal_Trapdoor,"_bottom");
+        blockItem(ModBlocks.Light_Crystal_Trapdoor,"_bottom");
+        blockItem(ModBlocks.Coal_Crystal_Trapdoor,"_bottom");
 
 
 
 
+
+
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("tsotd:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

@@ -27,6 +27,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         super(pOutput);
     }
 
+    private static final List<ItemLike> Dark_Crystal_Stone_Cutting = List.of(
+            ModBlocks.Dark_Crystal_Slab.get(),
+            ModBlocks.Dark_Crystal_Stairs.get(),
+            ModBlocks.Dark_Crystal_Wall.get(),
+            ModBlocks.Dark_Crystal_Fence.get(),
+            ModBlocks.Dark_Crystal_Fence_Gate.get(),
+            ModBlocks.Dark_Crystal_Door.get(),
+            ModBlocks.Dark_Crystal_Trapdoor.get());
+
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
@@ -124,7 +133,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //Smelting Items
 
 
-
         //Smelting Blocks
 
         oreBlasting(consumer, Dark_Crystal_Smeltables, RecipeCategory.MISC, ModItems.Dark_Crystal.get(), 4.0F, 300, "dark_crystal");
@@ -132,81 +140,123 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //StoneCutter
 
-            //Stairs
+        //Stairs
 
-        stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Dark_Crystal_Stairs.get())
-                .unlockedBy(getHasName(ModBlocks.Dark_Crystal_Block.get()), has(ModBlocks.Dark_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Light_Crystal_Stairs.get())
-                .unlockedBy(getHasName(ModBlocks.Light_Crystal_Block.get()), has(ModBlocks.Light_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Coal_Crystal_Stairs.get())
-                .unlockedBy(getHasName(ModBlocks.Coal_Crystal_Block.get()), has(ModBlocks.Coal_Crystal_Block.get()))
-                .save(consumer);
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Dark_Crystal_Stairs.get(),
+                        4)
+                .unlockedBy("has_dark_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Dark_Crystal_Block.get()).build())).save(consumer);
 
-            //Slabs
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Light_Crystal_Stairs.get(),
+                        4)
+                .unlockedBy("has_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Light_Crystal_Block.get()).build())).save(consumer);
 
-        stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Dark_Crystal_Slab.get())
-                .unlockedBy(getHasName(ModBlocks.Dark_Crystal_Block.get()), has(ModBlocks.Dark_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Light_Crystal_Slab.get())
-                .unlockedBy(getHasName(ModBlocks.Light_Crystal_Block.get()), has(ModBlocks.Light_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Coal_Crystal_Slab.get())
-                .unlockedBy(getHasName(ModBlocks.Coal_Crystal_Block.get()), has(ModBlocks.Coal_Crystal_Block.get()))
-                .save(consumer);
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Coal_Crystal_Stairs.get(),
+                        4)
+                .unlockedBy("has_coal_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
 
-            //Walls
+        //Slabs
 
-        stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Dark_Crystal_Wall.get())
-                .unlockedBy(getHasName(ModBlocks.Dark_Crystal_Block.get()), has(ModBlocks.Dark_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Light_Crystal_Wall.get())
-                .unlockedBy(getHasName(ModBlocks.Light_Crystal_Block.get()), has(ModBlocks.Light_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Coal_Crystal_Wall.get())
-                .unlockedBy(getHasName(ModBlocks.Coal_Crystal_Block.get()), has(ModBlocks.Coal_Crystal_Block.get()))
-                .save(consumer);
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Dark_Crystal_Slab.get(),
+                        2)
+                .unlockedBy("has_dark_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Dark_Crystal_Block.get()).build())).save(consumer);
 
-            //Fences
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Light_Crystal_Slab.get(),
+                        2)
+                .unlockedBy("has_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Light_Crystal_Block.get()).build())).save(consumer);
 
-        stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Dark_Crystal_Fence.get())
-                .unlockedBy(getHasName(ModBlocks.Dark_Crystal_Block.get()), has(ModBlocks.Dark_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Light_Crystal_Fence.get())
-                .unlockedBy(getHasName(ModBlocks.Light_Crystal_Block.get()), has(ModBlocks.Light_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Coal_Crystal_Fence.get())
-                .unlockedBy(getHasName(ModBlocks.Coal_Crystal_Block.get()), has(ModBlocks.Coal_Crystal_Block.get()))
-                .save(consumer);
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Coal_Crystal_Slab.get(),
+                        2)
+                .unlockedBy("has_coal_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
 
-            //FenceGates
+        //Walls
 
-        stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Dark_Crystal_Fence_Gate.get())
-                .unlockedBy(getHasName(ModBlocks.Dark_Crystal_Block.get()), has(ModBlocks.Dark_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Light_Crystal_Fence_Gate.get())
-                .unlockedBy(getHasName(ModBlocks.Light_Crystal_Block.get()), has(ModBlocks.Light_Crystal_Block.get()))
-                .save(consumer);
-        stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get())
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Coal_Crystal_Fence_Gate.get())
-                .unlockedBy(getHasName(ModBlocks.Coal_Crystal_Block.get()), has(ModBlocks.Coal_Crystal_Block.get()))
-                .save(consumer);
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Dark_Crystal_Wall.get(),
+                        6)
+                .unlockedBy("has_dark_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Dark_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Light_Crystal_Wall.get(),
+                        6)
+                .unlockedBy("has_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Light_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Coal_Crystal_Wall.get(),
+                        6)
+                .unlockedBy("has_coal_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
+        //Fences
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Dark_Crystal_Fence.get(),
+                        4)
+                .unlockedBy("has_dark_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Dark_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Light_Crystal_Fence.get(),
+                        4)
+                .unlockedBy("has_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Light_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Coal_Crystal_Fence.get(),
+                        4)
+                .unlockedBy("has_coal_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
+        //FenceGates
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Dark_Crystal_Fence_Gate.get(),
+                        2)
+                .unlockedBy("has_dark_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Dark_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Light_Crystal_Fence_Gate.get(),
+                        2)
+                .unlockedBy("has_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Light_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Coal_Crystal_Fence_Gate.get(),
+                        2)
+                .unlockedBy("has_coal_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
+
+
     }
+
+
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {

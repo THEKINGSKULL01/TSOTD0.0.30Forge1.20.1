@@ -112,6 +112,24 @@ public class ModBlocks {
     public static final RegistryObject<Block> Coal_Crystal_Fence_Gate = registerBlock("coal_crystal_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
+    //Doors, Doors, Doors, Doors, Doors, Doors, Doors, Doors
+
+    public static final RegistryObject<Block> Dark_Crystal_Door = registerBlock("dark_crystal_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), BlockSetType.WARPED));
+    public static final RegistryObject<Block> Light_Crystal_Door = registerBlock("light_crystal_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), BlockSetType.WARPED));
+    public static final RegistryObject<Block> Coal_Crystal_Door = registerBlock("coal_crystal_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), BlockSetType.CHERRY));
+
+            //Trapdoors, Trapdoors, Trapdoors, Trapdoors, Trapdoors
+
+    public static final RegistryObject<Block> Dark_Crystal_Trapdoor = registerBlock("dark_crystal_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).noOcclusion(), BlockSetType.WARPED));
+    public static final RegistryObject<Block> Light_Crystal_Trapdoor = registerBlock("light_crystal_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).noOcclusion(), BlockSetType.WARPED));
+    public static final RegistryObject<Block> Coal_Crystal_Trapdoor = registerBlock("coal_crystal_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).noOcclusion(), BlockSetType.CHERRY));
+
 
 
     //Extra, Dont touch

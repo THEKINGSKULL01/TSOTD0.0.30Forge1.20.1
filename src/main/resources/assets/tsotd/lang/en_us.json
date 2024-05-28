@@ -38,6 +38,16 @@
   "block.tsotd.coal_crystal_fence_gate": "Crystallized Coal Fence Gate",
 
 
+  "block.tsotd.dark_crystal_door": "Dark Crystal Door",
+  "block.tsotd.light_crystal_door": "Light Crystal Door",
+  "block.tsotd.coal_crystal_door": "Crystallized Coal Door",
+
+
+  "block.tsotd.dark_crystal_trapdoor": "Dark Crystal Trapdoor",
+  "block.tsotd.light_crystal_trapdoor": "Light Crystal Trapdoor",
+  "block.tsotd.coal_crystal_trapdoor": "Crystallized Coal Trapdoor",
+
+
   "block.tsotd.dark_crystal_ore": "Dark Crystal Ore",
   "block.tsotd.light_crystal_ore": "Light Crystal Ore",
   "block.tsotd.coal_crystal_ore": "Crystallized Coal Ore",

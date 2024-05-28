@@ -78,6 +78,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.Dark_Crystal_Fence_Gate.get());
         this.dropSelf(ModBlocks.Light_Crystal_Fence_Gate.get());
 
+        //Doors
+
+        this.add(ModBlocks.Coal_Crystal_Door.get(),
+                block -> createDoorTable(ModBlocks.Coal_Crystal_Door.get()));
+        this.add(ModBlocks.Dark_Crystal_Door.get(),
+                block -> createDoorTable(ModBlocks.Dark_Crystal_Door.get()));
+        this.add(ModBlocks.Light_Crystal_Door.get(),
+                block -> createDoorTable(ModBlocks.Light_Crystal_Door.get()));
+
+        //Trapdoors
+
+        this.dropSelf(ModBlocks.Coal_Crystal_Trapdoor.get());
+        this.dropSelf(ModBlocks.Dark_Crystal_Trapdoor.get());
+        this.dropSelf(ModBlocks.Light_Crystal_Trapdoor.get());
+
         //Ores
 
         this.add(ModBlocks.Coal_Crystal_Ore.get(),

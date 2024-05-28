@@ -45,6 +45,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.Dark_Crystal_Fence, ModBlocks.Dark_Crystal_Block);
         fenceItem(ModBlocks.Light_Crystal_Fence, ModBlocks.Light_Crystal_Block);
 
+        simpleBlockItem(ModBlocks.Dark_Crystal_Door);
+        simpleBlockItem(ModBlocks.Light_Crystal_Door);
+        simpleBlockItem(ModBlocks.Coal_Crystal_Door);
+
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(TSOTD.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {

@@ -84,6 +84,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Light_Crystal_Fence_Gate.get());
                         output.accept(ModBlocks.Coal_Crystal_Fence_Gate.get());
 
+                        //Doors
+
+                        output.accept(ModBlocks.Dark_Crystal_Door.get());
+                        output.accept(ModBlocks.Light_Crystal_Door.get());
+                        output.accept(ModBlocks.Coal_Crystal_Door.get());
+
+                        //Trapdoors
+
+                        output.accept(ModBlocks.Dark_Crystal_Trapdoor.get());
+                        output.accept(ModBlocks.Light_Crystal_Trapdoor.get());
+                        output.accept(ModBlocks.Coal_Crystal_Trapdoor.get());
+
                         //Food
 
                         output.accept(ModItems.Dark_Crystal_Steak.get());
