@@ -73,25 +73,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                         ModBlocks.Dark_Crystal_Stairs.get(),
                         ModBlocks.Light_Crystal_Stairs.get(),
-                        ModBlocks.Coal_Crystal_Stairs.get(),
-
-                //Walls
-
-                        ModBlocks.Dark_Crystal_Wall.get(),
-                        ModBlocks.Light_Crystal_Wall.get(),
-                        ModBlocks.Coal_Crystal_Wall.get(),
-
-                //Fences
-
-                        ModBlocks.Dark_Crystal_Fence.get(),
-                        ModBlocks.Light_Crystal_Fence.get(),
-                        ModBlocks.Coal_Crystal_Fence.get(),
-
-                //Fencegates
-
-                        ModBlocks.Dark_Crystal_Fence_Gate.get(),
-                        ModBlocks.Light_Crystal_Fence_Gate.get(),
-                        ModBlocks.Coal_Crystal_Fence_Gate.get());
+                        ModBlocks.Coal_Crystal_Stairs.get());
 
 
         //mineable with axe
@@ -106,11 +88,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.Dark_Crystal_Wall.get())
                 .add(ModBlocks.Light_Crystal_Wall.get())
                 .add(ModBlocks.Coal_Crystal_Wall.get());
-    this.tag(BlockTags.FENCES)
+        this.tag(BlockTags.FENCES)
                 .add(ModBlocks.Dark_Crystal_Fence.get())
                 .add(ModBlocks.Light_Crystal_Fence.get())
                 .add(ModBlocks.Coal_Crystal_Fence.get());
-    this.tag(BlockTags.FENCE_GATES)
+        this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.Dark_Crystal_Fence_Gate.get())
                 .add(ModBlocks.Light_Crystal_Fence_Gate.get())
                 .add(ModBlocks.Coal_Crystal_Fence_Gate.get());

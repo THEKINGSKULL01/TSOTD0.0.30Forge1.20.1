@@ -63,8 +63,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Fences
 
-    fenceBlock((FenceBlock) ModBlocks.Coal_Crystal_Fence.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
-    fenceBlock((FenceBlock) ModBlocks.Coal_Crystal_Fence.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
+    fenceBlock((FenceBlock) ModBlocks.Dark_Crystal_Fence.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
+    fenceBlock((FenceBlock) ModBlocks.Light_Crystal_Fence.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     fenceBlock((FenceBlock) ModBlocks.Coal_Crystal_Fence.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
 
         //Fencegates

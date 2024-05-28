@@ -41,20 +41,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.Coal_Crystal_Wall, ModBlocks.Coal_Crystal_Block);
 
         //Fences
+        fenceItem(ModBlocks.Coal_Crystal_Fence, ModBlocks.Coal_Crystal_Block);
         fenceItem(ModBlocks.Dark_Crystal_Fence, ModBlocks.Dark_Crystal_Block);
         fenceItem(ModBlocks.Light_Crystal_Fence, ModBlocks.Light_Crystal_Block);
-        fenceItem(ModBlocks.Coal_Crystal_Fence, ModBlocks.Coal_Crystal_Block);
 
-    }
-
-    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall", new ResourceLocation(TSOTD.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("fence", new ResourceLocation(TSOTD.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture",  new ResourceLocation(TSOTD.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  new ResourceLocation(TSOTD.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
 
