@@ -11,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 public class FuelBlock extends BlockItem {
     private int burnTime = 0;
 
-    public FuelBlock(Block block, Item.Properties properties, int burnTime) {
+    public FuelBlock (Block block, Item.Properties properties, int burnTime) {
         super(block, properties);
         this.burnTime = burnTime;
     }

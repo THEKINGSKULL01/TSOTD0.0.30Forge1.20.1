@@ -3,10 +3,7 @@ package net.thekingskull01.tsotd.block;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,7 +19,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TSOTD.MOD_ID);
 
 
-            //blocks
+            //Blocks, Blocks, Blocks, Blocks, Blocks
 
     public static final RegistryObject<Block> Dark_Crystal_Block = registerBlock("dark_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
@@ -32,7 +29,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
 
 
-            //Ores
+            //Ores, Ores, Ores, Ores, Ores, Ores, Ores
 
     public static final RegistryObject<Block> Dark_Crystal_Ore = registerBlock("dark_crystal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
@@ -43,6 +40,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> Coal_Crystal_Ore = registerBlock("coal_crystal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
                     .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(8,16)));
+
+            //Stairs, Stairs, Stairs, Stairs, Stairs
+
+    public static final RegistryObject<Block> Dark_Crystal_Stairs = registerBlock("dark_crystal_stairs",
+            () -> new StairBlock(() -> ModBlocks.Dark_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> Light_Crystal_Stairs = registerBlock("light_crystal_stairs",
+            () -> new StairBlock(() -> ModBlocks.Light_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> Coal_Crystal_stair = registerBlock("coal_crystal_stair",
+            () -> new StairBlock(() -> ModBlocks.Coal_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+
+    //Extra, dont touch
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -58,4 +66,5 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
+
 }
