@@ -5,7 +5,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
@@ -33,6 +35,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
     slabBlock(((SlabBlock) ModBlocks.Light_Crystal_Slab.get()), blockTexture(ModBlocks.Light_Crystal_Block.get()), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     slabBlock(((SlabBlock) ModBlocks.Coal_Crystal_Slab.get()), blockTexture(ModBlocks.Coal_Crystal_Block.get()), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
 
+
+    //Stairs blockItem
+    blockItem(ModBlocks.Dark_Crystal_Stairs);
+    blockItem(ModBlocks.Light_Crystal_Stairs);
+    blockItem(ModBlocks.Coal_Crystal_Stairs);
+
+    //Slab blockItem
+
+    blockItem(ModBlocks.Dark_Crystal_Slab);
+    blockItem(ModBlocks.Light_Crystal_Slab);
+    blockItem(ModBlocks.Coal_Crystal_Slab);
+
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(),
+                new ModelFile.UncheckedModelFile("tsotd:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

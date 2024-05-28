@@ -31,6 +31,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Light_Crystal_Block.get());
                         output.accept(ModBlocks.Coal_Crystal_Block.get());
 
+                            //Stairs
+
+                        output.accept(ModBlocks.Dark_Crystal_Stairs.get());
+                        output.accept(ModBlocks.Light_Crystal_Stairs.get());
+                        output.accept(ModBlocks.Coal_Crystal_Stairs.get());
+
+                            //Slabs
+
+                        output.accept(ModBlocks.Dark_Crystal_Slab.get());
+                        output.accept(ModBlocks.Light_Crystal_Slab.get());
+                        output.accept(ModBlocks.Coal_Crystal_Slab.get());
+
                         //Ores
 
                         output.accept(ModBlocks.Dark_Crystal_Ore.get());

@@ -4,9 +4,7 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.thekingskull01.tsotd.TSOTD;
@@ -132,7 +130,37 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(consumer, Dark_Crystal_Smeltables, RecipeCategory.MISC, ModItems.Dark_Crystal.get(), 4.0F, 300, "dark_crystal");
         oreBlasting(consumer, Light_Crystal_Smeltables, RecipeCategory.MISC, ModItems.Light_Crystal.get(), 4.0F, 300, "light_crystal");
 
+        //StoneCutter
 
+            //Stairs
+
+        stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get())
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Dark_Crystal_Stairs.get())
+                .unlockedBy(getHasName(ModBlocks.Dark_Crystal_Block.get()), has(ModBlocks.Dark_Crystal_Block.get()))
+                .save(consumer);
+        stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get())
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Light_Crystal_Stairs.get())
+                .unlockedBy(getHasName(ModBlocks.Light_Crystal_Block.get()), has(ModBlocks.Light_Crystal_Block.get()))
+                .save(consumer);
+        stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get())
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Coal_Crystal_Stairs.get())
+                .unlockedBy(getHasName(ModBlocks.Coal_Crystal_Block.get()), has(ModBlocks.Coal_Crystal_Block.get()))
+                .save(consumer);
+
+            //Slabs
+
+        stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get())
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Dark_Crystal_Slab.get())
+                .unlockedBy(getHasName(ModBlocks.Dark_Crystal_Block.get()), has(ModBlocks.Dark_Crystal_Block.get()))
+                .save(consumer);
+        stonecutting(Ingredient.of(ModBlocks.Light_Crystal_Block.get())
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Light_Crystal_Slab.get())
+                .unlockedBy(getHasName(ModBlocks.Light_Crystal_Block.get()), has(ModBlocks.Light_Crystal_Block.get()))
+                .save(consumer);
+        stonecutting(Ingredient.of(ModBlocks.Coal_Crystal_Block.get())
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.Coal_Crystal_Slab.get())
+                .unlockedBy(getHasName(ModBlocks.Coal_Crystal_Block.get()), has(ModBlocks.Coal_Crystal_Block.get()))
+                .save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
@@ -156,6 +184,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     TSOTD.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
 
+    }
+
+    public static SingleItemRecipeBuilder stonecutting(Ingredient pIngredient, RecipeCategory pCategory, ItemLike pResult) {
+        return new SingleItemRecipeBuilder(pCategory, RecipeSerializer.STONECUTTER, pIngredient, pResult, 1);
     }
 
 
