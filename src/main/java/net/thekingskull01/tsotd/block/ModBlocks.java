@@ -11,6 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.item.ModItems;
+import net.thekingskull01.tsotd.item.custom.FuelBlock;
 
 import java.util.function.Supplier;
 
@@ -25,8 +26,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Light_Crystal_Block = registerBlock("light_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
+    //public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
+            //() -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+            () -> new FuelBlock(() -> ModBlocks.Coal_Crystal_Block.get().defaultBlockState(),  BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
 
 
             //Ores, Ores, Ores, Ores, Ores, Ores, Ores
@@ -49,6 +52,15 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.Light_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Coal_Crystal_stair = registerBlock("coal_crystal_stair",
             () -> new StairBlock(() -> ModBlocks.Coal_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+
+            //Slabs, Slabs, Slabs, Slabs, Slabs, Slabs
+
+    public static final RegistryObject<Block> Dark_Crystal_Slab = registerBlock("dark_crystal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> Light_Crystal_Slab = registerBlock("light_crystal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> Coal_Crystal_Slab = registerBlock("coal_crystal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
 
     //Extra, dont touch
 
