@@ -29,22 +29,51 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         //Mineable with pickaxe
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+
+                //Blocks
+
                 .add(ModBlocks.Dark_Crystal_Ore.get(),
                         ModBlocks.Dark_Crystal_Block.get(),
                         ModBlocks.Light_Crystal_Ore.get(),
                         ModBlocks.Light_Crystal_Block.get(),
                         ModBlocks.Coal_Crystal_Ore.get(),
-                        ModBlocks.Coal_Crystal_Block.get());
+                        ModBlocks.Coal_Crystal_Block.get(),
+
+                //Slab
+
+                        ModBlocks.Dark_Crystal_Slab.get(),
+                        ModBlocks.Light_Crystal_Slab.get(),
+                        ModBlocks.Coal_Crystal_Slab.get(),
+                //Stairs
+
+                        ModBlocks.Dark_Crystal_Stairs.get(),
+                        ModBlocks.Light_Crystal_Stairs.get(),
+                        ModBlocks.Coal_Crystal_Stairs.get());
 
         //Netherite tools
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
+
+                //Blocks
+
                 .add(ModBlocks.Dark_Crystal_Ore.get(),
                         ModBlocks.Dark_Crystal_Block.get(),
                         ModBlocks.Light_Crystal_Ore.get(),
                         ModBlocks.Light_Crystal_Block.get(),
                         ModBlocks.Coal_Crystal_Ore.get(),
-                        ModBlocks.Coal_Crystal_Block.get());
+                        ModBlocks.Coal_Crystal_Block.get(),
+
+                //Slab
+
+                        ModBlocks.Dark_Crystal_Slab.get(),
+                        ModBlocks.Light_Crystal_Slab.get(),
+                        ModBlocks.Coal_Crystal_Slab.get(),
+
+                //Stairs
+
+                        ModBlocks.Dark_Crystal_Stairs.get(),
+                        ModBlocks.Light_Crystal_Stairs.get(),
+                        ModBlocks.Coal_Crystal_Stairs.get());
 
 
         //mineable with axe

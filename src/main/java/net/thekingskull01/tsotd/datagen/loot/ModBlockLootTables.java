@@ -27,9 +27,28 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
+        //Blocks
+
         this.dropSelf(ModBlocks.Coal_Crystal_Block.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Block.get());
         this.dropSelf(ModBlocks.Light_Crystal_Block.get());
+
+        //Stairs
+
+        this.dropSelf(ModBlocks.Coal_Crystal_Stairs.get());
+        this.dropSelf(ModBlocks.Dark_Crystal_Stairs.get());
+        this.dropSelf(ModBlocks.Light_Crystal_Stairs.get());
+
+        //Slabs
+
+        this.add(ModBlocks.Coal_Crystal_Slab.get(),
+                block -> createSlabItemTable(ModBlocks.Coal_Crystal_Slab.get()));
+        this.add(ModBlocks.Dark_Crystal_Slab.get(),
+                block -> createSlabItemTable(ModBlocks.Dark_Crystal_Slab.get()));
+        this.add(ModBlocks.Light_Crystal_Slab.get(),
+                block -> createSlabItemTable(ModBlocks.Light_Crystal_Slab.get()));
+
+        //Ores
 
         this.add(ModBlocks.Coal_Crystal_Ore.get(),
                 block -> createCrystalCoalOreDrops(ModBlocks.Coal_Crystal_Ore.get(), ModItems.Crystallized_Coal.get()));
