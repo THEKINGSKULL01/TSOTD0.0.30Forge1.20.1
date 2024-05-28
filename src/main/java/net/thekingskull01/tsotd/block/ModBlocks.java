@@ -26,10 +26,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Light_Crystal_Block = registerBlock("light_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
-    //public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
-            //() -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
-            () -> new FuelBlock(() -> ModBlocks.Coal_Crystal_Block.get().defaultBlockState(),  BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+    //public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
+            //() -> new FuelBlock(() -> ModBlocks.Coal_Crystal_Block.get().defaultBlockState(),  BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
 
 
             //Ores, Ores, Ores, Ores, Ores, Ores, Ores
