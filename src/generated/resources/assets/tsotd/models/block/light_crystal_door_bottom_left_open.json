@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_left_open",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "tsotd:block/light_crystal_door_bottom",
-    "top": "tsotd:block/light_crystal_door_top"
-  }
-}

@@ -65,7 +65,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Swords
 
-        handheldItem(ModItems.Ultimate_Sword);
+
         handheldItem(ModItems.Dark_Crystal_Sword);
         handheldItem(ModItems.Light_Crystal_Sword);
 
@@ -97,6 +97,30 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.Ultimate_Hammer);
 
+        //Helmet
+
+        simpleItem(ModItems.Ultimate_Helmet);
+        simpleItem(ModItems.Dark_Crystal_Helmet);
+        simpleItem(ModItems.Light_Crystal_Helmet);
+
+        //Chestplate
+
+        simpleItem(ModItems.Ultimate_Chestplate);
+        simpleItem(ModItems.Dark_Crystal_Chestplate);
+        simpleItem(ModItems.Light_Crystal_Chestplate);
+
+        //Leggings
+
+        simpleItem(ModItems.Ultimate_Leggings);
+        simpleItem(ModItems.Dark_Crystal_Leggings);
+        simpleItem(ModItems.Light_Crystal_Leggings);
+
+        //Boots
+
+       simpleItem(ModItems.Ultimate_Boots);
+       simpleItem(ModItems.Dark_Crystal_Boots);
+       simpleItem(ModItems.Light_Crystal_Boots);
+
 
 
 
@@ -123,7 +147,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  new ResourceLocation(TSOTD.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
-
 
 
     //Button blockItem

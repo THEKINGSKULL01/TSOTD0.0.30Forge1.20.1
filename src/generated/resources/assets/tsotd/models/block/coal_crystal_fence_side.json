@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_side",
-  "textures": {
-    "texture": "tsotd:block/coal_crystal_block"
-  }
-}

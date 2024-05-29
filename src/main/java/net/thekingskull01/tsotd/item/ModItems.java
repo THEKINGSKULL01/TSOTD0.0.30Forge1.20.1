@@ -25,6 +25,37 @@ public class ModItems{
             () -> new FuelItem(new Item.Properties(), 8000));
 
 
+    //Armor, Armor, Armor, Armor, Armor, Armor, Armor, Armor, Armor, Armor
+
+    public static final RegistryObject<Item> Dark_Crystal_Helmet = ITEMS.register("dark_crystal_helmet",
+            () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> Light_Crystal_Helmet = ITEMS.register("light_crystal_helmet",
+            () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> Ultimate_Helmet = ITEMS.register("ultimate_helmet",
+            () -> new ArmorItem(ModArmorMaterials.ULTIMATE, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> Dark_Crystal_Chestplate = ITEMS.register("dark_crystal_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> Light_Crystal_Chestplate = ITEMS.register("light_crystal_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> Ultimate_Chestplate = ITEMS.register("ultimate_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ULTIMATE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+
+    public static final RegistryObject<Item> Dark_Crystal_Leggings = ITEMS.register("dark_crystal_leggings",
+            () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> Light_Crystal_Leggings = ITEMS.register("light_crystal_leggings",
+            () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> Ultimate_Leggings = ITEMS.register("ultimate_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ULTIMATE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    public static final RegistryObject<Item> Dark_Crystal_Boots = ITEMS.register("dark_crystal_boots",
+            () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> Light_Crystal_Boots = ITEMS.register("light_crystal_boots",
+            () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> Ultimate_Boots = ITEMS.register("ultimate_boots",
+            () -> new ArmorItem(ModArmorMaterials.ULTIMATE, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+
             //Tools, Tools, Tools, Tools, Tools, Tools, Tools
 
     public static final RegistryObject<Item> Dark_Crystal_Detector = ITEMS.register("dark_crystal_detector",

@@ -58,6 +58,30 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Dark_Crystal_Hoe.get());
                         output.accept(ModItems.Light_Crystal_Hoe.get());
 
+                        //Helmets
+
+                        output.accept(ModItems.Ultimate_Helmet.get());
+                        output.accept(ModItems.Dark_Crystal_Helmet.get());
+                        output.accept(ModItems.Light_Crystal_Helmet.get());
+
+                        //Chestplate
+
+                        output.accept(ModItems.Ultimate_Chestplate.get());
+                        output.accept(ModItems.Dark_Crystal_Chestplate.get());
+                        output.accept(ModItems.Light_Crystal_Chestplate.get());
+
+                        //Leggings
+
+                        output.accept(ModItems.Ultimate_Leggings.get());
+                        output.accept(ModItems.Dark_Crystal_Leggings.get());
+                        output.accept(ModItems.Light_Crystal_Leggings.get());
+
+                        //Boots
+
+                        output.accept(ModItems.Ultimate_Boots.get());
+                        output.accept(ModItems.Dark_Crystal_Boots.get());
+                        output.accept(ModItems.Light_Crystal_Boots.get());
+
                         //Minerals
 
                         output.accept(ModItems.Dark_Crystal.get());

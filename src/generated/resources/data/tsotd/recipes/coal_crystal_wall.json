@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 6,
-  "ingredient": {
-    "item": "tsotd:coal_crystal_block"
-  },
-  "result": "tsotd:coal_crystal_wall"
-}

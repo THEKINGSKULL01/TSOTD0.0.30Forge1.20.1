@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "tsotd:block/dark_crystal_block",
-    "side": "tsotd:block/dark_crystal_block",
-    "top": "tsotd:block/dark_crystal_block"
-  }
-}
