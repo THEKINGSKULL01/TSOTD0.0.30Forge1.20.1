@@ -8,8 +8,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.thekingskull01.tsotd.TSOTD;
 
-import javax.swing.text.html.HTML;
-
 public class ModTags {
 
 
@@ -17,6 +15,10 @@ public class ModTags {
 
         public static final TagKey<Block> DARK_CRYSTAL_DETECTOR_VALUABLES = tag("dark_crystal_detector_valuables");
         public static final TagKey<Block> LIGHT_CRYSTAL_DETECTOR_VALUABLES = tag("light_crystal_detector_valuables");
+
+
+        public static final TagKey<Block> NEEDS_DARK_CRYSTAL_TOOL = tag("needs_dark_crystal_tool");
+        public static final TagKey<Block> NEEDS_LIGHT_CRYSTAL_TOOL = tag("needs_light_crystal_tool");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(TSOTD.MOD_ID, name));

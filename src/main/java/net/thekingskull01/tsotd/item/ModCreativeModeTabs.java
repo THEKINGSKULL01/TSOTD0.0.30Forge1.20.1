@@ -24,7 +24,32 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Dark_Crystal_Detector.get());
                         output.accept(ModItems.Light_Crystal_Detector.get());
 
-                        //Items
+                        //Swords
+
+                        output.accept(ModItems.Dark_Crystal_Sword.get());
+                        output.accept(ModItems.Light_Crystal_Sword.get());
+
+                        //Pickaxes
+
+                        output.accept(ModItems.Dark_Crystal_Pickaxe.get());
+                        output.accept(ModItems.Light_Crystal_Pickaxe.get());
+
+                        //Shovels
+
+                        output.accept(ModItems.Dark_Crystal_Shovel.get());
+                        output.accept(ModItems.Light_Crystal_Shovel.get());
+
+                        //Axes
+
+                        output.accept(ModItems.Dark_Crystal_Axe.get());
+                        output.accept(ModItems.Light_Crystal_Axe.get());
+
+                        //Hoes
+
+                        output.accept(ModItems.Dark_Crystal_Hoe.get());
+                        output.accept(ModItems.Light_Crystal_Hoe.get());
+
+                        //Minerals
 
                         output.accept(ModItems.Dark_Crystal.get());
                         output.accept(ModItems.Light_Crystal.get());
@@ -42,13 +67,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Light_Crystal_Block.get());
                         output.accept(ModBlocks.Coal_Crystal_Block.get());
 
-                            //Stairs
+                        //Stairs
 
                         output.accept(ModBlocks.Dark_Crystal_Stairs.get());
                         output.accept(ModBlocks.Light_Crystal_Stairs.get());
                         output.accept(ModBlocks.Coal_Crystal_Stairs.get());
 
-                            //Slabs
+                        //Slabs
 
                         output.accept(ModBlocks.Dark_Crystal_Slab.get());
                         output.accept(ModBlocks.Light_Crystal_Slab.get());
@@ -95,6 +120,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Dark_Crystal_Trapdoor.get());
                         output.accept(ModBlocks.Light_Crystal_Trapdoor.get());
                         output.accept(ModBlocks.Coal_Crystal_Trapdoor.get());
+
+                        //Items
+
+                        output.accept(ModItems.Dark_Stick.get());
+                        output.accept(ModItems.Light_Stick.get());
 
                         //Food
 

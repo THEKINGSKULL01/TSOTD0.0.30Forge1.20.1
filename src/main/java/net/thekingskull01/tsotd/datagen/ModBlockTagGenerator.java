@@ -3,6 +3,7 @@ package net.thekingskull01.tsotd.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.thekingskull01.tsotd.TSOTD;
@@ -50,9 +51,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.Light_Crystal_Stairs.get(),
                         ModBlocks.Coal_Crystal_Stairs.get());
 
-        //Netherite tools
+        //Dark Crystal Tool
+        //(Get rid of this and the// for the tag!)this.tag(ModTags.Blocks.NEEDS_DARK_CRYSTAL_TOOL);
 
-        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
+
+
+        //Light Crystal Tool
+        //(Get rid of this and the// for the tag!)this.tag(ModTags.Blocks.NEEDS_LIGHT_CRYSTAL_TOOL);
+
+        //Netherite tool
+
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
 
                 //Blocks
 

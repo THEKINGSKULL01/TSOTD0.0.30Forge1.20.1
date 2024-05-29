@@ -22,11 +22,22 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+
+        //Minerals
         simpleItem(ModItems.Crystallized_Coal);
+
         simpleItem(ModItems.Dark_Crystal);
         simpleItem(ModItems.Light_Crystal);
+
+        simpleItem(ModItems.Dark_Stick);
+        simpleItem(ModItems.Light_Stick);
+
+        //Items
         simpleItem(ModItems.Dark_Crystal_Detector);
         simpleItem(ModItems.Light_Crystal_Detector);
+
+        //Food
         simpleItem(ModItems.Dark_Crystal_Steak);
         simpleItem(ModItems.Light_Crystal_Steak);
 
@@ -45,10 +56,46 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.Dark_Crystal_Fence, ModBlocks.Dark_Crystal_Block);
         fenceItem(ModBlocks.Light_Crystal_Fence, ModBlocks.Light_Crystal_Block);
 
+        //Doors
+
         simpleBlockItem(ModBlocks.Dark_Crystal_Door);
         simpleBlockItem(ModBlocks.Light_Crystal_Door);
         simpleBlockItem(ModBlocks.Coal_Crystal_Door);
 
+        //Swords
+
+        handheldItem(ModItems.Dark_Crystal_Sword);
+        handheldItem(ModItems.Light_Crystal_Sword);
+
+        //Pickaxes
+
+        handheldItem(ModItems.Dark_Crystal_Pickaxe);
+        handheldItem(ModItems.Light_Crystal_Pickaxe);
+
+        //Shovels
+
+        handheldItem(ModItems.Dark_Crystal_Shovel);
+        handheldItem(ModItems.Light_Crystal_Shovel);
+
+        //Axes
+
+        handheldItem(ModItems.Dark_Crystal_Axe);
+        handheldItem(ModItems.Light_Crystal_Axe);
+
+        //Hoes
+
+        handheldItem(ModItems.Dark_Crystal_Hoe);
+        handheldItem(ModItems.Light_Crystal_Hoe);
+
+
+
+
+    }
+
+    private  ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(TSOTD.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {

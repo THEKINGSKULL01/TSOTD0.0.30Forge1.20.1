@@ -61,8 +61,32 @@
   "item.tsotd.light_crystal_detector": "Light Crystal Detector",
 
 
+  "item.tsotd.dark_crystal_sword": "Dark Crystallized Sword",
+  "item.tsotd.light_crystal_sword": "Light Crystallized Sword",
+
+
+  "item.tsotd.dark_crystal_pickaxe": "Dark Crystallized Pickaxe",
+  "item.tsotd.light_crystal_pickaxe": "Light Crystallized Pickaxe",
+
+
+  "item.tsotd.dark_crystal_shovel": "Dark Crystallized Shovel",
+  "item.tsotd.light_crystal_shovel": "Light Crystallized Shovel",
+
+
+  "item.tsotd.dark_crystal_axe": "Dark Crystallized Axe",
+  "item.tsotd.light_crystal_axe": "Light Crystallized Axe",
+
+
+  "item.tsotd.dark_crystal_hoe": "Dark Crystallized Hoe",
+  "item.tsotd.light_crystal_hoe": "Light Crystallized Hoe",
+
+
   "item.tsotd.dark_crystal_steak": "Dark Crystallized Steak",
   "item.tsotd.light_crystal_steak": "Light Crystallized Steak",
+
+
+  "item.tsotd.dark_stick": "Dark Stick",
+  "item.tsotd.light_stick": "Light Stick",
 
 
   "tooltip.tsotd.dark_crystal_detector.tooltip": "Finds Dark Crystal In The End",
