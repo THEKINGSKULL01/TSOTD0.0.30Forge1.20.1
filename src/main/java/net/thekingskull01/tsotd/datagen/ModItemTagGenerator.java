@@ -3,9 +3,12 @@ package net.thekingskull01.tsotd.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.thekingskull01.tsotd.TSOTD;
+import net.thekingskull01.tsotd.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -16,9 +19,24 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
-        //Add item tags here
-        //tag(ModTags.Items)
+    protected void addTags(HolderLookup.Provider pProvider) {
+        //Helmets
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.Ultimate_Helmet.get(),
+                ModItems.Dark_Crystal_Helmet.get(),
+                ModItems.Light_Crystal_Helmet.get(),
+
+                ModItems.Ultimate_Chestplate.get(),
+                ModItems.Dark_Crystal_Chestplate.get(),
+                ModItems.Light_Crystal_Chestplate.get(),
+
+                ModItems.Ultimate_Leggings.get(),
+                ModItems.Dark_Crystal_Leggings.get(),
+                ModItems.Light_Crystal_Leggings.get(),
+
+                ModItems.Ultimate_Boots.get(),
+                ModItems.Dark_Crystal_Boots.get(),
+                ModItems.Light_Crystal_Boots.get());
 
 
 
