@@ -34,6 +34,9 @@ public class ModItems{
 
             //Swords
 
+    public static final RegistryObject<Item> Ultimate_Sword = ITEMS.register("ultimate_sword",
+            () -> new UlimateSwordItem(ModToolTiers.ULTIMATE, 3,1F, new Item.Properties()));
+
     public static final RegistryObject<Item> Dark_Crystal_Sword = ITEMS.register("dark_crystal_sword",
             () -> new SwordItem(ModToolTiers.DARK_CRYSTAL, 8,0.6F, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Sword = ITEMS.register("light_crystal_sword",

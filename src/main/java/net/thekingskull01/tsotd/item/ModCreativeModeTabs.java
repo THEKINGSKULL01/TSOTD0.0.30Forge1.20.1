@@ -26,6 +26,7 @@ public class ModCreativeModeTabs {
 
                         //Swords
 
+                        output.accept(ModItems.Ultimate_Sword.get());
                         output.accept(ModItems.Dark_Crystal_Sword.get());
                         output.accept(ModItems.Light_Crystal_Sword.get());
 

@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-29T09:02:21.4648	Item Models: tsotd
+// 1.20.1	2024-05-29T09:49:36.7904235	Item Models: tsotd
 e454f095c0defc490971cfce5a699c86c839591f assets/tsotd/models/item/coal_crystal_button.json
 2d794b9e80013498576641ec205d7956fd1cd12c assets/tsotd/models/item/coal_crystal_door.json
 bd1c78cb52e822e33468cbe5beb762d0217ab795 assets/tsotd/models/item/coal_crystal_fence.json
@@ -33,3 +33,4 @@ bd68aba0de1968e27a085e6d59d940bdfcc2197d assets/tsotd/models/item/light_stick.js
 bdbddb32114abf4a7546ed69f9c56a17b90b3d04 assets/tsotd/models/item/ultimate_hammer.json
 342134c63045964a65f9ef47ceaf2d3c312f1a40 assets/tsotd/models/item/ultimate_ingot.json
 7b0eae658f2034d43703d84d8d905bfdb4a321c3 assets/tsotd/models/item/ultimate_paxel.json
+c51d3702d1a325c86eeeabe3ba55a5fb5d594cc6 assets/tsotd/models/item/ultimate_sword.json

@@ -65,6 +65,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Swords
 
+        handheldItem(ModItems.Ultimate_Sword);
         handheldItem(ModItems.Dark_Crystal_Sword);
         handheldItem(ModItems.Light_Crystal_Sword);
 
