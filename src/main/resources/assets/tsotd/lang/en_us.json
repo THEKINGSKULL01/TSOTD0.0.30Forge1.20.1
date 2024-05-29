@@ -54,6 +54,7 @@
 
   "item.tsotd.dark_crystal": "Dark Crystal",
   "item.tsotd.light_crystal": "Light Crystal",
+  "item.tsotd.ultimate_ingot": "Ultimate Ingot",
   "item.tsotd.crystallized_coal": "Crystallized Coal",
 
 
@@ -79,6 +80,9 @@
 
   "item.tsotd.dark_crystal_hoe": "Dark Crystallized Hoe",
   "item.tsotd.light_crystal_hoe": "Light Crystallized Hoe",
+
+
+  "item.tsotd.ultimate_paxel": "Mo~chi's Ultimate Paxel",
 
 
   "item.tsotd.dark_crystal_steak": "Dark Crystallized Steak",

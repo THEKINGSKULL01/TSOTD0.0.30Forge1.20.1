@@ -26,6 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Minerals
         simpleItem(ModItems.Crystallized_Coal);
+        simpleItem(ModItems.Ultimate_Ingot);
 
         simpleItem(ModItems.Dark_Crystal);
         simpleItem(ModItems.Light_Crystal);
@@ -86,6 +87,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.Dark_Crystal_Hoe);
         handheldItem(ModItems.Light_Crystal_Hoe);
+
+        //Paxel
+
+        handheldItem(ModItems.Ultimate_Paxel);
 
 
 

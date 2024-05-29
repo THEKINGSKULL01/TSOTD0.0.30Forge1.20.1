@@ -21,5 +21,11 @@ public class ModToolTiers {
             new ForgeTier(11, 5000, 35f, 8f, 25,
                     ModTags.Blocks.NEEDS_LIGHT_CRYSTAL_TOOL, () -> Ingredient.of(ModItems.Light_Crystal.get())),
             new ResourceLocation(TSOTD.MOD_ID, "light_crystal"), List.of(Tiers.NETHERITE), List.of());
+
+
+    public static final Tier ULTIMATE = TierSortingRegistry.registerTier(
+            new ForgeTier(11, 5000, 45f, 16f, 50,
+                    ModTags.Blocks.PAXEL_MINEABLE, () -> Ingredient.of(ModItems.Ultimate_Ingot.get())),
+            new ResourceLocation(TSOTD.MOD_ID, "ultimate"), List.of(Tiers.NETHERITE), List.of());
 }
 

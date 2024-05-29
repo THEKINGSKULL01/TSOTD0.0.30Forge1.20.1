@@ -20,6 +20,9 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_DARK_CRYSTAL_TOOL = tag("needs_dark_crystal_tool");
         public static final TagKey<Block> NEEDS_LIGHT_CRYSTAL_TOOL = tag("needs_light_crystal_tool");
 
+
+        public static final TagKey<Block> PAXEL_MINEABLE = tag("mineable/paxel");
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(TSOTD.MOD_ID, name));
         }

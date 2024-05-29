@@ -10,6 +10,7 @@ import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.item.custom.DarkCrystalDetectorItem;
 import net.thekingskull01.tsotd.item.custom.LightCrystalDetectorItem;
 import net.thekingskull01.tsotd.item.custom.FuelItem;
+import net.thekingskull01.tsotd.item.custom.PaxelItem;
 
 public class ModItems{
     public static final DeferredRegister<Item> ITEMS =
@@ -20,6 +21,8 @@ public class ModItems{
     public static final RegistryObject<Item> Dark_Crystal = ITEMS.register("dark_crystal",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal = ITEMS.register("light_crystal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> Ultimate_Ingot = ITEMS.register("ultimate_ingot",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Crystallized_Coal = ITEMS.register("crystallized_coal",
             () -> new FuelItem(new Item.Properties(), 8000));
@@ -44,7 +47,7 @@ public class ModItems{
     public static final RegistryObject<Item> Dark_Crystal_Pickaxe = ITEMS.register("dark_crystal_pickaxe",
             () -> new PickaxeItem(ModToolTiers.DARK_CRYSTAL,2, 4F, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Pickaxe = ITEMS.register("light_crystal_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.LIGHT_CRYSTAL, 2, 4F, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.LIGHT_CRYSTAL,2, 4F, new Item.Properties()));
 
             //Shovels
 
@@ -66,6 +69,11 @@ public class ModItems{
             () -> new HoeItem(ModToolTiers.DARK_CRYSTAL,1, 3, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Hoe = ITEMS.register("light_crystal_hoe",
             () -> new HoeItem(ModToolTiers.LIGHT_CRYSTAL, 1, 3, new Item.Properties()));
+
+            //Paxel
+
+    public static final RegistryObject<Item> Ultimate_Paxel = ITEMS.register("ultimate_paxel",
+            () -> new PaxelItem(ModToolTiers.ULTIMATE, 2, 4F, new Item.Properties()));
 
             //Food
 

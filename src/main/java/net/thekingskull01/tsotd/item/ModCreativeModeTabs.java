@@ -29,6 +29,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Dark_Crystal_Sword.get());
                         output.accept(ModItems.Light_Crystal_Sword.get());
 
+                        //Paxel
+
+                        output.accept(ModItems.Ultimate_Paxel.get());
+
                         //Pickaxes
 
                         output.accept(ModItems.Dark_Crystal_Pickaxe.get());
@@ -53,6 +57,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.Dark_Crystal.get());
                         output.accept(ModItems.Light_Crystal.get());
+                        output.accept(ModItems.Ultimate_Ingot.get());
                         output.accept(ModItems.Crystallized_Coal.get());
 
                         //Ores
