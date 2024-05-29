@@ -23,7 +23,7 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.ToolActions;
 import net.thekingskull01.tsotd.util.ModTags;
 
-import java.util
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
