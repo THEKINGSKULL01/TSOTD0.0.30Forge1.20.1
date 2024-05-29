@@ -112,7 +112,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockItem(ModBlocks.Dark_Crystal_Pressure_Plate);
         blockItem(ModBlocks.Light_Crystal_Pressure_Plate);
-        blockItem(ModBlocks.Coal_Crystal_Pressure_Plate);
+        blockItem(ModBlocks.Coal_Crystal_Pressure
 
         //Walls are in ModItemModelProvider for the "blockItem"
 
