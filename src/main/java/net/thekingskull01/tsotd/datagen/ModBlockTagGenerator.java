@@ -52,8 +52,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.Coal_Crystal_Stairs.get());
 
 
-        //Ultimate Paxel
-        this.tag(ModTags.Blocks.PAXEL_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL);
+        //Mo~chirium Paxel
+        this.tag(ModTags.Blocks.PAXEL_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL, BlockTags.MINEABLE_WITH_HOE);
 
 
 

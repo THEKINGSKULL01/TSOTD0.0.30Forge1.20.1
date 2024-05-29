@@ -22,19 +22,19 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         //Helmets
         this.tag(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.Ultimate_Helmet.get(),
+                .add(ModItems.Mochirium_Helmet.get(),
                 ModItems.Dark_Crystal_Helmet.get(),
                 ModItems.Light_Crystal_Helmet.get(),
 
-                ModItems.Ultimate_Chestplate.get(),
+                ModItems.Mochirium_Chestplate.get(),
                 ModItems.Dark_Crystal_Chestplate.get(),
                 ModItems.Light_Crystal_Chestplate.get(),
 
-                ModItems.Ultimate_Leggings.get(),
+                ModItems.Mochirium_Leggings.get(),
                 ModItems.Dark_Crystal_Leggings.get(),
                 ModItems.Light_Crystal_Leggings.get(),
 
-                ModItems.Ultimate_Boots.get(),
+                ModItems.Mochirium_Boots.get(),
                 ModItems.Dark_Crystal_Boots.get(),
                 ModItems.Light_Crystal_Boots.get());
 

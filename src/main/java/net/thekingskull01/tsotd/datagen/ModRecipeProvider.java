@@ -95,7 +95,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" 23")
                 .pattern(" 32")
                 .define('1', ModItems.Light_Crystal.get())
-                .define('2', Items.STICK)
+                .define('2', ModItems.Light_Stick.get())
                 .define('3', Items.ENDER_EYE)
                 .unlockedBy("has_light_crystal_detector",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Light_Crystal_Detector.get()).build()))
@@ -106,7 +106,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" 23")
                 .pattern(" 32")
                 .define('1', ModItems.Dark_Crystal.get())
-                .define('2', Items.STICK)
+                .define('2', ModItems.Dark_Stick.get())
                 .define('3', Items.ENDER_EYE)
                 .unlockedBy("has_dark_crystal_detector",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Dark_Crystal_Detector.get()).build()))

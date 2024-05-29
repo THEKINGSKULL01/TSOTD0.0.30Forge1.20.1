@@ -3,12 +3,10 @@ package net.thekingskull01.tsotd.item;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.thekingskull01.tsotd.TSOTD;
@@ -18,13 +16,13 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
 
-    ULTIMATE("ultimate", 64, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
+    MOCHIRIUM("mochirium", 64, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
         enumMap.put(ArmorItem.Type.BOOTS, 12);
         enumMap.put(ArmorItem.Type.LEGGINGS, 16);
         enumMap.put(ArmorItem.Type.CHESTPLATE, 18);
         enumMap.put(ArmorItem.Type.HELMET, 13);
     }), 30, SoundEvents.ARMOR_EQUIP_NETHERITE, 10.0F, 0.5F, () -> {
-        return Ingredient.of(new ItemLike[]{ModItems.Ultimate_Ingot.get()});
+        return Ingredient.of(new ItemLike[]{ModItems.Mochirium_Ingot.get()});
     }),
 
 

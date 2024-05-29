@@ -8,7 +8,7 @@ public class ModFoods {
     public static final FoodProperties DARK_CRYSTAL_STEAK = new FoodProperties.Builder()
             .nutrition(12).saturationMod(1f)
             .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 12000, 2), 1)
-            .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 300, 1), 0.1f)
+            .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 400, 1), 0.1f)
             .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 12000, 3), 1)
             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 18000, 3), 1).build();
 
@@ -16,7 +16,7 @@ public class ModFoods {
     public static final FoodProperties LIGHT_CRYSTAL_STEAK = new FoodProperties.Builder()
             .nutrition(12).saturationMod(1f)
             .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 12000, 2), 1)
-            .effect(() -> new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 300, 1), 0.1f)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 400, 1), 0.1f)
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 12000, 3), 1)
             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 18000, 3), 1).build();
 

@@ -23,9 +23,9 @@ public class ModToolTiers {
             new ResourceLocation(TSOTD.MOD_ID, "light_crystal"), List.of(Tiers.NETHERITE), List.of());
 
 
-    public static final Tier ULTIMATE = TierSortingRegistry.registerTier(
+    public static final Tier MOCHIRIUM = TierSortingRegistry.registerTier(
             new ForgeTier(11, 5000, 35f, 16f, 50,
-                    ModTags.Blocks.PAXEL_MINEABLE, () -> Ingredient.of(ModItems.Ultimate_Ingot.get())),
-            new ResourceLocation(TSOTD.MOD_ID, "ultimate"), List.of(Tiers.NETHERITE), List.of());
+                    ModTags.Blocks.PAXEL_MINEABLE, () -> Ingredient.of(ModItems.Mochirium_Ingot.get())),
+            new ResourceLocation(TSOTD.MOD_ID, "mochirium"), List.of(Tiers.NETHERITE), List.of());
 }
 

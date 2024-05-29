@@ -26,17 +26,17 @@ public class ModCreativeModeTabs {
 
                         //Swords
 
-                        output.accept(ModItems.Ultimate_Sword.get());
+                        output.accept(ModItems.Mochirium_Sword.get());
                         output.accept(ModItems.Dark_Crystal_Sword.get());
                         output.accept(ModItems.Light_Crystal_Sword.get());
 
                         //Paxel
 
-                        output.accept(ModItems.Ultimate_Paxel.get());
+                        output.accept(ModItems.Mochirium_Paxel.get());
 
                         //Hammer
 
-                        output.accept(ModItems.Ultimate_Hammer.get());
+                        output.accept(ModItems.Mochirium_Hammer.get());
 
                         //Pickaxes
 
@@ -60,25 +60,25 @@ public class ModCreativeModeTabs {
 
                         //Helmets
 
-                        output.accept(ModItems.Ultimate_Helmet.get());
+                        output.accept(ModItems.Mochirium_Helmet.get());
                         output.accept(ModItems.Dark_Crystal_Helmet.get());
                         output.accept(ModItems.Light_Crystal_Helmet.get());
 
                         //Chestplate
 
-                        output.accept(ModItems.Ultimate_Chestplate.get());
+                        output.accept(ModItems.Mochirium_Chestplate.get());
                         output.accept(ModItems.Dark_Crystal_Chestplate.get());
                         output.accept(ModItems.Light_Crystal_Chestplate.get());
 
                         //Leggings
 
-                        output.accept(ModItems.Ultimate_Leggings.get());
+                        output.accept(ModItems.Mochirium_Leggings.get());
                         output.accept(ModItems.Dark_Crystal_Leggings.get());
                         output.accept(ModItems.Light_Crystal_Leggings.get());
 
                         //Boots
 
-                        output.accept(ModItems.Ultimate_Boots.get());
+                        output.accept(ModItems.Mochirium_Boots.get());
                         output.accept(ModItems.Dark_Crystal_Boots.get());
                         output.accept(ModItems.Light_Crystal_Boots.get());
 
@@ -86,7 +86,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.Dark_Crystal.get());
                         output.accept(ModItems.Light_Crystal.get());
-                        output.accept(ModItems.Ultimate_Ingot.get());
+                        output.accept(ModItems.Mochirium_Ingot.get());
                         output.accept(ModItems.Crystallized_Coal.get());
 
                         //Ores

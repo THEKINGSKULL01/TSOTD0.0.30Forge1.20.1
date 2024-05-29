@@ -54,7 +54,7 @@
 
   "item.tsotd.dark_crystal": "Dark Crystal",
   "item.tsotd.light_crystal": "Light Crystal",
-  "item.tsotd.ultimate_ingot": "Ultimate Ingot",
+  "item.tsotd.mochirium_ingot": "Mo~chirium Ingot",
   "item.tsotd.crystallized_coal": "Crystallized Coal",
 
 
@@ -62,29 +62,29 @@
   "item.tsotd.light_crystal_detector": "Light Crystal Detector",
 
 
-  "item.tsotd.ultimate_helmet": "Mo~chi's Ultimate Helmet",
+  "item.tsotd.mochirium_helmet": "Mo~chirium Helmet",
   "item.tsotd.dark_crystal_helmet": "Dark Crystallized Helmet",
   "item.tsotd.light_crystal_helmet": "Light Crystallized Helmet",
 
 
-  "item.tsotd.ultimate_chestplate": "Mo~chi's Ultimate Chestplate",
+  "item.tsotd.mochirium_chestplate": "Mo~chirium Chestplate",
   "item.tsotd.dark_crystal_chestplate": "Dark Crystallized Chestplate",
   "item.tsotd.light_crystal_chestplate": "Light Crystallized Chestplate",
 
 
-  "item.tsotd.ultimate_leggings": "Mo~chi's Ultimate Leggings",
+  "item.tsotd.mochirium_leggings": "Mo~chirium Leggings",
   "item.tsotd.dark_crystal_leggings": "Dark Crystallized Leggings",
   "item.tsotd.light_crystal_leggings": "Light Crystallized Leggings",
 
 
   "item.tsotd.dark_crystal_boots": "Dark Crystallized Boots",
   "item.tsotd.light_crystal_boots": "Light Crystallized Boots",
-  "item.tsotd.ultimate_boots": "Mo~chi's Ultimate Boots",
+  "item.tsotd.mochirium_boots": "Mo~chirium Boots",
 
 
   "item.tsotd.dark_crystal_sword": "Dark Crystallized Sword",
   "item.tsotd.light_crystal_sword": "Light Crystallized Sword",
-  "item.tsotd.ultimate_sword": "Mo~chi's Ultimate Sword",
+  "item.tsotd.mochirium_sword": "Mo~chirium Sword",
 
 
   "item.tsotd.dark_crystal_pickaxe": "Dark Crystallized Pickaxe",
@@ -103,8 +103,8 @@
   "item.tsotd.light_crystal_hoe": "Light Crystallized Hoe",
 
 
-  "item.tsotd.ultimate_paxel": "Mo~chi's Ultimate Paxel",
-  "item.tsotd.ultimate_hammer": "Mo~chi's Ultimate Hammer",
+  "item.tsotd.mochirium_paxel": "Mo~chirium Paxel",
+  "item.tsotd.mochirium_hammer": "Mo~chirium Hammer",
 
 
   "item.tsotd.dark_crystal_steak": "Dark Crystallized Steak",

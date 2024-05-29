@@ -19,7 +19,7 @@ public class ModItems{
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal = ITEMS.register("light_crystal",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> Ultimate_Ingot = ITEMS.register("ultimate_ingot",
+    public static final RegistryObject<Item> Mochirium_Ingot = ITEMS.register("mochirium_ingot",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Crystallized_Coal = ITEMS.register("crystallized_coal",
             () -> new FuelItem(new Item.Properties(), 8000));
@@ -31,29 +31,29 @@ public class ModItems{
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Helmet = ITEMS.register("light_crystal_helmet",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> Ultimate_Helmet = ITEMS.register("ultimate_helmet",
-            () -> new ArmorItem(ModArmorMaterials.ULTIMATE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> Mochirium_Helmet = ITEMS.register("mochirium_helmet",
+            () -> new ArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Chestplate = ITEMS.register("dark_crystal_chestplate",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Chestplate = ITEMS.register("light_crystal_chestplate",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<Item> Ultimate_Chestplate = ITEMS.register("ultimate_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.ULTIMATE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> Mochirium_Chestplate = ITEMS.register("mochirium_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Leggings = ITEMS.register("dark_crystal_leggings",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Leggings = ITEMS.register("light_crystal_leggings",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<Item> Ultimate_Leggings = ITEMS.register("ultimate_leggings",
-            () -> new ArmorItem(ModArmorMaterials.ULTIMATE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> Mochirium_Leggings = ITEMS.register("mochirium_leggings",
+            () -> new ArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Boots = ITEMS.register("dark_crystal_boots",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Boots = ITEMS.register("light_crystal_boots",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties()));
-    public static final RegistryObject<Item> Ultimate_Boots = ITEMS.register("ultimate_boots",
-            () -> new ArmorItem(ModArmorMaterials.ULTIMATE, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> Mochirium_Boots = ITEMS.register("mochirium_boots",
+            () -> new ArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
             //Tools, Tools, Tools, Tools, Tools, Tools, Tools
@@ -65,8 +65,8 @@ public class ModItems{
 
             //Swords
 
-    public static final RegistryObject<Item> Ultimate_Sword = ITEMS.register("ultimate_sword",
-            () -> new UlimateSwordItem(ModToolTiers.ULTIMATE, 3,1F, new Item.Properties()));
+    public static final RegistryObject<Item> Mochirium_Sword = ITEMS.register("mochirium_sword",
+            () -> new MochiriumSwordItem(ModToolTiers.MOCHIRIUM, 3,1F, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Sword = ITEMS.register("dark_crystal_sword",
             () -> new SwordItem(ModToolTiers.DARK_CRYSTAL, 8,0.6F, new Item.Properties()));
@@ -103,13 +103,13 @@ public class ModItems{
 
             //Paxel
 
-    public static final RegistryObject<Item> Ultimate_Paxel = ITEMS.register("ultimate_paxel",
-            () -> new PaxelItem(ModToolTiers.ULTIMATE, 2, 4F, new Item.Properties()));
+    public static final RegistryObject<Item> Mochirium_Paxel = ITEMS.register("mochirium_paxel",
+            () -> new PaxelItem(ModToolTiers.MOCHIRIUM, 2, 4F, new Item.Properties()));
 
             //Hammers
 
-    public static final RegistryObject<Item> Ultimate_Hammer = ITEMS.register("ultimate_hammer",
-            () -> new HammerItem(ModToolTiers.ULTIMATE, 2, 4F, new Item.Properties()));
+    public static final RegistryObject<Item> Mochirium_Hammer = ITEMS.register("mochirium_hammer",
+            () -> new HammerItem(ModToolTiers.MOCHIRIUM, 2, 4F, new Item.Properties()));
 
             //Food
 
