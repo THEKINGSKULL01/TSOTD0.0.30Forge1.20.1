@@ -7,10 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
-import net.thekingskull01.tsotd.item.custom.DarkCrystalDetectorItem;
-import net.thekingskull01.tsotd.item.custom.LightCrystalDetectorItem;
-import net.thekingskull01.tsotd.item.custom.FuelItem;
-import net.thekingskull01.tsotd.item.custom.PaxelItem;
+import net.thekingskull01.tsotd.item.custom.*;
 
 public class ModItems{
     public static final DeferredRegister<Item> ITEMS =
@@ -74,6 +71,11 @@ public class ModItems{
 
     public static final RegistryObject<Item> Ultimate_Paxel = ITEMS.register("ultimate_paxel",
             () -> new PaxelItem(ModToolTiers.ULTIMATE, 2, 4F, new Item.Properties()));
+
+            //Hammers
+
+    public static final RegistryObject<Item> Ultimate_Hammer = ITEMS.register("ultimate_hammer",
+            () -> new HammerItem(ModToolTiers.ULTIMATE, 2, 4F, new Item.Properties()));
 
             //Food
 

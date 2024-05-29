@@ -33,6 +33,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.Ultimate_Paxel.get());
 
+                        //Hammer
+
+                        output.accept(ModItems.Ultimate_Hammer.get());
+
                         //Pickaxes
 
                         output.accept(ModItems.Dark_Crystal_Pickaxe.get());

@@ -92,6 +92,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.Ultimate_Paxel);
 
+        //Hammer
+
+        handheldItem(ModItems.Ultimate_Hammer);
+
 
 
 

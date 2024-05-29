@@ -24,7 +24,7 @@ public class ModToolTiers {
 
 
     public static final Tier ULTIMATE = TierSortingRegistry.registerTier(
-            new ForgeTier(11, 5000, 45f, 16f, 50,
+            new ForgeTier(11, 5000, 35f, 16f, 50,
                     ModTags.Blocks.PAXEL_MINEABLE, () -> Ingredient.of(ModItems.Ultimate_Ingot.get())),
             new ResourceLocation(TSOTD.MOD_ID, "ultimate"), List.of(Tiers.NETHERITE), List.of());
 }

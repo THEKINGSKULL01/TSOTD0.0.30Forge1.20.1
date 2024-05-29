@@ -23,6 +23,9 @@ public class ModTags {
 
         public static final TagKey<Block> PAXEL_MINEABLE = tag("mineable/paxel");
 
+
+        public static final TagKey<Block> HAMMER_MINEABLE = tag("mineable/hammer");
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(TSOTD.MOD_ID, name));
         }
