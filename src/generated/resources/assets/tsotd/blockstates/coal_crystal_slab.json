@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tsotd:block/coal_crystal_slab"
+    },
+    "type=double": {
+      "model": "tsotd:block/coal_crystal_block"
+    },
+    "type=top": {
+      "model": "tsotd:block/coal_crystal_slab_top"
+    }
+  }
+}

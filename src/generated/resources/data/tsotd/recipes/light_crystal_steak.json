@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "tsotd:light_crystal_steak"
+    },
+    "2": {
+      "item": "minecraft:cooked_beef"
+    }
+  },
+  "pattern": [
+    "21",
+    "12"
+  ],
+  "result": {
+    "item": "tsotd:light_crystal_steak"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "tsotd:light_crystal_block"
+  },
+  "result": "tsotd:light_crystal_slab"
+}
