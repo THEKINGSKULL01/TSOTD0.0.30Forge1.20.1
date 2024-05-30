@@ -4,11 +4,13 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 
 public class ModCreativeModeTabs {
     public static DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -58,36 +60,41 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Dark_Crystal_Hoe.get());
                         output.accept(ModItems.Light_Crystal_Hoe.get());
 
-                        //Helmets
 
-                        output.accept(ModItems.Mochirium_Helmet.get());
-                        output.accept(ModItems.Dark_Crystal_Helmet.get());
+                        //Light Crystal Armor
+
                         output.accept(ModItems.Light_Crystal_Helmet.get());
+                        output.accept(ModItems.Light_Crystal_Chestplate.get());
+                        output.accept(ModItems.Light_Crystal_Leggings.get());
+                        output.accept(ModItems.Light_Crystal_Boots.get());
 
-                        //Chestplate
+                        //DarkCrystal Armor
+
+                        output.accept(ModItems.Dark_Crystal_Helmet.get());
+                        output.accept(ModItems.Dark_Crystal_Chestplate.get());
+                        output.accept(ModItems.Dark_Crystal_Leggings.get());
+                        output.accept(ModItems.Dark_Crystal_Boots.get());
+
+                        //Mo~chirium Armor
 
                         output.accept(ModItems.Mochirium_Chestplate.get());
-                        output.accept(ModItems.Dark_Crystal_Chestplate.get());
-                        output.accept(ModItems.Light_Crystal_Chestplate.get());
-
-                        //Leggings
-
+                        output.accept(ModItems.Mochirium_Helmet.get());
                         output.accept(ModItems.Mochirium_Leggings.get());
-                        output.accept(ModItems.Dark_Crystal_Leggings.get());
-                        output.accept(ModItems.Light_Crystal_Leggings.get());
-
-                        //Boots
-
                         output.accept(ModItems.Mochirium_Boots.get());
-                        output.accept(ModItems.Dark_Crystal_Boots.get());
-                        output.accept(ModItems.Light_Crystal_Boots.get());
+
+                        //HorseArmor
+
+                        output.accept(ModItems.Light_Crystal_Horse_Armor.get());
+                        output.accept(ModItems.Dark_Crystal_Horse_Armor.get());
+                        output.accept(ModItems.Mochirium_Horse_Armor.get());
 
                         //Minerals
 
+                        output.accept(ModItems.Crystallized_Coal.get());
                         output.accept(ModItems.Dark_Crystal.get());
                         output.accept(ModItems.Light_Crystal.get());
                         output.accept(ModItems.Mochirium_Ingot.get());
-                        output.accept(ModItems.Crystallized_Coal.get());
+
 
                         //Ores
 
@@ -100,6 +107,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Dark_Crystal_Block.get());
                         output.accept(ModBlocks.Light_Crystal_Block.get());
                         output.accept(ModBlocks.Coal_Crystal_Block.get());
+
+                        //Blocks
+
+                        output.accept(ModBlocks.Dark_Crystal_Lamp.get());
 
                         //Stairs
 
@@ -164,6 +175,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.Dark_Crystal_Steak.get());
                         output.accept(ModItems.Light_Crystal_Steak.get());
+
                     })
                     .build());
 

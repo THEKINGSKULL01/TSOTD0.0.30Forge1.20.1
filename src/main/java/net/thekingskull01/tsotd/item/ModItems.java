@@ -1,5 +1,6 @@
 package net.thekingskull01.tsotd.item;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -118,11 +119,20 @@ public class ModItems{
     public static final RegistryObject<Item> Light_Crystal_Steak = ITEMS.register("light_crystal_steak",
             () -> new Item(new Item.Properties().food(ModFoods.LIGHT_CRYSTAL_STEAK)));
 
+            //Horse armor
+
+    public static final RegistryObject<Item> Dark_Crystal_Horse_Armor = ITEMS.register("dark_crystal_horse_armor",
+            () -> new HorseArmorItem(16, new ResourceLocation(TSOTD.MOD_ID,"dark_crystal"), new Item.Properties()));
+    public static final RegistryObject<Item> Light_Crystal_Horse_Armor = ITEMS.register("light_crystal_horse_armor",
+            () -> new HorseArmorItem(16, new ResourceLocation(TSOTD.MOD_ID,"light_crystal"), new Item.Properties()));
+    public static final RegistryObject<Item> Mochirium_Horse_Armor = ITEMS.register("mochirium_horse_armor",
+            () -> new HorseArmorItem(18, new ResourceLocation(TSOTD.MOD_ID,"mochirium"), new Item.Properties()));
+
             //Misc
-            public static final RegistryObject<Item> Dark_Stick = ITEMS.register("dark_stick",
-                    () -> new FuelItem(new Item.Properties(), 2000));
-            public static final RegistryObject<Item> Light_Stick = ITEMS.register("light_stick",
-                    () -> new FuelItem(new Item.Properties(), 2000));
+    public static final RegistryObject<Item> Dark_Stick = ITEMS.register("dark_stick",
+            () -> new FuelItem(new Item.Properties(), 2000));
+    public static final RegistryObject<Item> Light_Stick = ITEMS.register("light_stick",
+            () -> new FuelItem(new Item.Properties(), 2000));
 
 
     public static void  register(IEventBus eventBus) {

@@ -4,6 +4,8 @@
   "block.tsotd.light_crystal_block": "Block Of Light Crystal",
   "block.tsotd.coal_crystal_block": "Block Of Crystallized Coal",
 
+  "block.tsotd.dark_crystal_lamp": "Dark Crystallized Lamp",
+
   "block.tsotd.dark_crystal_stairs": "Dark Crystal Stairs",
   "block.tsotd.light_crystal_stairs": "Light Crystal Stairs",
   "block.tsotd.coal_crystal_stairs": "Crystallized Coal Stairs",
@@ -82,6 +84,11 @@
   "item.tsotd.mochirium_boots": "Mo~chirium Boots",
 
 
+  "item.tsotd.dark_crystal_horse_armor": "Dark Crystallized Horse Armor",
+  "item.tsotd.light_crystal_horse_armor": "Light Crystallized Horse Armor",
+  "item.tsotd.mochirium_horse_armor": "Mo~chirium Horse Armor",
+
+
   "item.tsotd.dark_crystal_sword": "Dark Crystallized Sword",
   "item.tsotd.light_crystal_sword": "Light Crystallized Sword",
   "item.tsotd.mochirium_sword": "Mo~chirium Sword",
@@ -113,6 +120,8 @@
 
   "item.tsotd.dark_stick": "Dark Stick",
   "item.tsotd.light_stick": "Light Stick",
+
+  "enchantment.tsotd.lightning_striker": "Lightning Striker",
 
 
   "tooltip.tsotd.dark_crystal_detector.tooltip": "Finds Dark Crystal In The End",

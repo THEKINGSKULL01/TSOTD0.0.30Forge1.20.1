@@ -7,11 +7,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
+import net.thekingskull01.tsotd.block.custom.DarkCrystalLampBlock;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.item.custom.FuelBlock;
 
@@ -30,8 +32,12 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
-    //public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
-            //() -> new FuelBlock(() -> ModBlocks.Coal_Crystal_Block.get().defaultBlockState(),  BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+
+            //Custom blocks, Custom blocks, Custom blocks, Custom blocks
+
+    public static final RegistryObject<Block> Dark_Crystal_Lamp = registerBlock("dark_crystal_lamp",
+            () -> new DarkCrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).mapColor(MapColor.COLOR_GRAY)
+                    .lightLevel(state -> state.getValue(DarkCrystalLampBlock.CLICKED) ? 15 : 0)));
 
 
             //Ores, Ores, Ores, Ores, Ores, Ores, Ores
@@ -112,7 +118,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> Coal_Crystal_Fence_Gate = registerBlock("coal_crystal_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
-    //Doors, Doors, Doors, Doors, Doors, Doors, Doors, Doors
+            //Doors, Doors, Doors, Doors, Doors, Doors, Doors, Doors
 
     public static final RegistryObject<Block> Dark_Crystal_Door = registerBlock("dark_crystal_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), BlockSetType.WARPED));

@@ -1,14 +1,17 @@
 package net.thekingskull01.tsotd.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.block.custom.DarkCrystalLampBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -138,6 +141,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
 
+    }
+
+    private void customLamp() {
+        getVariantBuilder(ModBlocks.Dark_Crystal_Lamp.get()).forAllStates(state -> {
+            if(state.getValue(DarkCrystalLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("dark_crystal_lamp_on",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("dark_crystal_lamp_off",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" +"dark_crystal_lamp_off")))};
+            }
+        });
+
+        simpleBlockItem(ModBlocks.Dark_Crystal_Lamp.get(), models().cubeAll("dark_crystal_lamp_on",
+                new ResourceLocation(TSOTD.MOD_ID, "block/" +"dark_crystal_lamp_on")));
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {

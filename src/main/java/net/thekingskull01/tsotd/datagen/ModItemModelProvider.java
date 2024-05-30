@@ -99,27 +99,34 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Helmet
 
-        //simpleItem(ModItems.Ultimate_Helmet);
+        //simpleItem(ModItems.Mochirium_Helmet);
         //simpleItem(ModItems.Dark_Crystal_Helmet);
         //simpleItem(ModItems.Light_Crystal_Helmet);
 
         //Chestplate
 
-        //simpleItem(ModItems.Ultimate_Chestplate);
+        //simpleItem(ModItems.Mochirium_Chestplate);
         //simpleItem(ModItems.Dark_Crystal_Chestplate);
         //simpleItem(ModItems.Light_Crystal_Chestplate);
 
         //Leggings
 
-        //simpleItem(ModItems.Ultimate_Leggings);
+        //simpleItem(ModItems.Mochirium_Leggings);
         //simpleItem(ModItems.Dark_Crystal_Leggings);
         //simpleItem(ModItems.Light_Crystal_Leggings);
 
         //Boots
 
-       //simpleItem(ModItems.Ultimate_Boots);
+       //simpleItem(ModItems.Mochirium_Boots);
        //simpleItem(ModItems.Dark_Crystal_Boots);
        //simpleItem(ModItems.Light_Crystal_Boots);
+
+
+        //Horse Armor
+
+       simpleItem(ModItems.Mochirium_Horse_Armor);
+       simpleItem(ModItems.Dark_Crystal_Horse_Armor);
+       simpleItem(ModItems.Light_Crystal_Horse_Armor);
 
 
 
