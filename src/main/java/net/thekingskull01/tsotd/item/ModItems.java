@@ -32,28 +32,28 @@ public class ModItems{
     public static final RegistryObject<Item> Light_Crystal_Helmet = ITEMS.register("light_crystal_helmet",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> Mochirium_Helmet = ITEMS.register("mochirium_helmet",
-            () -> new ArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Chestplate = ITEMS.register("dark_crystal_chestplate",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Chestplate = ITEMS.register("light_crystal_chestplate",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> Mochirium_Chestplate = ITEMS.register("mochirium_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Leggings = ITEMS.register("dark_crystal_leggings",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Leggings = ITEMS.register("light_crystal_leggings",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> Mochirium_Leggings = ITEMS.register("mochirium_leggings",
-            () -> new ArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Boots = ITEMS.register("dark_crystal_boots",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Boots = ITEMS.register("light_crystal_boots",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> Mochirium_Boots = ITEMS.register("mochirium_boots",
-            () -> new ArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
             //Tools, Tools, Tools, Tools, Tools, Tools, Tools
