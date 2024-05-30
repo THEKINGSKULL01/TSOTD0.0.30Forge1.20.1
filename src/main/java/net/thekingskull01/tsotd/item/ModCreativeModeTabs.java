@@ -26,6 +26,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Dark_Crystal_Detector.get());
                         output.accept(ModItems.Light_Crystal_Detector.get());
 
+                        //Tablets
+
+                        output.accept(ModItems.Dark_Crystal_Data_Tablet.get());
+                        output.accept(ModItems.Light_Crystal_Data_Tablet.get());
+
                         //Swords
 
                         output.accept(ModItems.Mochirium_Sword.get());
@@ -108,7 +113,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Light_Crystal_Block.get());
                         output.accept(ModBlocks.Coal_Crystal_Block.get());
 
-                        //Blocks
+                        //Lamps
 
                         output.accept(ModBlocks.Dark_Crystal_Lamp.get());
 

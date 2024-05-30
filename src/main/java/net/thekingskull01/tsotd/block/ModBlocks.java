@@ -36,8 +36,9 @@ public class ModBlocks {
             //Custom blocks, Custom blocks, Custom blocks, Custom blocks
 
     public static final RegistryObject<Block> Dark_Crystal_Lamp = registerBlock("dark_crystal_lamp",
-            () -> new DarkCrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).mapColor(MapColor.COLOR_GRAY)
-                    .lightLevel(state -> state.getValue(DarkCrystalLampBlock.CLICKED) ? 15 : 0)));
+           () -> new DarkCrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).mapColor(MapColor.COLOR_GRAY)
+                   .lightLevel(state -> state.getValue(DarkCrystalLampBlock.LIT) ? 15 : 0)
+                   .lightLevel(state -> state.getValue(DarkCrystalLampBlock.CLICKED) ? 15 : 0)));
 
 
             //Ores, Ores, Ores, Ores, Ores, Ores, Ores

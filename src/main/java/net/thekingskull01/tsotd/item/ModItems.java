@@ -57,7 +57,7 @@ public class ModItems{
             () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
-            //Tools, Tools, Tools, Tools, Tools, Tools, Tools
+            //Detectors
 
     public static final RegistryObject<Item> Dark_Crystal_Detector = ITEMS.register("dark_crystal_detector",
             () -> new DarkCrystalDetectorItem(new Item.Properties().durability(256)));
@@ -122,11 +122,11 @@ public class ModItems{
             //Horse armor
 
     public static final RegistryObject<Item> Dark_Crystal_Horse_Armor = ITEMS.register("dark_crystal_horse_armor",
-            () -> new HorseArmorItem(16, new ResourceLocation(TSOTD.MOD_ID,"dark_crystal"), new Item.Properties()));
+            () -> new HorseArmorItem(16, new ResourceLocation(TSOTD.MOD_ID,"textures/entity/horse/armor/horse_armor_dark_crystal.png"), new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> Light_Crystal_Horse_Armor = ITEMS.register("light_crystal_horse_armor",
-            () -> new HorseArmorItem(16, new ResourceLocation(TSOTD.MOD_ID,"light_crystal"), new Item.Properties()));
+            () -> new HorseArmorItem(16, new ResourceLocation(TSOTD.MOD_ID,"textures/entity/horse/armor/horse_armor_light_crystal.png"), new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> Mochirium_Horse_Armor = ITEMS.register("mochirium_horse_armor",
-            () -> new HorseArmorItem(18, new ResourceLocation(TSOTD.MOD_ID,"mochirium"), new Item.Properties()));
+            () -> new HorseArmorItem(18, new ResourceLocation(TSOTD.MOD_ID,"textures/entity/horse/armor/horse_armor_mochirium.png"), new Item.Properties().stacksTo(1)));
 
             //Misc
     public static final RegistryObject<Item> Dark_Stick = ITEMS.register("dark_stick",
@@ -134,10 +134,19 @@ public class ModItems{
     public static final RegistryObject<Item> Light_Stick = ITEMS.register("light_stick",
             () -> new FuelItem(new Item.Properties(), 2000));
 
+            //DataTablet
+
+    public static final RegistryObject<Item> Dark_Crystal_Data_Tablet = ITEMS.register("dark_crystal_data_tablet",
+            () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> Light_Crystal_Data_Tablet = ITEMS.register("light_crystal_data_tablet",
+            () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
+
 
     public static void  register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
+
+
 
 
 }

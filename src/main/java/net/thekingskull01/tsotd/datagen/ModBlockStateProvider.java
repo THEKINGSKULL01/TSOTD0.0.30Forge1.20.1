@@ -140,22 +140,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
 
-
+        customLamp();
     }
 
     private void customLamp() {
         getVariantBuilder(ModBlocks.Dark_Crystal_Lamp.get()).forAllStates(state -> {
-            if(state.getValue(DarkCrystalLampBlock.CLICKED)) {
+            if(state.getValue(DarkCrystalLampBlock.LIT)) {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("dark_crystal_lamp_on",
                         new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_on")))};
+
+            } else if (state.getValue(DarkCrystalLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("dark_crystal_lamp_on",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_on")))};
+
             } else {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("dark_crystal_lamp_off",
-                        new ResourceLocation(TSOTD.MOD_ID, "block/" +"dark_crystal_lamp_off")))};
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_off")))};
             }
+
         });
 
         simpleBlockItem(ModBlocks.Dark_Crystal_Lamp.get(), models().cubeAll("dark_crystal_lamp_on",
-                new ResourceLocation(TSOTD.MOD_ID, "block/" +"dark_crystal_lamp_on")));
+                new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_on")));
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {

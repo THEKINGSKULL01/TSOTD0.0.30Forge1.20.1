@@ -34,9 +34,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.Dark_Stick);
         simpleItem(ModItems.Light_Stick);
 
-        //Items
+        //Detectors
         simpleItem(ModItems.Dark_Crystal_Detector);
         simpleItem(ModItems.Light_Crystal_Detector);
+
+        //DataTablets
+        simpleItem(ModItems.Dark_Crystal_Data_Tablet);
+        simpleItem(ModItems.Light_Crystal_Data_Tablet);
 
         //Food
         simpleItem(ModItems.Dark_Crystal_Steak);
@@ -64,7 +68,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.Coal_Crystal_Door);
 
         //Swords
-
 
         handheldItem(ModItems.Dark_Crystal_Sword);
         handheldItem(ModItems.Light_Crystal_Sword);
