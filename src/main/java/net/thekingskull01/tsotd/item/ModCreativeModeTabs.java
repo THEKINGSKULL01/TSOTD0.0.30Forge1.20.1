@@ -28,8 +28,8 @@ public class ModCreativeModeTabs {
 
                         //Tablets
 
-                        output.accept(ModItems.Dark_Crystal_Data_Tablet.get());
-                        output.accept(ModItems.Light_Crystal_Data_Tablet.get());
+                        output.accept(ModItems.Dark_Crystal_Memory_Orb.get());
+                        output.accept(ModItems.Light_Crystal_Memory_Orb.get());
 
                         //Swords
 

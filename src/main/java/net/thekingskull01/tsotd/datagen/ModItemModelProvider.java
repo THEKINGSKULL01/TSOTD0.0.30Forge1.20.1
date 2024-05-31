@@ -39,8 +39,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.Light_Crystal_Detector);
 
         //DataTablets
-        simpleItem(ModItems.Dark_Crystal_Data_Tablet);
-        simpleItem(ModItems.Light_Crystal_Data_Tablet);
+        //simpleItem(ModItems.Dark_Crystal_Data_Tablet);
+        //simpleItem(ModItems.Light_Crystal_Data_Tablet);
 
         //Food
         simpleItem(ModItems.Dark_Crystal_Steak);

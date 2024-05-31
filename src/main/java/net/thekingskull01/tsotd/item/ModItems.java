@@ -136,9 +136,9 @@ public class ModItems{
 
             //DataTablet
 
-    public static final RegistryObject<Item> Dark_Crystal_Data_Tablet = ITEMS.register("dark_crystal_data_tablet",
+    public static final RegistryObject<Item> Dark_Crystal_Memory_Orb = ITEMS.register("dark_crystal_memory_orb",
             () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> Light_Crystal_Data_Tablet = ITEMS.register("light_crystal_data_tablet",
+    public static final RegistryObject<Item> Light_Crystal_Memory_Orb = ITEMS.register("light_crystal_memory_orb",
             () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
 
 

@@ -54,7 +54,7 @@ public class LightCrystalDetectorItem extends Item {
                         player.sendSystemMessage(Component.literal("Found " + I18n.get(state.getBlock().getDescriptionId()) + " at " +
                                 "(y = " + checkPos.getY() + ")"));
                         //DataTablet stuffs
-                        if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.Light_Crystal_Data_Tablet.get())) {
+                        if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.Light_Crystal_Memory_Orb.get())) {
                             addDataToDataTablet(player, pos.offset(x,-y,z), state.getBlock());
                         }
                         return InteractionResult.SUCCESS;
@@ -92,7 +92,7 @@ public class LightCrystalDetectorItem extends Item {
 
     private void addDataToDataTablet(Player player, BlockPos offset, Block block) {
 
-        ItemStack dataTablet = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.Light_Crystal_Data_Tablet.get()));
+        ItemStack dataTablet = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.Light_Crystal_Memory_Orb.get()));
 
         CompoundTag data = new CompoundTag();
         data.putString("tsotd.found_ore", "Found " + I18n.get(block.getDescriptionId()) + " at " +
