@@ -1,6 +1,7 @@
 package net.thekingskull01.tsotd ;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -44,7 +45,9 @@ public class TSOTD {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.Takichirum_Seeds.get(), 1.0f);
+        });
     }
 
     // Add the example block item to the building blocks tab
