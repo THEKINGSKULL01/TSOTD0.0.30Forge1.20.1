@@ -82,8 +82,8 @@ public class ModCreativeModeTabs {
 
                         //Mo~chirium Armor
 
-                        output.accept(ModItems.Mochirium_Chestplate.get());
                         output.accept(ModItems.Mochirium_Helmet.get());
+                        output.accept(ModItems.Mochirium_Chestplate.get());
                         output.accept(ModItems.Mochirium_Leggings.get());
                         output.accept(ModItems.Mochirium_Boots.get());
 

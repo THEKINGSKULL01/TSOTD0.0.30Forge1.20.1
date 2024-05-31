@@ -2,6 +2,7 @@ package net.thekingskull01.tsotd.item.custom;
 
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -14,6 +15,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkAccess;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.item.ModItems;
+import net.thekingskull01.tsotd.util.InventoryUtil;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -50,7 +53,10 @@ public class LightCrystalDetectorItem extends Item {
                         //Output text to Player
                         player.sendSystemMessage(Component.literal("Found " + I18n.get(state.getBlock().getDescriptionId()) + " at " +
                                 "(y = " + checkPos.getY() + ")"));
-                        //Finish up
+                        //DataTablet stuffs
+                        if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.Light_Crystal_Data_Tablet.get())) {
+                            addDataToDataTablet(player, pos.offset(x,-y,z), state.getBlock());
+                        }
                         return InteractionResult.SUCCESS;
                     }
                 }
@@ -82,6 +88,20 @@ public class LightCrystalDetectorItem extends Item {
         context.getItemInHand().hurtAndBreak(1, player, _player -> _player.broadcastBreakEvent(_player.getUsedItemHand()));
 
         return InteractionResult.SUCCESS;
+    }
+
+    private void addDataToDataTablet(Player player, BlockPos offset, Block block) {
+
+        ItemStack dataTablet = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.Light_Crystal_Data_Tablet.get()));
+
+        CompoundTag data = new CompoundTag();
+        data.putString("tsotd.found_ore", "Found " + I18n.get(block.getDescriptionId()) + " at " +
+                "( y = " + offset.getY() + " ) " +
+                "Player coordinates = ( x =" + player.getX() + " ) " +
+                "( z = = " + player.getZ() + " )");
+
+        dataTablet.setTag(data);
+
     }
 
     private boolean isValuableBlock(BlockState state) {

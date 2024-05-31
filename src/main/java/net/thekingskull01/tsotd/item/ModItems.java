@@ -60,7 +60,7 @@ public class ModItems{
             //Detectors
 
     public static final RegistryObject<Item> Dark_Crystal_Detector = ITEMS.register("dark_crystal_detector",
-            () -> new DarkCrystalDetectorItem(new Item.Properties().durability(256)));
+            () -> new LightCrystalDetectorItem(new Item.Properties().durability(256)));
     public static final RegistryObject<Item> Light_Crystal_Detector = ITEMS.register("light_crystal_detector",
             () -> new LightCrystalDetectorItem(new Item.Properties().durability(256)));
 
