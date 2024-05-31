@@ -13,9 +13,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
-import net.thekingskull01.tsotd.block.custom.DarkCrystalLampBlock;
+import net.thekingskull01.tsotd.block.custom.CrystalLampBlock;
 import net.thekingskull01.tsotd.item.ModItems;
-import net.thekingskull01.tsotd.item.custom.FuelBlock;
 
 import java.util.function.Supplier;
 
@@ -35,10 +34,14 @@ public class ModBlocks {
 
             //Custom blocks, Custom blocks, Custom blocks, Custom blocks
 
-    public static final RegistryObject<Block> Dark_Crystal_Lamp = registerBlock("dark_crystal_lamp",
-           () -> new DarkCrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).mapColor(MapColor.COLOR_GRAY)
-                   .lightLevel(state -> state.getValue(DarkCrystalLampBlock.LIT) ? 15 : 0)
-                   .lightLevel(state -> state.getValue(DarkCrystalLampBlock.CLICKED) ? 15 : 0)));
+    public static final RegistryObject<Block> Darkened_Crystal_Lamp = registerBlock("darkened_crystal_lamp",
+           () -> new CrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).mapColor(MapColor.COLOR_GRAY)
+                   .lightLevel(state -> state.getValue(CrystalLampBlock.LIT) ? 15 : 0)
+                   .lightLevel(state -> state.getValue(CrystalLampBlock.CLICKED) ? 15 : 0)));
+    //public static final RegistryObject<Block> Light_Crystal_Lamp = registerBlock("dark_crystal_lamp",
+    //       () -> new CrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).mapColor(MapColor.COLOR_LIGHT_GRAY)
+    //               .lightLevel(state -> state.getValue(CrystalLampBlock.LIT) ? 15 : 0)
+    //               .lightLevel(state -> state.getValue(CrystalLampBlock.CLICKED) ? 15 : 0)));
 
 
             //Ores, Ores, Ores, Ores, Ores, Ores, Ores

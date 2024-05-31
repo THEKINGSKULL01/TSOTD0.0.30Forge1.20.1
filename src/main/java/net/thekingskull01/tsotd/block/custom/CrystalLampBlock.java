@@ -18,11 +18,11 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nullable;
 
-public class DarkCrystalLampBlock extends Block {
+public class CrystalLampBlock extends Block {
     public static final BooleanProperty LIT;
     public static final BooleanProperty CLICKED = BooleanProperty.create("clicked");
 
-    public DarkCrystalLampBlock(BlockBehaviour.Properties pProperties) {
+    public CrystalLampBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState((BlockState)this.defaultBlockState().setValue(LIT, false));
         this.registerDefaultState(this.defaultBlockState().setValue(CLICKED, false));

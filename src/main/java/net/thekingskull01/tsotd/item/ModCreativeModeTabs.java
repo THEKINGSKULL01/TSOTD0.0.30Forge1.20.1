@@ -115,7 +115,7 @@ public class ModCreativeModeTabs {
 
                         //Lamps
 
-                        output.accept(ModBlocks.Dark_Crystal_Lamp.get());
+                        output.accept(ModBlocks.Darkened_Crystal_Lamp.get());
 
                         //Stairs
 

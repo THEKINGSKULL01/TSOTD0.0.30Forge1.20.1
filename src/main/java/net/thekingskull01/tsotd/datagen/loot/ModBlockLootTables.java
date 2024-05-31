@@ -34,7 +34,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.Light_Crystal_Block.get());
 
         //Lamps
-        this.dropSelf(ModBlocks.Dark_Crystal_Lamp.get());
+        this.dropSelf(ModBlocks.Darkened_Crystal_Lamp.get());
 
         //Stairs
 

@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
-import net.thekingskull01.tsotd.block.custom.DarkCrystalLampBlock;
+import net.thekingskull01.tsotd.block.custom.CrystalLampBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -144,24 +144,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void customLamp() {
-        getVariantBuilder(ModBlocks.Dark_Crystal_Lamp.get()).forAllStates(state -> {
-            if(state.getValue(DarkCrystalLampBlock.LIT)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("dark_crystal_lamp_on",
-                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_on")))};
+        getVariantBuilder(ModBlocks.Darkened_Crystal_Lamp.get()).forAllStates(state -> {
+            if(state.getValue(CrystalLampBlock.LIT)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("darkened_crystal_lamp_on",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "darkened_crystal_lamp_on")))};
 
-            } else if (state.getValue(DarkCrystalLampBlock.CLICKED)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("dark_crystal_lamp_on",
-                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_on")))};
+            } else if (state.getValue(CrystalLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("darkened_crystal_lamp_on",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "darkened_crystal_lamp_on")))};
 
             } else {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("dark_crystal_lamp_off",
-                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_off")))};
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("darkened_crystal_lamp_off",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "darkened_crystal_lamp_off")))};
             }
 
         });
 
-        simpleBlockItem(ModBlocks.Dark_Crystal_Lamp.get(), models().cubeAll("dark_crystal_lamp_on",
-                new ResourceLocation(TSOTD.MOD_ID, "block/" + "dark_crystal_lamp_on")));
+        simpleBlockItem(ModBlocks.Darkened_Crystal_Lamp.get(), models().cubeAll("darkened_crystal_lamp_on",
+                new ResourceLocation(TSOTD.MOD_ID, "block/" + "darkened_crystal_lamp_on")));
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
