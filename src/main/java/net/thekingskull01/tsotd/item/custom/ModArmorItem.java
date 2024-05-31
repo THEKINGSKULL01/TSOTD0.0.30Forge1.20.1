@@ -16,7 +16,7 @@ import java.util.Map;
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-            .put(ModArmorMaterials.MOCHIRIUM, new MobEffectInstance(MobEffects.ABSORPTION, 200, 2))
+            .put(ModArmorMaterials.TAKICHIRUM, new MobEffectInstance(MobEffects.ABSORPTION, 200, 2))
 
 
 

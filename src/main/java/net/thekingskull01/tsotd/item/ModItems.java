@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
+import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.item.custom.*;
 
 public class ModItems{
@@ -20,7 +21,7 @@ public class ModItems{
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal = ITEMS.register("light_crystal",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> Mochirium_Ingot = ITEMS.register("mochirium_ingot",
+    public static final RegistryObject<Item> Takichirum_Ingot = ITEMS.register("takichirum_ingot",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Crystallized_Coal = ITEMS.register("crystallized_coal",
             () -> new FuelItem(new Item.Properties(), 8000));
@@ -32,29 +33,29 @@ public class ModItems{
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Helmet = ITEMS.register("light_crystal_helmet",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> Mochirium_Helmet = ITEMS.register("mochirium_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> Takichirum_Helmet = ITEMS.register("takichirum_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.TAKICHIRUM, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Chestplate = ITEMS.register("dark_crystal_chestplate",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Chestplate = ITEMS.register("light_crystal_chestplate",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<Item> Mochirium_Chestplate = ITEMS.register("mochirium_chestplate",
-            () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> Takichirum_Chestplate = ITEMS.register("takichirum_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.TAKICHIRUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Leggings = ITEMS.register("dark_crystal_leggings",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Leggings = ITEMS.register("light_crystal_leggings",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<Item> Mochirium_Leggings = ITEMS.register("mochirium_leggings",
-            () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> Takichirum_Leggings = ITEMS.register("takichirum_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.TAKICHIRUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Boots = ITEMS.register("dark_crystal_boots",
             () -> new ArmorItem(ModArmorMaterials.DARK_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Boots = ITEMS.register("light_crystal_boots",
             () -> new ArmorItem(ModArmorMaterials.LIGHT_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties()));
-    public static final RegistryObject<Item> Mochirium_Boots = ITEMS.register("mochirium_boots",
-            () -> new ModArmorItem(ModArmorMaterials.MOCHIRIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> Takichirum_Boots = ITEMS.register("takichirum_boots",
+            () -> new ModArmorItem(ModArmorMaterials.TAKICHIRUM, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
             //Detectors
@@ -66,8 +67,8 @@ public class ModItems{
 
             //Swords
 
-    public static final RegistryObject<Item> Mochirium_Sword = ITEMS.register("mochirium_sword",
-            () -> new MochiriumSwordItem(ModToolTiers.MOCHIRIUM, 3,1F, new Item.Properties()));
+    public static final RegistryObject<Item> Takichirum_Sword = ITEMS.register("takichirum_sword",
+            () -> new TakichirumSwordItem(ModToolTiers.TAKICHIRUM, 3,1F, new Item.Properties()));
 
     public static final RegistryObject<Item> Dark_Crystal_Sword = ITEMS.register("dark_crystal_sword",
             () -> new SwordItem(ModToolTiers.DARK_CRYSTAL, 8,0.6F, new Item.Properties()));
@@ -104,13 +105,13 @@ public class ModItems{
 
             //Paxel
 
-    public static final RegistryObject<Item> Mochirium_Paxel = ITEMS.register("mochirium_paxel",
-            () -> new PaxelItem(ModToolTiers.MOCHIRIUM, 2, 4F, new Item.Properties()));
+    public static final RegistryObject<Item> Takichirum_Paxel = ITEMS.register("takichirum_paxel",
+            () -> new PaxelItem(ModToolTiers.TAKICHIRUM, 2, 4F, new Item.Properties()));
 
             //Hammers
 
-    public static final RegistryObject<Item> Mochirium_Hammer = ITEMS.register("mochirium_hammer",
-            () -> new HammerItem(ModToolTiers.MOCHIRIUM, 2, 4F, new Item.Properties()));
+    public static final RegistryObject<Item> Takichirum_Hammer = ITEMS.register("takichirum_hammer",
+            () -> new HammerItem(ModToolTiers.TAKICHIRUM, 2, 4F, new Item.Properties()));
 
             //Food
 
@@ -125,8 +126,8 @@ public class ModItems{
             () -> new HorseArmorItem(16, new ResourceLocation(TSOTD.MOD_ID,"textures/entity/horse/armor/horse_armor_dark_crystal.png"), new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> Light_Crystal_Horse_Armor = ITEMS.register("light_crystal_horse_armor",
             () -> new HorseArmorItem(16, new ResourceLocation(TSOTD.MOD_ID,"textures/entity/horse/armor/horse_armor_light_crystal.png"), new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> Mochirium_Horse_Armor = ITEMS.register("mochirium_horse_armor",
-            () -> new HorseArmorItem(18, new ResourceLocation(TSOTD.MOD_ID,"textures/entity/horse/armor/horse_armor_mochirium.png"), new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> Takichirum_Horse_Armor = ITEMS.register("takichirum_horse_armor",
+            () -> new HorseArmorItem(18, new ResourceLocation(TSOTD.MOD_ID,"textures/entity/horse/armor/horse_armor_takichirum.png"), new Item.Properties().stacksTo(1)));
 
             //Misc
     public static final RegistryObject<Item> Dark_Stick = ITEMS.register("dark_stick",
@@ -140,6 +141,11 @@ public class ModItems{
             () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> Light_Crystal_Memory_Orb = ITEMS.register("light_crystal_memory_orb",
             () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
+
+            //Seeds
+
+    public static final RegistryObject<Item> Takichirum_Seeds = ITEMS.register("takichirum_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.Takichirum_Crop.get(), new Item.Properties()));
 
 
     public static void  register(IEventBus eventBus) {

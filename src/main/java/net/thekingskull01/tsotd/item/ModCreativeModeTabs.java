@@ -33,17 +33,17 @@ public class ModCreativeModeTabs {
 
                         //Swords
 
-                        output.accept(ModItems.Mochirium_Sword.get());
+                        output.accept(ModItems.Takichirum_Sword.get());
                         output.accept(ModItems.Dark_Crystal_Sword.get());
                         output.accept(ModItems.Light_Crystal_Sword.get());
 
                         //Paxel
 
-                        output.accept(ModItems.Mochirium_Paxel.get());
+                        output.accept(ModItems.Takichirum_Paxel.get());
 
                         //Hammer
 
-                        output.accept(ModItems.Mochirium_Hammer.get());
+                        output.accept(ModItems.Takichirum_Hammer.get());
 
                         //Pickaxes
 
@@ -82,23 +82,23 @@ public class ModCreativeModeTabs {
 
                         //Mo~chirium Armor
 
-                        output.accept(ModItems.Mochirium_Helmet.get());
-                        output.accept(ModItems.Mochirium_Chestplate.get());
-                        output.accept(ModItems.Mochirium_Leggings.get());
-                        output.accept(ModItems.Mochirium_Boots.get());
+                        output.accept(ModItems.Takichirum_Helmet.get());
+                        output.accept(ModItems.Takichirum_Chestplate.get());
+                        output.accept(ModItems.Takichirum_Leggings.get());
+                        output.accept(ModItems.Takichirum_Boots.get());
 
                         //HorseArmor
 
                         output.accept(ModItems.Light_Crystal_Horse_Armor.get());
                         output.accept(ModItems.Dark_Crystal_Horse_Armor.get());
-                        output.accept(ModItems.Mochirium_Horse_Armor.get());
+                        output.accept(ModItems.Takichirum_Horse_Armor.get());
 
                         //Minerals
 
                         output.accept(ModItems.Crystallized_Coal.get());
                         output.accept(ModItems.Dark_Crystal.get());
                         output.accept(ModItems.Light_Crystal.get());
-                        output.accept(ModItems.Mochirium_Ingot.get());
+                        output.accept(ModItems.Takichirum_Ingot.get());
 
 
                         //Ores
@@ -115,7 +115,7 @@ public class ModCreativeModeTabs {
 
                         //Lamps
 
-                        output.accept(ModBlocks.Darkened_Crystal_Lamp.get());
+                        output.accept(ModBlocks.Crystal_Lamp.get());
 
                         //Stairs
 
@@ -180,6 +180,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.Dark_Crystal_Steak.get());
                         output.accept(ModItems.Light_Crystal_Steak.get());
+
+                        //Seeds
+
+                        output.accept(ModItems.Takichirum_Seeds.get());
 
                     })
                     .build());

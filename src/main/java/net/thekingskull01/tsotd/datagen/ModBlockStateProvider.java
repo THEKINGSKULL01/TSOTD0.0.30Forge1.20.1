@@ -3,6 +3,7 @@ package net.thekingskull01.tsotd.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -12,6 +13,9 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.block.custom.CrystalLampBlock;
+import net.thekingskull01.tsotd.block.custom.TakichirumCrop;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -136,6 +140,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.Light_Crystal_Trapdoor,"_bottom");
         blockItem(ModBlocks.Coal_Crystal_Trapdoor,"_bottom");
 
+        //Crops
+
+        makeCrop(((TakichirumCrop) ModBlocks.Takichirum_Crop.get()), "takichirum_stage", "takichirum_stage");
+
 
 
 
@@ -144,24 +152,38 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void customLamp() {
-        getVariantBuilder(ModBlocks.Darkened_Crystal_Lamp.get()).forAllStates(state -> {
+        getVariantBuilder(ModBlocks.Crystal_Lamp.get()).forAllStates(state -> {
             if(state.getValue(CrystalLampBlock.LIT)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("darkened_crystal_lamp_on",
-                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "darkened_crystal_lamp_on")))};
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("crystal_lamp_on",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "crystal_lamp_on")))};
 
             } else if (state.getValue(CrystalLampBlock.CLICKED)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("darkened_crystal_lamp_on",
-                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "darkened_crystal_lamp_on")))};
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("crystal_lamp_on",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "crystal_lamp_on")))};
 
             } else {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("darkened_crystal_lamp_off",
-                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "darkened_crystal_lamp_off")))};
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("crystal_lamp_off",
+                        new ResourceLocation(TSOTD.MOD_ID, "block/" + "crystal_lamp_off")))};
             }
 
         });
 
-        simpleBlockItem(ModBlocks.Darkened_Crystal_Lamp.get(), models().cubeAll("darkened_crystal_lamp_on",
-                new ResourceLocation(TSOTD.MOD_ID, "block/" + "darkened_crystal_lamp_on")));
+        simpleBlockItem(ModBlocks.Crystal_Lamp.get(), models().cubeAll("crystal_lamp_on",
+                new ResourceLocation(TSOTD.MOD_ID, "block/" + "crystal_lamp_on")));
+    }
+
+    public void makeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TakichirumCrop) block).getAgeProperty()),
+                new ResourceLocation(TSOTD.MOD_ID, "block/" + textureName + state.getValue(((TakichirumCrop) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {

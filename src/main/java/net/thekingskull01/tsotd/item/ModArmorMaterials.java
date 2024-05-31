@@ -16,13 +16,13 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
 
-    MOCHIRIUM("mochirium", 64, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
+    TAKICHIRUM("takichirum", 64, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
         enumMap.put(ArmorItem.Type.BOOTS, 12);
         enumMap.put(ArmorItem.Type.LEGGINGS, 16);
         enumMap.put(ArmorItem.Type.CHESTPLATE, 18);
         enumMap.put(ArmorItem.Type.HELMET, 13);
     }), 30, SoundEvents.ARMOR_EQUIP_NETHERITE, 10.0F, 0.5F, () -> {
-        return Ingredient.of(new ItemLike[]{ModItems.Mochirium_Ingot.get()});
+        return Ingredient.of(new ItemLike[]{ModItems.Takichirum_Ingot.get()});
     }),
 
 

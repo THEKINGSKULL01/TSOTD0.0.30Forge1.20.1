@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.custom.CrystalLampBlock;
+import net.thekingskull01.tsotd.block.custom.TakichirumCrop;
 import net.thekingskull01.tsotd.item.ModItems;
 
 import java.util.function.Supplier;
@@ -34,14 +35,9 @@ public class ModBlocks {
 
             //Custom blocks, Custom blocks, Custom blocks, Custom blocks
 
-    public static final RegistryObject<Block> Darkened_Crystal_Lamp = registerBlock("darkened_crystal_lamp",
-           () -> new CrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).mapColor(MapColor.COLOR_GRAY)
-                   .lightLevel(state -> state.getValue(CrystalLampBlock.LIT) ? 15 : 0)
-                   .lightLevel(state -> state.getValue(CrystalLampBlock.CLICKED) ? 15 : 0)));
-    //public static final RegistryObject<Block> Light_Crystal_Lamp = registerBlock("dark_crystal_lamp",
-    //       () -> new CrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).mapColor(MapColor.COLOR_LIGHT_GRAY)
-    //               .lightLevel(state -> state.getValue(CrystalLampBlock.LIT) ? 15 : 0)
-    //               .lightLevel(state -> state.getValue(CrystalLampBlock.CLICKED) ? 15 : 0)));
+    public static final RegistryObject<Block> Crystal_Lamp = registerBlock("crystal_lamp",
+           () -> new CrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP).mapColor(MapColor.COLOR_GRAY)
+                   .lightLevel(state -> state.getValue(CrystalLampBlock.LIT) || state.getValue(CrystalLampBlock.CLICKED) ? 15 : 0)));
 
 
             //Ores, Ores, Ores, Ores, Ores, Ores, Ores
@@ -139,6 +135,11 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).noOcclusion(), BlockSetType.WARPED));
     public static final RegistryObject<Block> Coal_Crystal_Trapdoor = registerBlock("coal_crystal_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).noOcclusion(), BlockSetType.CHERRY));
+
+    //Crops, Crops, Crops, Crops, Crops, Crops, Crops, Crops, Crops
+
+    public static final RegistryObject<Block> Takichirum_Crop = BLOCKS.register("takichirum_crop",
+            () -> new TakichirumCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
 
 
 

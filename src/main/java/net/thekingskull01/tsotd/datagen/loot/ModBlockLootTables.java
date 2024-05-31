@@ -1,19 +1,24 @@
 package net.thekingskull01.tsotd.datagen.loot;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.block.custom.TakichirumCrop;
 import net.thekingskull01.tsotd.item.ModItems;
 
 import java.util.Set;
@@ -34,7 +39,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.Light_Crystal_Block.get());
 
         //Lamps
-        this.dropSelf(ModBlocks.Darkened_Crystal_Lamp.get());
+        this.dropSelf(ModBlocks.Crystal_Lamp.get());
 
         //Stairs
 
@@ -104,6 +109,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrop1(ModBlocks.Dark_Crystal_Ore.get(), ModItems.Dark_Crystal.get()));
         this.add(ModBlocks.Light_Crystal_Ore.get(),
                 block -> createOreDrop1(ModBlocks.Dark_Crystal_Ore.get(), ModItems.Dark_Crystal.get()));
+
+        //Crops
+
+        LootItemCondition.Builder lootitemcondition$builder1 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.Takichirum_Crop.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TakichirumCrop.AGE, 6));
+        this.add(ModBlocks.Takichirum_Crop.get(), this.createCropDrops(ModBlocks.Takichirum_Crop.get(),
+                ModItems.Takichirum_Ingot.get(), ModItems.Takichirum_Seeds.get(), lootitemcondition$builder1));
 
     }
 
