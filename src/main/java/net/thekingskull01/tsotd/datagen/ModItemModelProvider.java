@@ -94,7 +94,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Paxel
 
-        handheldItem(ModItems.Takichirum_Paxel);
+        //handheldItem(ModItems.Takichirum_Paxel);
 
         //Hammer
 

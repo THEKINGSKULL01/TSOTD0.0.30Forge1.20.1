@@ -139,7 +139,7 @@ public class ModBlocks {
     //Crops, Crops, Crops, Crops, Crops, Crops, Crops, Crops, Crops
 
     public static final RegistryObject<Block> Takichirum_Crop = BLOCKS.register("takichirum_crop",
-            () -> new TakichirumCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
+            () -> new TakichirumCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion().randomTicks()));
 
 
 
@@ -160,5 +160,6 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
+
 
 }

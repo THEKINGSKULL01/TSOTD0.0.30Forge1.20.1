@@ -119,6 +119,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     }
 
+
+
     protected LootTable.Builder createCrystalCoalOreDrops(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock, (LootPoolEntryContainer.Builder)
                 this.applyExplosionDecay(pBlock,
