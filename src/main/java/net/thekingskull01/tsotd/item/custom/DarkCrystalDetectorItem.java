@@ -95,11 +95,12 @@ public class DarkCrystalDetectorItem extends Item {
         ItemStack dataTablet = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.Dark_Crystal_Data_Tablet.get()));
 
         CompoundTag data = new CompoundTag();
-        data.putString("tsotd.found_ore", "Found " + I18n.get(block.getDescriptionId()) + " at " + "(y = " + checkPos.getY() + ")");
+        data.putString("tsotd.found_ore", "Found " + I18n.get(block.getDescriptionId()) + " at " +
+                "( y = " + offset.getY() + " ) " +
+                "Player coordinates = ( x =" + player.getX() + " ) " +
+                "( z = = " + player.getZ() + " )");
 
         dataTablet.setTag(data);
-
-
 
     }
 
