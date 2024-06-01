@@ -21,8 +21,15 @@ public class ModEnchantments {
 
     public static final RegistryObject<Enchantment> AUTO_SMELTING =
             ENCHANTMENTS.register("auto_smelting",
-                    () -> new LightingStrikerEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.DIGGER,
-                            EquipmentSlot.MAINHAND));
+                    () -> new AutoSmeltEnchantment());
+
+    public static final RegistryObject<Enchantment> LIFE_STEALER =
+            ENCHANTMENTS.register("life_stealer",
+                    () -> new LifeStealerEnchantment());
+
+    public static final RegistryObject<Enchantment> REACHER =
+            ENCHANTMENTS.register("reacher",
+                    () -> new ReacherEnchantment());
 
 
     public static void register(IEventBus eventBus) {

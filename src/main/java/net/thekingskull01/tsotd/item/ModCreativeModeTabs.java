@@ -185,6 +185,12 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.Takichirum_Seeds.get());
 
+                        //Enchants
+
+                        //output.accept((ItemLike) ModEnchantments.AUTO_SMELTING.get());
+                        //output.accept((ItemLike) ModEnchantments.LIFE_STEALER.get());
+                        //output.accept((ItemLike) ModEnchantments.REACHER.get());
+
                     })
                     .build());
 

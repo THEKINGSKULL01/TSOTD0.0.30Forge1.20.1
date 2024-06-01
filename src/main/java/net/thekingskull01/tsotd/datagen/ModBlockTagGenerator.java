@@ -63,16 +63,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
         //Dark Crystal Tool
-        //this.tag(ModTags.Blocks.NEEDS_DARK_CRYSTAL_TOOL);
+        this.tag(ModTags.Blocks.NEEDS_DARK_CRYSTAL_TOOL).addTags(BlockTags.MINEABLE_WITH_PICKAXE);
 
 
 
         //Light Crystal Tool
-        //this.tag(ModTags.Blocks.NEEDS_LIGHT_CRYSTAL_TOOL);
+        this.tag(ModTags.Blocks.NEEDS_LIGHT_CRYSTAL_TOOL).addTags(BlockTags.MINEABLE_WITH_PICKAXE);
 
         //Netherite tool
 
-        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).addTags(BlockTags.MINEABLE_WITH_PICKAXE)
 
                 //Blocks
 
