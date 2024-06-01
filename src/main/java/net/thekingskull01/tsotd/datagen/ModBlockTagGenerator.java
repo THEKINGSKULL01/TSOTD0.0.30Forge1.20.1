@@ -52,27 +52,27 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.Coal_Crystal_Stairs.get());
 
 
-        //Mo~chirium Paxel
+        //Takichirum Paxel
         this.tag(ModTags.Blocks.PAXEL_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL, BlockTags.MINEABLE_WITH_HOE);
 
 
 
-        //Ultimate Hammer
+        //Takichirum Hammer
         this.tag(ModTags.Blocks.HAMMER_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_SHOVEL);
 
 
 
         //Dark Crystal Tool
-        this.tag(ModTags.Blocks.NEEDS_DARK_CRYSTAL_TOOL).addTags(BlockTags.MINEABLE_WITH_PICKAXE);
+        //this.tag(ModTags.Blocks.NEEDS_DARK_CRYSTAL_TOOL).addTags(BlockTags.MINEABLE_WITH_PICKAXE);
 
 
 
-        //Light Crystal Tool
-        this.tag(ModTags.Blocks.NEEDS_LIGHT_CRYSTAL_TOOL).addTags(BlockTags.MINEABLE_WITH_PICKAXE);
+        ////Light Crystal Tool
+        //this.tag(ModTags.Blocks.NEEDS_LIGHT_CRYSTAL_TOOL).addTags(BlockTags.MINEABLE_WITH_PICKAXE);
 
         //Netherite tool
 
-        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).addTags(BlockTags.MINEABLE_WITH_PICKAXE)
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
 
                 //Blocks
 

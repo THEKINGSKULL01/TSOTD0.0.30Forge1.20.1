@@ -39,7 +39,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
-        //Blocks to items
+        //Items to blocks
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.Coal_Crystal_Block.get())
                 .pattern("###")
@@ -68,7 +68,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Light_Crystal.get()).build()))
                 .save(consumer);
 
-        //Items to blocks
+        //Blocks to items
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.Crystallized_Coal.get(), 9)
                 .requires(ModBlocks.Coal_Crystal_Block.get())

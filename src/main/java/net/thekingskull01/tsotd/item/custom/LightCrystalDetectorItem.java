@@ -43,7 +43,7 @@ public class LightCrystalDetectorItem extends Item {
             for(int z = -16; z < 16; z++){
                 //y radius, looks in x2xz2xy256
                 ChunkAccess access = context.getLevel().getChunkAt(pos);
-                //y hight, going negative for y = -64 is better as it'll allow you to search for the thing you want, even if your blow it
+                //y height, going negative for y = -64 is better as it'll allow you to search for the thing you want, even if your blow it
                 for(int y = -64; y <= 64; y++){
                     BlockPos checkPos = pos.offset(x,-y,z);
                     BlockState state = access.getBlockState(checkPos);
@@ -69,7 +69,7 @@ public class LightCrystalDetectorItem extends Item {
             for(int z = -32; z < 32; z++){
                 //y radius, looks in x2xz2xy256
                 BlockPos positionClicked = context.getClickedPos();
-                //y hight, going negative for y = -128 is better as it'll allow you to search for the thing you want, even if your blow it
+                //y height, going negative for y = -128 is better as it'll allow you to search for the thing you want, even if your blow it
                 for(int y = -128; y <= 128; y++){
                     BlockPos checkPos = pos.offset(x,-y,z);
                     BlockState state = context.getLevel().getBlockState(checkPos);
