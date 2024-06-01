@@ -134,6 +134,9 @@ public class ModItemModelProvider extends ItemModelProvider {
        //Seeds
        simpleItem(ModItems.Takichirum_Seeds);
 
+       //Flowers
+       simpleBlockItemBlockTexture(ModBlocks.Dancing_Flower_Leaf);
+
 
 
 
@@ -149,6 +152,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(TSOTD.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(TSOTD.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {

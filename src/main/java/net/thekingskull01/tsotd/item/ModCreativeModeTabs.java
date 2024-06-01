@@ -185,6 +185,12 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.Takichirum_Seeds.get());
 
+                        //Flowers
+
+                        output.accept(ModBlocks.Dancing_Flower_Leaf.get());
+
+
+
                         //Enchants
 
                         //output.accept((ItemLike) ModEnchantments.AUTO_SMELTING.get());

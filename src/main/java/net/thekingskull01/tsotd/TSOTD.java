@@ -1,7 +1,9 @@
 package net.thekingskull01.tsotd ;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -47,6 +49,10 @@ public class TSOTD {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ComposterBlock.COMPOSTABLES.put(ModItems.Takichirum_Seeds.get(), 1.0f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.Dancing_Flower_Leaf.get(), 1.0f);
+        });
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.Dancing_Flower_Leaf.getId(),ModBlocks.Potted_Dancing_Flower_Leaf);
         });
     }
 

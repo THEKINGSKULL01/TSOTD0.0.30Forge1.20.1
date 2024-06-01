@@ -50,6 +50,9 @@
   "block.tsotd.coal_crystal_trapdoor": "Crystallized Coal Trapdoor",
 
 
+  "block.tsotd.dancing_flower_leaf": "Dancing Flower Leaf",
+
+
   "block.tsotd.dark_crystal_ore": "Dark Crystal Ore",
   "block.tsotd.light_crystal_ore": "Light Crystal Ore",
   "block.tsotd.coal_crystal_ore": "Crystallized Coal Ore",
@@ -129,6 +132,9 @@
 
 
   "enchantment.tsotd.lightning_striker": "Lightning Striker",
+  "enchantment.tsotd.auto_smelting": "AutoSmelt",
+  "enchantment.tsotd.reacher": "Reacher",
+  "enchantment.tsotd.life_stealer": "Life Stealer",
 
 
   "tooltip.tsotd.dark_crystal_detector.tooltip": "Finds Dark Crystal In The End",

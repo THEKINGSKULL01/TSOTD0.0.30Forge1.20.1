@@ -2,6 +2,7 @@ package net.thekingskull01.tsotd.block;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -141,6 +142,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> Takichirum_Crop = BLOCKS.register("takichirum_crop",
             () -> new TakichirumCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion().randomTicks()));
+
+    //Flowers, Flowers, Flowers, Flowers, Flowers, Flowers, Flowers
+
+    public static final RegistryObject<Block> Dancing_Flower_Leaf = registerBlock("dancing_flower_leaf",
+            () -> new FlowerBlock(() -> MobEffects.MOVEMENT_SPEED, 6, BlockBehaviour.Properties.copy(Blocks.POPPY).noCollission().noOcclusion()));
+    public static final RegistryObject<Block> Potted_Dancing_Flower_Leaf = BLOCKS.register("potted_dancing_flower_leaf",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.Dancing_Flower_Leaf,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
 
 
     //Extra, Dont touch

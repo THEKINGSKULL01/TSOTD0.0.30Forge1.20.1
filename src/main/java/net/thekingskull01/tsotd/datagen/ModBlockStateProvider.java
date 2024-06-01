@@ -144,6 +144,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeCrop(((TakichirumCrop) ModBlocks.Takichirum_Crop.get()), "takichirum_stage", "takichirum_stage");
 
+        //Flowers
+
+        simpleBlockWithItem(ModBlocks.Dancing_Flower_Leaf.get(), models().cross(blockTexture(ModBlocks.Dancing_Flower_Leaf.get()).getPath(),
+                blockTexture(ModBlocks.Dancing_Flower_Leaf.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.Potted_Dancing_Flower_Leaf.get(), models().singleTexture("potted_dancing_flower_leaf",
+                new ResourceLocation("flower_pot_cross"), "plant",blockTexture(ModBlocks.Dancing_Flower_Leaf.get())).renderType("cutout"));
+
 
 
 

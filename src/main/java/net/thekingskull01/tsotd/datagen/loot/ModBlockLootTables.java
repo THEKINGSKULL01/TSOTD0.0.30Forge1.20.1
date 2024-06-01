@@ -7,7 +7,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
@@ -116,6 +115,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TakichirumCrop.AGE, 6));
         this.add(ModBlocks.Takichirum_Crop.get(), this.createCropDrops(ModBlocks.Takichirum_Crop.get(),
                 ModItems.Takichirum_Ingot.get(), ModItems.Takichirum_Seeds.get(), lootitemcondition$builder1));
+
+        //Flowers
+
+        this.dropSelf(ModBlocks.Dancing_Flower_Leaf.get());
+        this.add(ModBlocks.Potted_Dancing_Flower_Leaf.get(), createPotFlowerItemTable(ModBlocks.Potted_Dancing_Flower_Leaf.get()));
 
     }
 
