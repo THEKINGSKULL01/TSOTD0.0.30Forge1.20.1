@@ -33,9 +33,18 @@ public class ModCreativeModeTabs {
 
                         //Swords
 
-                        output.accept(ModItems.Takichirum_Sword.get());
                         output.accept(ModItems.Dark_Crystal_Sword.get());
                         output.accept(ModItems.Light_Crystal_Sword.get());
+                        output.accept(ModItems.Takichirum_Sword.get());
+
+                        //Shields
+
+                        output.accept(ModItems.Takichirum_Shield.get());
+
+                        //Bows
+
+                        output.accept(ModItems.Dark_Crystal_Bow.get());
+                        output.accept(ModItems.Light_Crystal_Bow.get());
 
                         //Paxel
 
@@ -65,6 +74,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Dark_Crystal_Hoe.get());
                         output.accept(ModItems.Light_Crystal_Hoe.get());
 
+                        //DarkCrystal Armor
+
+                        output.accept(ModItems.Dark_Crystal_Helmet.get());
+                        output.accept(ModItems.Dark_Crystal_Chestplate.get());
+                        output.accept(ModItems.Dark_Crystal_Leggings.get());
+                        output.accept(ModItems.Dark_Crystal_Boots.get());
 
                         //Light Crystal Armor
 
@@ -73,12 +88,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Light_Crystal_Leggings.get());
                         output.accept(ModItems.Light_Crystal_Boots.get());
 
-                        //DarkCrystal Armor
-
-                        output.accept(ModItems.Dark_Crystal_Helmet.get());
-                        output.accept(ModItems.Dark_Crystal_Chestplate.get());
-                        output.accept(ModItems.Dark_Crystal_Leggings.get());
-                        output.accept(ModItems.Dark_Crystal_Boots.get());
 
                         //Mo~chirium Armor
 

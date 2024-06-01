@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.item.custom.*;
 
 public class ModItems{
@@ -69,11 +70,17 @@ public class ModItems{
 
     public static final RegistryObject<Item> Takichirum_Sword = ITEMS.register("takichirum_sword",
             () -> new TakichirumSwordItem(ModToolTiers.TAKICHIRUM, 3,1F, new Item.Properties()));
-
     public static final RegistryObject<Item> Dark_Crystal_Sword = ITEMS.register("dark_crystal_sword",
             () -> new SwordItem(ModToolTiers.DARK_CRYSTAL, 8,0.6F, new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal_Sword = ITEMS.register("light_crystal_sword",
             () -> new SwordItem(ModToolTiers.LIGHT_CRYSTAL, 8,0.6F, new Item.Properties()));
+
+            //Bows
+
+    public static final RegistryObject<Item> Dark_Crystal_Bow = ITEMS.register("dark_crystal_bow",
+            () -> new BowItem(new Item.Properties().stacksTo(1).durability(4500)));
+    public static final RegistryObject<Item> Light_Crystal_Bow = ITEMS.register("light_crystal_bow",
+            () -> new BowItem(new Item.Properties().stacksTo(1).durability(4500)));
 
             //Pickaxes
 
@@ -113,6 +120,11 @@ public class ModItems{
     public static final RegistryObject<Item> Takichirum_Hammer = ITEMS.register("takichirum_hammer",
             () -> new HammerItem(ModToolTiers.TAKICHIRUM, 2, 4F, new Item.Properties()));
 
+    //Shield
+
+    public static final RegistryObject<Item> Takichirum_Shield = ITEMS.register("takichirum_shield",
+            () -> new ShieldItem(new Item.Properties().durability(3500) ));
+
             //Food
 
     public static final RegistryObject<Item> Dark_Crystal_Steak = ITEMS.register("dark_crystal_steak",
@@ -146,6 +158,11 @@ public class ModItems{
 
     public static final RegistryObject<Item> Takichirum_Seeds = ITEMS.register("takichirum_seeds",
             () -> new ItemNameBlockItem(ModBlocks.Takichirum_Crop.get(), new Item.Properties()));
+
+            //Enchanted books
+
+    //public static final RegistryObject<Item> Life_Stealer_Book = ITEMS.register("life_stealer_book",
+    //        () -> new EnchantedBookItem(ModEnchantments.LIFE_STEALER.get(), new Item.Properties()));
 
 
     public static void  register(IEventBus eventBus) {

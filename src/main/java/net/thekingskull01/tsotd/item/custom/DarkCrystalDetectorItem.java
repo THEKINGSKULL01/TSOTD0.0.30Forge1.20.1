@@ -51,7 +51,7 @@ public class DarkCrystalDetectorItem extends Item {
                         //Hurt the Item
                         context.getItemInHand().hurtAndBreak(1, player, _player -> _player.broadcastBreakEvent(_player.getUsedItemHand()));
                         //Output text to Player
-                        player.sendSystemMessage(Component.literal("Found " + I18n.get(state.getBlock().getDescriptionId()) + " at " +
+                        player.sendSystemMessage(Component.literal("Found |~Dark Crystal Ore~| at " +
                                 "(y = " + checkPos.getY() + ")"));
                         //DataTablet stuffs
                         if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.Dark_Crystal_Memory_Orb.get())) {

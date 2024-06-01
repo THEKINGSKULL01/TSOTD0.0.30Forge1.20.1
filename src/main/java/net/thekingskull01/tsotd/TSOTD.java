@@ -19,6 +19,8 @@ import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.item.ModCreativeModeTabs;
 import net.thekingskull01.tsotd.item.ModItemProperties;
 import net.thekingskull01.tsotd.item.ModItems;
+import net.thekingskull01.tsotd.loot.ModLootModifers;
+import net.thekingskull01.tsotd.painting.ModPaintings;
 import org.slf4j.Logger;
 
 
@@ -39,6 +41,9 @@ public class TSOTD {
         ModBlocks.register(modEventBus);
 
         ModEnchantments.register(modEventBus);
+
+        ModLootModifers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

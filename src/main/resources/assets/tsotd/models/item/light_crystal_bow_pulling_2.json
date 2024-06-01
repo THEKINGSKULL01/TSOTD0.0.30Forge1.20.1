@@ -1,0 +1,6 @@
+{
+    "parent": "tsotd:item/light_crystal_bow",
+    "textures": {
+        "layer0": "tsotd:item/light_crystal_bow_pulling_2"
+    }
+}
