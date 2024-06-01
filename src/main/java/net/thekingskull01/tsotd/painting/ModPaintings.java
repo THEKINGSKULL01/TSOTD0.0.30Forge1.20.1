@@ -12,7 +12,7 @@ public class ModPaintings {
             DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, TSOTD.MOD_ID);
 
     public static final RegistryObject<PaintingVariant> TAKICHI = PAINTING_VARIANTS.register("takichi",
-            () -> new PaintingVariant(64, 64));
+            () -> new PaintingVariant(16, 16));
 
     public static void register (IEventBus eventBus) {
         PAINTING_VARIANTS.register(eventBus);
