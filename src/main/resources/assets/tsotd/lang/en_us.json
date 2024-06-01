@@ -136,6 +136,11 @@
   "item.tsotd.takichirum_seeds": "Tak~chium Seeds",
 
 
+  "item.minecraft.potion.effect.tsotd_slimey_potion": "Slippery Slime Potion",
+  "item.minecraft.splash_potion.effect.tsotd_slimey_potion": "Slippery Slime Splash Potion",
+  "item.minecraft.lingering_potion.effect.tsotd_slimey_potion": "Slippery Slime Lingering Potion",
+
+
   "painting.tsotd.world.title": "Tak~chi",
   "painting.tsotd.world.auther": "THEKINGSKULL01",
 
@@ -144,6 +149,9 @@
   "enchantment.tsotd.auto_smelting": "AutoSmelt",
   "enchantment.tsotd.reacher": "Reacher",
   "enchantment.tsotd.life_stealer": "Life Stealer",
+
+
+  "effect.tsotd.slimey": "Slippery Slime",
 
 
   "tooltip.tsotd.dark_crystal_detector.tooltip": "Finds Dark Crystal In The End",

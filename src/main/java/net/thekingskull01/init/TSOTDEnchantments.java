@@ -1,6 +1,5 @@
 package net.thekingskull01.init;
 
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;

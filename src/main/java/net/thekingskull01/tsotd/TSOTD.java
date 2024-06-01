@@ -1,11 +1,15 @@
 package net.thekingskull01.tsotd ;
 
 import com.mojang.logging.LogUtils;
+import net.kaupenjoe.mccourse.potion.BetterBrewingRecipe;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,12 +19,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.effect.ModEffects;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.item.ModCreativeModeTabs;
 import net.thekingskull01.tsotd.item.ModItemProperties;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.loot.ModLootModifers;
 import net.thekingskull01.tsotd.painting.ModPaintings;
+import net.thekingskull01.tsotd.potion.ModPotions;
 import org.slf4j.Logger;
 
 
@@ -45,6 +51,10 @@ public class TSOTD {
         ModLootModifers.register(modEventBus);
         ModPaintings.register(modEventBus);
 
+        ModEffects.register(modEventBus);
+
+        ModPotions.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -59,6 +69,9 @@ public class TSOTD {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.Dancing_Flower_Leaf.getId(),ModBlocks.Potted_Dancing_Flower_Leaf);
         });
+
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.get()));
+
     }
 
     // Add the example block item to the building blocks tab

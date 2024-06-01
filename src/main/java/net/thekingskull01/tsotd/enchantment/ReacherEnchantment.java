@@ -4,7 +4,6 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.thekingskull01.tsotd.TSOTD;
 
 public class ReacherEnchantment extends Enchantment {
     public ReacherEnchantment(EquipmentSlot... slots) {
