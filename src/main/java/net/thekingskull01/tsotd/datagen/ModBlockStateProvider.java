@@ -33,9 +33,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Blocks
 
+    blockWithItem(ModBlocks.Coal_Crystal_Block);
     blockWithItem(ModBlocks.Dark_Crystal_Block);
     blockWithItem(ModBlocks.Light_Crystal_Block);
-    blockWithItem(ModBlocks.Coal_Crystal_Block);
+    blockWithItem(ModBlocks.Takichirum_Block);
+
 
         //Stairs
 

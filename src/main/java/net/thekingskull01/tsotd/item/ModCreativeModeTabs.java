@@ -121,9 +121,11 @@ public class ModCreativeModeTabs {
 
                         //Blocks
 
+                        output.accept(ModBlocks.Coal_Crystal_Block.get());
                         output.accept(ModBlocks.Dark_Crystal_Block.get());
                         output.accept(ModBlocks.Light_Crystal_Block.get());
-                        output.accept(ModBlocks.Coal_Crystal_Block.get());
+                        output.accept(ModBlocks.Takichirum_Block.get());
+
 
                         //Lamps
 

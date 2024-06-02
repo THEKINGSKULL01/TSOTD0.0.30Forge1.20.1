@@ -29,12 +29,14 @@ public class ModBlocks {
 
     //Blocks, Blocks, Blocks, Blocks, Blocks
 
+    public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).explosionResistance(4)));
     public static final RegistryObject<Block> Dark_Crystal_Block = registerBlock("dark_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Light_Crystal_Block = registerBlock("light_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).explosionResistance(4)));
+    public static final RegistryObject<Block> Takichirum_Block = registerBlock("takichirum_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.ANCIENT_DEBRIS)));
 
     //Lamps, Lamps, Lamps, Lamps, Lamps, Lamps, Lamps
 

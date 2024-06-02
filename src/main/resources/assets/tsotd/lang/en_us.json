@@ -1,8 +1,10 @@
 {
 
+  "block.tsotd.coal_crystal_block": "Block Of Crystallized Coal",
   "block.tsotd.dark_crystal_block": "Block Of Dark Crystal",
   "block.tsotd.light_crystal_block": "Block Of Light Crystal",
-  "block.tsotd.coal_crystal_block": "Block Of Crystallized Coal",
+  "block.tsotd.takichirum_block": "Block Of Takichirum",
+
 
   "block.tsotd.dark_crystal_lamp": "Dark Crystallized Lamp",
 

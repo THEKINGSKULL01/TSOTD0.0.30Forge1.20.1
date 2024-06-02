@@ -26,10 +26,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Minerals
         simpleItem(ModItems.Crystallized_Coal);
-        simpleItem(ModItems.Takichirum_Ingot);
-
         simpleItem(ModItems.Dark_Crystal);
         simpleItem(ModItems.Light_Crystal);
+        simpleItem(ModItems.Takichirum_Ingot);
+
+        //Parts
 
         simpleItem(ModItems.Dark_Stick);
         simpleItem(ModItems.Light_Stick);
