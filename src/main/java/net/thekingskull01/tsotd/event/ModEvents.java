@@ -82,28 +82,28 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.DIRT, 32),
-                    new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 20, 0.06f
+                    new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 10, 0.06f
             ));
 
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.STONE, 32),
-                    new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 20, 0.06f
+                    new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 20, 0.07f
             ));
 
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.DIAMOND, 32),
-                    new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 20, 0.06f
+                    new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 20, 0.08f
             ));
 
             trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 32),
-                    new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 20, 0.06f
+                    new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 50, 0.09f
             ));
 
             trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 24),
                     new ItemStack(Items.NETHERITE_SCRAP, 8),
-                    new ItemStack(ModBlocks.Dancing_Flower_Leaf.get(), 1), 10, 20, 0.06f
+                    new ItemStack(ModBlocks.Dancing_Flower_Leaf.get(), 1), 10, 100, 1f
             ));
         }
     }

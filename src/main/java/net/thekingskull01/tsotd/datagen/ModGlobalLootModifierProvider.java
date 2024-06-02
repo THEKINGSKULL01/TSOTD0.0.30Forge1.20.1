@@ -33,9 +33,10 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
     protected void start() {
 
         //Block to Item
-        add("takichirum_seeds_from_dancing_flower_leaf", new AddItemModifer(new LootItemCondition[] {
+        add("takichirum_seeds_from_dancing_flower_leaf", new AddItemModifer(new LootItemCondition[]{
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.Dancing_Flower_Leaf.get()).build(),
-                LootItemRandomChanceCondition.randomChance(0.15f).build() }, ModItems.Takichirum_Seeds.get()));
+                LootItemRandomChanceCondition.randomChance(0.15f).build()}, ModItems.Takichirum_Seeds.get()));
+    }
 
         //Chest enchantments
 
@@ -45,11 +46,7 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
     //    add("lifestealer_enchantment_from_jungle_temple", new AddItemModifer(new LootItemCondition[] {
     //             new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
     //    LootItemRandomChanceCondition.randomChance(1f).build()}, lifeStealer().getItem()));
-//
-//
-//
-//
-    }
+    //   }
     //private static ItemStack lifeStealer() {
     //    ItemStack lifeStealer = new ItemStack(Items.ENCHANTED_BOOK);
     //    EnchantmentHelper.enchantItem(ModEnchantments.LIFE_STEALER.get(), 1);
