@@ -107,6 +107,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Crystallized_Coal.get());
                         output.accept(ModItems.Dark_Crystal.get());
                         output.accept(ModItems.Light_Crystal.get());
+                        output.accept(ModItems.Darkened_Light_Crystal.get());
                         output.accept(ModItems.Takichirum_Ingot.get());
 
                         //Workbenches
@@ -124,6 +125,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Coal_Crystal_Block.get());
                         output.accept(ModBlocks.Dark_Crystal_Block.get());
                         output.accept(ModBlocks.Light_Crystal_Block.get());
+                        output.accept(ModBlocks.Darkened_Light_Crystal_Block.get());
                         output.accept(ModBlocks.Takichirum_Block.get());
 
 
@@ -136,42 +138,49 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Dark_Crystal_Stairs.get());
                         output.accept(ModBlocks.Light_Crystal_Stairs.get());
                         output.accept(ModBlocks.Coal_Crystal_Stairs.get());
+                        output.accept(ModBlocks.Darkened_Light_Crystal_Stairs.get());
 
                         //Slabs
 
                         output.accept(ModBlocks.Dark_Crystal_Slab.get());
                         output.accept(ModBlocks.Light_Crystal_Slab.get());
                         output.accept(ModBlocks.Coal_Crystal_Slab.get());
+                        output.accept(ModBlocks.Darkened_Light_Crystal_Slab.get());
 
                         //Buttons
 
                         output.accept(ModBlocks.Dark_Crystal_Button.get());
                         output.accept(ModBlocks.Light_Crystal_Button.get());
                         output.accept(ModBlocks.Coal_Crystal_Button.get());
+                        output.accept(ModBlocks.Darkened_Light_Crystal_Button.get());
 
                         //PressurePlates
 
                         output.accept(ModBlocks.Dark_Crystal_Pressure_Plate.get());
                         output.accept(ModBlocks.Light_Crystal_Pressure_Plate.get());
                         output.accept(ModBlocks.Coal_Crystal_Pressure_Plate.get());
+                        output.accept(ModBlocks.Darkened_Light_Crystal_Pressure_Plate.get());
 
                         //Walls
 
                         output.accept(ModBlocks.Dark_Crystal_Wall.get());
                         output.accept(ModBlocks.Light_Crystal_Wall.get());
                         output.accept(ModBlocks.Coal_Crystal_Wall.get());
+                        output.accept(ModBlocks.Darkened_Light_Crystal_Wall.get());
 
                         //Fences
 
                         output.accept(ModBlocks.Dark_Crystal_Fence.get());
                         output.accept(ModBlocks.Light_Crystal_Fence.get());
                         output.accept(ModBlocks.Coal_Crystal_Fence.get());
+                        output.accept(ModBlocks.Darkened_Light_Crystal_Fence.get());
 
                         //FenceGates
 
                         output.accept(ModBlocks.Dark_Crystal_Fence_Gate.get());
                         output.accept(ModBlocks.Light_Crystal_Fence_Gate.get());
                         output.accept(ModBlocks.Coal_Crystal_Fence_Gate.get());
+                        output.accept(ModBlocks.Darkened_Light_Crystal_Fence_Gate.get());
 
                         //Doors
 

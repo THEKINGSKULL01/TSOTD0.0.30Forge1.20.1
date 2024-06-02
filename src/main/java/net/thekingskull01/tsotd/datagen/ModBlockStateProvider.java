@@ -36,6 +36,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     blockWithItem(ModBlocks.Coal_Crystal_Block);
     blockWithItem(ModBlocks.Dark_Crystal_Block);
     blockWithItem(ModBlocks.Light_Crystal_Block);
+    blockWithItem(ModBlocks.Darkened_Light_Crystal_Block);
     blockWithItem(ModBlocks.Takichirum_Block);
 
 
@@ -44,18 +45,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
     stairsBlock((StairBlock) ModBlocks.Dark_Crystal_Stairs.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
     stairsBlock((StairBlock) ModBlocks.Light_Crystal_Stairs.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     stairsBlock((StairBlock) ModBlocks.Coal_Crystal_Stairs.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+    stairsBlock((StairBlock) ModBlocks.Darkened_Light_Crystal_Stairs.get(), blockTexture(ModBlocks.Darkened_Light_Crystal_Block.get()));
 
         //Slabs
 
     slabBlock(((SlabBlock) ModBlocks.Dark_Crystal_Slab.get()), blockTexture(ModBlocks.Dark_Crystal_Block.get()), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
     slabBlock(((SlabBlock) ModBlocks.Light_Crystal_Slab.get()), blockTexture(ModBlocks.Light_Crystal_Block.get()), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     slabBlock(((SlabBlock) ModBlocks.Coal_Crystal_Slab.get()), blockTexture(ModBlocks.Coal_Crystal_Block.get()), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+    slabBlock(((SlabBlock) ModBlocks.Darkened_Light_Crystal_Slab.get()), blockTexture(ModBlocks.Darkened_Light_Crystal_Block.get()), blockTexture(ModBlocks.Darkened_Light_Crystal_Block.get()));
 
         //Button
 
     buttonBlock((ButtonBlock) ModBlocks.Dark_Crystal_Button.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
     buttonBlock((ButtonBlock) ModBlocks.Light_Crystal_Button.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     buttonBlock((ButtonBlock) ModBlocks.Coal_Crystal_Button.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+    buttonBlock((ButtonBlock) ModBlocks.Darkened_Light_Crystal_Button.get(), blockTexture(ModBlocks.Darkened_Light_Crystal_Block.get()));
 
 
         //PressurePlate
@@ -63,24 +67,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
     pressurePlateBlock((PressurePlateBlock) ModBlocks.Dark_Crystal_Pressure_Plate.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
     pressurePlateBlock((PressurePlateBlock) ModBlocks.Light_Crystal_Pressure_Plate.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     pressurePlateBlock((PressurePlateBlock) ModBlocks.Coal_Crystal_Pressure_Plate.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+    pressurePlateBlock((PressurePlateBlock) ModBlocks.Darkened_Light_Crystal_Pressure_Plate.get(), blockTexture(ModBlocks.Darkened_Light_Crystal_Block.get()));
 
         //Walls
 
     wallBlock((WallBlock) ModBlocks.Dark_Crystal_Wall.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
     wallBlock((WallBlock) ModBlocks.Light_Crystal_Wall.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     wallBlock((WallBlock) ModBlocks.Coal_Crystal_Wall.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+    wallBlock((WallBlock) ModBlocks.Darkened_Light_Crystal_Wall.get(), blockTexture(ModBlocks.Darkened_Light_Crystal_Block.get()));
 
         //Fences
 
     fenceBlock((FenceBlock) ModBlocks.Dark_Crystal_Fence.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
     fenceBlock((FenceBlock) ModBlocks.Light_Crystal_Fence.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     fenceBlock((FenceBlock) ModBlocks.Coal_Crystal_Fence.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+    fenceBlock((FenceBlock) ModBlocks.Darkened_Light_Crystal_Fence.get(), blockTexture(ModBlocks.Darkened_Light_Crystal_Block.get()));
 
         //Fencegates
 
     fenceGateBlock((FenceGateBlock) ModBlocks.Dark_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Dark_Crystal_Block.get()));
     fenceGateBlock((FenceGateBlock) ModBlocks.Light_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Light_Crystal_Block.get()));
     fenceGateBlock((FenceGateBlock) ModBlocks.Coal_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Coal_Crystal_Block.get()));
+    fenceGateBlock((FenceGateBlock) ModBlocks.Darkened_Light_Crystal_Fence_Gate.get(), blockTexture(ModBlocks.Darkened_Light_Crystal_Block.get()));
 
         //Doors
 
@@ -108,12 +116,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.Dark_Crystal_Stairs);
         blockItem(ModBlocks.Light_Crystal_Stairs);
         blockItem(ModBlocks.Coal_Crystal_Stairs);
+        blockItem(ModBlocks.Darkened_Light_Crystal_Stairs);
 
         //Slab blockItem
 
         blockItem(ModBlocks.Dark_Crystal_Slab);
         blockItem(ModBlocks.Light_Crystal_Slab);
         blockItem(ModBlocks.Coal_Crystal_Slab);
+        blockItem(ModBlocks.Darkened_Light_Crystal_Slab);
 
         //Button "blockItem" is in the "Mod-Item-Model-Provider"
 
@@ -122,6 +132,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.Dark_Crystal_Pressure_Plate);
         blockItem(ModBlocks.Light_Crystal_Pressure_Plate);
         blockItem(ModBlocks.Coal_Crystal_Pressure_Plate);
+        blockItem(ModBlocks.Darkened_Light_Crystal_Pressure_Plate);
 
         //Walls are in ModItemModelProvider for the "blockItem"
 
@@ -133,6 +144,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.Dark_Crystal_Fence_Gate);
         blockItem(ModBlocks.Light_Crystal_Fence_Gate);
         blockItem(ModBlocks.Coal_Crystal_Fence_Gate);
+        blockItem(ModBlocks.Darkened_Light_Crystal_Fence_Gate);
 
         //Doors are in ModItemModelProvider for the "blockItem"
 

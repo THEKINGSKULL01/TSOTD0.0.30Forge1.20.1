@@ -3,43 +3,53 @@
   "block.tsotd.coal_crystal_block": "Block Of Crystallized Coal",
   "block.tsotd.dark_crystal_block": "Block Of Dark Crystal",
   "block.tsotd.light_crystal_block": "Block Of Light Crystal",
+  "block.tsotd.darkened_light_crystal_block": "Block Of Darkened Light Crystal",
   "block.tsotd.takichirum_block": "Block Of Takichirum",
 
 
   "block.tsotd.dark_crystal_lamp": "Dark Crystallized Lamp",
 
+
   "block.tsotd.dark_crystal_stairs": "Dark Crystal Stairs",
   "block.tsotd.light_crystal_stairs": "Light Crystal Stairs",
   "block.tsotd.coal_crystal_stairs": "Crystallized Coal Stairs",
+  "block.tsotd.darkened_light_crystal_stairs": "Darkened Light Crystal Stairs",
+
 
   "block.tsotd.dark_crystal_slab": "Dark Crystal Slab",
   "block.tsotd.light_crystal_slab": "Light Crystal Slab",
   "block.tsotd.coal_crystal_slab": "Crystallized Coal Slab",
+  "block.tsotd.darkened_light_crystal_slab": "Darkened Light Crystal Slab",
 
 
   "block.tsotd.dark_crystal_button": "Dark Crystal Button",
   "block.tsotd.light_crystal_button": "Light Crystal Button",
   "block.tsotd.coal_crystal_button": "Crystallized Coal Button",
+  "block.tsotd.darkened_light_crystal_button": "Darkened Light Crystal Button",
 
 
   "block.tsotd.dark_crystal_pressure_plate": "Dark Crystal Pressure Plate",
   "block.tsotd.light_crystal_pressure_plate": "Light Crystal Pressure Plate",
   "block.tsotd.coal_crystal_pressure_plate": "Crystallized Coal Pressure Plate",
+  "block.tsotd.darkened_light_crystal_pressure_plate": "Darkened Light Crystal Pressure Plate",
 
 
   "block.tsotd.dark_crystal_wall": "Dark Crystal Walls",
   "block.tsotd.light_crystal_wall": "Light Crystal Walls",
   "block.tsotd.coal_crystal_wall": "Crystallized Coal Walls",
+  "block.tsotd.darkened_light_crystal_wall": "Darkened Light Crystal Walls",
 
 
   "block.tsotd.dark_crystal_fence": "Dark Crystal Fence",
   "block.tsotd.light_crystal_fence": "Light Crystal Fence",
   "block.tsotd.coal_crystal_fence": "Crystallized Coal Fence",
+  "block.tsotd.darkened_light_crystal_fence": "Darkened Light Crystal Fence",
 
 
   "block.tsotd.dark_crystal_fence_gate": "Dark Crystal Fence Gate",
   "block.tsotd.light_crystal_fence_gate": "Light Crystal Fence Gate",
   "block.tsotd.coal_crystal_fence_gate": "Crystallized Coal Fence Gate",
+  "block.tsotd.darkened_light_crystal_fence_gate": "Darkened Light Crystal Fence Gate",
 
 
   "block.tsotd.dark_crystal_door": "Dark Crystal Door",
@@ -62,14 +72,17 @@
   "block.tsotd.light_crystal_ore": "Light Crystal Ore",
   "block.tsotd.coal_crystal_ore": "Crystallized Coal Ore",
 
+
+  "item.tsotd.crystallized_coal": "Crystallized Coal",
   "item.tsotd.dark_crystal": "Dark Crystal",
   "item.tsotd.light_crystal": "Light Crystal",
+  "item.tsotd.darkened_light_crystal": "Darkened Light Crystal",
   "item.tsotd.takichirum_ingot": "Takichirum Ingot",
-  "item.tsotd.crystallized_coal": "Crystallized Coal",
 
 
   "item.tsotd.dark_crystal_detector": "Dark Crystal Detector",
   "item.tsotd.light_crystal_detector": "Light Crystal Detector",
+
 
   "item.tsotd.dark_crystal_memory_orb": "Dark Crystal Memory Orb",
   "item.tsotd.light_crystal_memory_orb": "Light Crystal Memory Orb",
@@ -104,7 +117,9 @@
   "item.tsotd.light_crystal_sword": "Light Crystallized Sword",
   "item.tsotd.takichirum_sword": "Takichirum Sword",
 
+
   "item.tsotd.takichirum_shield": "Takichirum Shield",
+
 
   "item.tsotd.dark_crystal_bow": "Dark Crystallized Bow",
   "item.tsotd.light_crystal_bow": "Light Crystallized Bow",

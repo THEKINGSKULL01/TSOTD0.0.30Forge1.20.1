@@ -66,7 +66,7 @@ public class TSOTD {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ComposterBlock.COMPOSTABLES.put(ModItems.Takichirum_Seeds.get(), 1.0f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.Takichirum_Seeds.get(), 2.0f);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.Dancing_Flower_Leaf.get(), 1.0f);
         });
         event.enqueueWork(() -> {

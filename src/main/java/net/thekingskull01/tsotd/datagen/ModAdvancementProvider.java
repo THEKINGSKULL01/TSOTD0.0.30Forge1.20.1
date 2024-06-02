@@ -41,7 +41,7 @@ public class ModAdvancementProvider implements ForgeAdvancementProvider.Advancem
 
         Advancement lightCrystalDetector = Advancement.Builder.advancement()
                 .display(new DisplayInfo(new ItemStack(ModItems.Light_Crystal_Detector.get()),
-                        Component.literal("Raise into the light"), Component.literal("So, into the Light?"),
+                        Component.literal("Raise into the Light"), Component.literal("So, into the Light?"),
                         null, FrameType.GOAL,
                         true,true,false))
                 .parent(rootAdvancement)
@@ -75,8 +75,8 @@ public class ModAdvancementProvider implements ForgeAdvancementProvider.Advancem
                         null, FrameType.TASK,
                         true,true,false))
                 .parent(takichirumIngot)
-                .addCriterion("has_takichirum_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.Takichirum_Ingot.get()))
-                .save(saver, new ResourceLocation(TSOTD.MOD_ID, "takichirum_ingot"), existingFileHelper);
+                .addCriterion("has_takichirum_block", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.Takichirum_Block.get()))
+                .save(saver, new ResourceLocation(TSOTD.MOD_ID, "takichirum_block"), existingFileHelper);
 
 
         Advancement takichirumPaxel = Advancement.Builder.advancement()

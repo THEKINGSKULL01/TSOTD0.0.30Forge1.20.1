@@ -107,15 +107,18 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.Dark_Crystal_Wall.get())
                 .add(ModBlocks.Light_Crystal_Wall.get())
-                .add(ModBlocks.Coal_Crystal_Wall.get());
+                .add(ModBlocks.Coal_Crystal_Wall.get())
+                .add(ModBlocks.Darkened_Light_Crystal_Wall.get());
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.Dark_Crystal_Fence.get())
                 .add(ModBlocks.Light_Crystal_Fence.get())
-                .add(ModBlocks.Coal_Crystal_Fence.get());
+                .add(ModBlocks.Coal_Crystal_Fence.get())
+                .add(ModBlocks.Darkened_Light_Crystal_Fence.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.Dark_Crystal_Fence_Gate.get())
                 .add(ModBlocks.Light_Crystal_Fence_Gate.get())
-                .add(ModBlocks.Coal_Crystal_Fence_Gate.get());
+                .add(ModBlocks.Coal_Crystal_Fence_Gate.get())
+                .add(ModBlocks.Darkened_Light_Crystal_Fence_Gate.get());
 
 
     }

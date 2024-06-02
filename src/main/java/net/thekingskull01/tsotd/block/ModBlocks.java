@@ -35,6 +35,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Light_Crystal_Block = registerBlock("light_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> Darkened_Light_Crystal_Block = registerBlock("darkened_light_crystal_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
     public static final RegistryObject<Block> Takichirum_Block = registerBlock("takichirum_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.ANCIENT_DEBRIS)));
 
@@ -70,6 +72,8 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.Light_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Coal_Crystal_Stairs = registerBlock("coal_crystal_stairs",
             () -> new StairBlock(() -> ModBlocks.Coal_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> Darkened_Light_Crystal_Stairs = registerBlock("darkened_light_crystal_stairs",
+            () -> new StairBlock(() -> ModBlocks.Darkened_Light_Crystal_Block.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
 
     //Slabs, Slabs, Slabs, Slabs, Slabs, Slabs
 
@@ -79,6 +83,8 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> Coal_Crystal_Slab = registerBlock("coal_crystal_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> Darkened_Light_Crystal_Slab = registerBlock("darkened_light_crystal_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
 
     //Buttons, Buttons, Buttons, Buttons, Buttons
 
@@ -87,7 +93,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> Light_Crystal_Button = registerBlock("light_crystal_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
     public static final RegistryObject<Block> Coal_Crystal_Button = registerBlock("coal_crystal_button",
-            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 30, true));
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).sound(SoundType.STONE), BlockSetType.STONE, 30, true));
+    public static final RegistryObject<Block> Darkened_Light_Crystal_Button = registerBlock("darkened_light_crystal_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK), BlockSetType.STONE, 30, true));
 
     //Pressure Plates, Pressure Plates, Pressure Plates
 
@@ -100,6 +108,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> Coal_Crystal_Pressure_Plate = registerBlock("coal_crystal_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK),
                     BlockSetType.STONE));
+    public static final RegistryObject<Block> Darkened_Light_Crystal_Pressure_Plate = registerBlock("darkened_light_crystal_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK),
+                    BlockSetType.STONE));
 
     //Walls, Walls, Walls, Walls, Walls, Walls, Walls
 
@@ -108,7 +119,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> Light_Crystal_Wall = registerBlock("light_crystal_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> Coal_Crystal_Wall = registerBlock("coal_crystal_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK)));
+    public static final RegistryObject<Block> Darkened_Light_Crystal_Wall = registerBlock("darkened_light_crystal_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
 
     //Fence, Fence, Fence, Fence, Fence, Fence, Fence
 
@@ -117,7 +130,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> Light_Crystal_Fence = registerBlock("light_crystal_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> Coal_Crystal_Fence = registerBlock("coal_crystal_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK)));
+    public static final RegistryObject<Block> Darkened_Light_Crystal_Fence = registerBlock("darkened_light_crystal_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
 
     //Gates, Gates, Gates, Gates, Gates, Gates, Gates
 
@@ -126,7 +141,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> Light_Crystal_Fence_Gate = registerBlock("light_crystal_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> Coal_Crystal_Fence_Gate = registerBlock("coal_crystal_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> Darkened_Light_Crystal_Fence_Gate = registerBlock("darkened_light_crystal_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
     //Doors, Doors, Doors, Doors, Doors, Doors, Doors, Doors
 

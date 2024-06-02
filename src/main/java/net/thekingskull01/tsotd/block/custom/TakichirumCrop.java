@@ -18,7 +18,7 @@ public class TakichirumCrop extends CropBlock {
     public static final int MAX_AGE = 6;
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0,6);
 
-    protected static float Takichirum_Crop(Block pBlock, BlockGetter pLevel, BlockPos pPos) {
+    protected static float getGrowthSpeed(Block pBlock, BlockGetter pLevel, BlockPos pPos) {
         float f = 1.0F;
         BlockPos blockpos = pPos.below();
 
@@ -45,7 +45,16 @@ public class TakichirumCrop extends CropBlock {
 
     @Override
     public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
-        super.randomTick(pState, pLevel, pPos, pRandom);
+        if (pLevel.getRawBrightness(pPos, 0) >= 9) {
+            int age = this.getAge(pState);
+            if (age < this.getMaxAge()) {
+                float growthSpeed = 150.0F;
+
+                if (pRandom.nextFloat() < growthSpeed) {
+                    pLevel.setBlock(pPos, this.getStateForAge(age + 1), 2);
+                }
+            }
+        }
     }
 
     public TakichirumCrop(Properties pProperties) {

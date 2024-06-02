@@ -18,14 +18,17 @@ public class ModItems{
 
             //Minerals
 
+    public static final RegistryObject<Item> Crystallized_Coal = ITEMS.register("crystallized_coal",
+                    () -> new FuelItem(new Item.Properties(), 8000));
     public static final RegistryObject<Item> Dark_Crystal = ITEMS.register("dark_crystal",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal = ITEMS.register("light_crystal",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> Darkened_Light_Crystal = ITEMS.register("darkened_light_crystal",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Takichirum_Ingot = ITEMS.register("takichirum_ingot",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> Crystallized_Coal = ITEMS.register("crystallized_coal",
-            () -> new FuelItem(new Item.Properties(), 8000));
+
 
 
     //Armor, Armor, Armor, Armor, Armor, Armor, Armor, Armor, Armor, Armor

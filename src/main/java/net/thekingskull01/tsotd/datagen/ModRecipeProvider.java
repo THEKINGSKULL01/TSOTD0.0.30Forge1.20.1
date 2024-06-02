@@ -36,6 +36,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             ModBlocks.Dark_Crystal_Door.get(),
             ModBlocks.Dark_Crystal_Trapdoor.get());
 
+    private static final List<ItemLike> Light_Crystal_Stone_Cutting = List.of(
+            ModBlocks.Light_Crystal_Slab.get(),
+            ModBlocks.Light_Crystal_Stairs.get(),
+            ModBlocks.Light_Crystal_Wall.get(),
+            ModBlocks.Light_Crystal_Fence.get(),
+            ModBlocks.Light_Crystal_Fence_Gate.get(),
+            ModBlocks.Light_Crystal_Door.get(),
+            ModBlocks.Light_Crystal_Trapdoor.get());
+
+    private static final List<ItemLike> Darkened_Light_Crystal_Stone_Cutting = List.of(
+            ModBlocks.Darkened_Light_Crystal_Slab.get(),
+            ModBlocks.Darkened_Light_Crystal_Stairs.get(),
+            ModBlocks.Darkened_Light_Crystal_Wall.get(),
+            ModBlocks.Darkened_Light_Crystal_Fence.get(),
+            ModBlocks.Darkened_Light_Crystal_Fence_Gate.get());
+
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
@@ -55,7 +71,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .pattern("###")
                 .define('#', ModItems.Dark_Crystal.get())
-                .unlockedBy("has_crystal_coal",
+                .unlockedBy("has_dark_crystal",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Dark_Crystal.get()).build()))
                 .save(consumer);
 
@@ -64,9 +80,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .pattern("###")
                 .define('#', ModItems.Light_Crystal.get())
-                .unlockedBy("has_crystal_coal",
+                .unlockedBy("has_light_crystal",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Light_Crystal.get()).build()))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.Darkened_Light_Crystal_Block.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.Darkened_Light_Crystal.get())
+                .unlockedBy("has_darkened_light_crystal",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Darkened_Light_Crystal.get()).build()))
+                .save(consumer);
+
+        //ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.Darkened_Light_Crystal_Block.get())
+        //        .pattern("121")
+        //        .pattern("232")
+        //        .pattern("121")
+        //        .define('1', ModBlocks.Dark_Crystal_Block.get())
+        //        .define('2', ModBlocks.Light_Crystal_Block.get())
+        //        .define('3', Items.DRAGON_EGG)
+        //        .unlockedBy("has_darkened_light_crystal", inventoryTrigger(ItemPredicate.Builder.item().of
+        //                (ModBlocks.Darkened_Light_Crystal_Block.get()).build()))
+        //        .save(consumer);
 
         //Blocks to items
 
@@ -86,6 +122,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.Light_Crystal_Block.get())
                 .unlockedBy("has_light_crystal_block",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Light_Crystal_Block.get()).build()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.Darkened_Light_Crystal.get(), 9)
+                .requires(ModBlocks.Darkened_Light_Crystal_Block.get())
+                .unlockedBy("has_darkened_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Darkened_Light_Crystal.get()).build()))
                 .save(consumer);
 
         //Raw items to Items
@@ -115,7 +156,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.Dark_Crystal_Steak.get())
                 .pattern("12")
                 .pattern("21")
-                .define('1', ModItems.Dark_Crystal_Steak.get())
+                .define('1', ModBlocks.Dark_Crystal_Block.get())
                 .define('2', Items.COOKED_BEEF)
                 .unlockedBy("has_dark_crystal_steak",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Dark_Crystal_Steak.get()).build()))
@@ -124,7 +165,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.Light_Crystal_Steak.get())
                 .pattern("21")
                 .pattern("12")
-                .define('1', ModItems.Light_Crystal_Steak.get())
+                .define('1', ModBlocks.Light_Crystal_Block.get())
                 .define('2', Items.COOKED_BEEF)
                 .unlockedBy("has_light_crystal_steak",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Light_Crystal_Steak.get()).build()))
@@ -163,6 +204,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_coal_crystal_block",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Darkened_Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Darkened_Light_Crystal_Stairs.get(),
+                        4)
+                .unlockedBy("has_darkened_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Darkened_Light_Crystal_Block.get()).build())).save(consumer);
+
         //Slabs
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
@@ -186,6 +234,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_coal_crystal_block",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Darkened_Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Darkened_Light_Crystal_Slab.get(),
+                        2)
+                .unlockedBy("has_darkened_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Darkened_Light_Crystal_Block.get()).build())).save(consumer);
+
         //Walls
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
@@ -208,6 +263,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         6)
                 .unlockedBy("has_coal_crystal_block",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Darkened_Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Darkened_Light_Crystal_Wall.get(),
+                        6)
+                .unlockedBy("has_darkened_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Darkened_Light_Crystal_Block.get()).build())).save(consumer);
         //Fences
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
@@ -230,6 +292,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         4)
                 .unlockedBy("has_coal_crystal_block",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Darkened_Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Darkened_Light_Crystal_Fence.get(),
+                        4)
+                .unlockedBy("has_darkened_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Darkened_Light_Crystal_Block.get()).build())).save(consumer);
+
         //FenceGates
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Dark_Crystal_Block.get()),
@@ -252,6 +322,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         2)
                 .unlockedBy("has_coal_crystal_block",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Coal_Crystal_Block.get()).build())).save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.Darkened_Light_Crystal_Block.get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        ModBlocks.Darkened_Light_Crystal_Fence_Gate.get(),
+                        2)
+                .unlockedBy("has_darkened_light_crystal_block",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.Darkened_Light_Crystal_Block.get()).build())).save(consumer);
 
 
     }

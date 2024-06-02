@@ -36,6 +36,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.Coal_Crystal_Block.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Block.get());
         this.dropSelf(ModBlocks.Light_Crystal_Block.get());
+        this.dropSelf(ModBlocks.Darkened_Light_Crystal_Block.get());
         this.dropSelf(ModBlocks.Takichirum_Block.get());
 
         //Lamps
@@ -46,6 +47,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.Coal_Crystal_Stairs.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Stairs.get());
         this.dropSelf(ModBlocks.Light_Crystal_Stairs.get());
+        this.dropSelf(ModBlocks.Darkened_Light_Crystal_Stairs.get());
 
         //Slabs
 
@@ -55,36 +57,43 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.Dark_Crystal_Slab.get()));
         this.add(ModBlocks.Light_Crystal_Slab.get(),
                 block -> createSlabItemTable(ModBlocks.Light_Crystal_Slab.get()));
+        this.add(ModBlocks.Darkened_Light_Crystal_Slab.get(),
+                block -> createSlabItemTable(ModBlocks.Darkened_Light_Crystal_Slab.get()));
 
         //Buttons
 
         this.dropSelf(ModBlocks.Coal_Crystal_Button.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Button.get());
         this.dropSelf(ModBlocks.Light_Crystal_Button.get());
+        this.dropSelf(ModBlocks.Darkened_Light_Crystal_Button.get());
 
         //PressurePlates
 
         this.dropSelf(ModBlocks.Coal_Crystal_Pressure_Plate.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Pressure_Plate.get());
         this.dropSelf(ModBlocks.Light_Crystal_Pressure_Plate.get());
+        this.dropSelf(ModBlocks.Darkened_Light_Crystal_Pressure_Plate.get());
 
         //Walls
 
         this.dropSelf(ModBlocks.Coal_Crystal_Wall.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Wall.get());
         this.dropSelf(ModBlocks.Light_Crystal_Wall.get());
+        this.dropSelf(ModBlocks.Darkened_Light_Crystal_Wall.get());
 
         //Fences
 
         this.dropSelf(ModBlocks.Coal_Crystal_Fence.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Fence.get());
         this.dropSelf(ModBlocks.Light_Crystal_Fence.get());
+        this.dropSelf(ModBlocks.Darkened_Light_Crystal_Fence.get());
 
         //FenceGates
 
         this.dropSelf(ModBlocks.Coal_Crystal_Fence_Gate.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Fence_Gate.get());
         this.dropSelf(ModBlocks.Light_Crystal_Fence_Gate.get());
+        this.dropSelf(ModBlocks.Darkened_Light_Crystal_Fence_Gate.get());
 
         //Doors
 

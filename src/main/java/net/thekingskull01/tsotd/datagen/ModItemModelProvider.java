@@ -28,6 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.Crystallized_Coal);
         simpleItem(ModItems.Dark_Crystal);
         simpleItem(ModItems.Light_Crystal);
+        simpleItem(ModItems.Darkened_Light_Crystal);
         simpleItem(ModItems.Takichirum_Ingot);
 
         //Parts
@@ -48,16 +49,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.Dark_Crystal_Button, ModBlocks.Dark_Crystal_Block);
         buttonItem(ModBlocks.Light_Crystal_Button, ModBlocks.Light_Crystal_Block);
         buttonItem(ModBlocks.Coal_Crystal_Button, ModBlocks.Coal_Crystal_Block);
+        buttonItem(ModBlocks.Darkened_Light_Crystal_Button, ModBlocks.Darkened_Light_Crystal_Block);
 
         //Walls
         wallItem(ModBlocks.Dark_Crystal_Wall, ModBlocks.Dark_Crystal_Block);
         wallItem(ModBlocks.Light_Crystal_Wall, ModBlocks.Light_Crystal_Block);
         wallItem(ModBlocks.Coal_Crystal_Wall, ModBlocks.Coal_Crystal_Block);
+        wallItem(ModBlocks.Darkened_Light_Crystal_Wall, ModBlocks.Darkened_Light_Crystal_Block);
 
         //Fences
         fenceItem(ModBlocks.Coal_Crystal_Fence, ModBlocks.Coal_Crystal_Block);
         fenceItem(ModBlocks.Dark_Crystal_Fence, ModBlocks.Dark_Crystal_Block);
         fenceItem(ModBlocks.Light_Crystal_Fence, ModBlocks.Light_Crystal_Block);
+        fenceItem(ModBlocks.Darkened_Light_Crystal_Fence, ModBlocks.Darkened_Light_Crystal_Block);
 
         //Doors
 
