@@ -27,6 +27,7 @@ import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.loot.ModLootModifers;
 import net.thekingskull01.tsotd.painting.ModPaintings;
 import net.thekingskull01.tsotd.potion.ModPotions;
+import net.thekingskull01.tsotd.villager.ModVillagers;
 import org.slf4j.Logger;
 
 
@@ -54,6 +55,8 @@ public class TSOTD {
         ModEffects.register(modEventBus);
 
         ModPotions.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

@@ -121,6 +121,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.Dancing_Flower_Leaf.get());
         this.add(ModBlocks.Potted_Dancing_Flower_Leaf.get(), createPotFlowerItemTable(ModBlocks.Potted_Dancing_Flower_Leaf.get()));
 
+        //Workbenches
+        this.dropSelf(ModBlocks.Takichirum_Workbench.get());
+
     }
 
 

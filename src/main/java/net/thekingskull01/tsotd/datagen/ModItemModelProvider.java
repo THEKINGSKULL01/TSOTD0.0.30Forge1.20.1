@@ -38,9 +38,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.Dark_Crystal_Detector);
         simpleItem(ModItems.Light_Crystal_Detector);
 
-        //DataTablets
-        //simpleItem(ModItems.Dark_Crystal_Data_Tablet);
-        //simpleItem(ModItems.Light_Crystal_Data_Tablet);
 
         //Food
         simpleItem(ModItems.Dark_Crystal_Steak);
@@ -92,55 +89,35 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.Dark_Crystal_Hoe);
         handheldItem(ModItems.Light_Crystal_Hoe);
 
-        //Paxel
-
-        //handheldItem(ModItems.Takichirum_Paxel);
 
         //Hammer
 
         handheldItem(ModItems.Takichirum_Hammer);
 
-        //Helmet
-
-        //simpleItem(ModItems.Takichirum_Helmet);
-        //simpleItem(ModItems.Dark_Crystal_Helmet);
-        //simpleItem(ModItems.Light_Crystal_Helmet);
-
-        //Chestplate
-
-        //simpleItem(ModItems.Takichirum_Chestplate);
-        //simpleItem(ModItems.Dark_Crystal_Chestplate);
-        //simpleItem(ModItems.Light_Crystal_Chestplate);
-
-        //Leggings
-
-        //simpleItem(ModItems.Takichirum_Leggings);
-        //simpleItem(ModItems.Dark_Crystal_Leggings);
-        //simpleItem(ModItems.Light_Crystal_Leggings);
-
-        //Boots
-
-       //simpleItem(ModItems.Takichirum_Boots);
-       //simpleItem(ModItems.Dark_Crystal_Boots);
-       //simpleItem(ModItems.Light_Crystal_Boots);
-
-
         //Horse Armor
 
-       simpleItem(ModItems.Takichirum_Horse_Armor);
-       simpleItem(ModItems.Dark_Crystal_Horse_Armor);
-       simpleItem(ModItems.Light_Crystal_Horse_Armor);
+        simpleItem(ModItems.Takichirum_Horse_Armor);
+        simpleItem(ModItems.Dark_Crystal_Horse_Armor);
+        simpleItem(ModItems.Light_Crystal_Horse_Armor);
 
-       //Seeds
-       simpleItem(ModItems.Takichirum_Seeds);
+        //Seeds
+        simpleItem(ModItems.Takichirum_Seeds);
 
-       //Flowers
-       simpleBlockItemBlockTexture(ModBlocks.Dancing_Flower_Leaf);
+        //Flowers
+        simpleBlockItemBlockTexture(ModBlocks.Dancing_Flower_Leaf);
 
+        //Workbenches
+        complexBlock(ModBlocks.Takichirum_Workbench.get());
 
 
 
     }
+
+    private ItemModelBuilder complexBlock(Block block) {
+        return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), new ResourceLocation(TSOTD.MOD_ID,
+                "block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
+    }
+
 
     private  ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

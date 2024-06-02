@@ -53,6 +53,9 @@
   "block.tsotd.dancing_flower_leaf": "Dancing Flower Leaf",
 
 
+  "block.tsotd.takichirum_workbench": "Takichirum Workbench",
+
+
   "block.tsotd.dark_crystal_ore": "Dark Crystal Ore",
   "block.tsotd.light_crystal_ore": "Light Crystal Ore",
   "block.tsotd.coal_crystal_ore": "Crystallized Coal Ore",
@@ -152,6 +155,9 @@
 
 
   "effect.tsotd.slimey": "Slippery Slime",
+
+
+  "entity.minecraft.villager.tsotd.takichirum_maintainer": "Takichirum Maintainer",
 
 
   "tooltip.tsotd.dark_crystal_detector.tooltip": "Finds Dark Crystal In The End",

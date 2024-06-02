@@ -162,7 +162,7 @@ public class ModItems{
             //Enchanted books
 
     //public static final RegistryObject<Item> Life_Stealer_Book = ITEMS.register("life_stealer_book",
-    //        () -> new EnchantedBookItem(ModEnchantments.LIFE_STEALER.get(), new Item.Properties()));
+    //        () -> new EnchantedBookItem(new Item.Properties()));
 
 
     public static void  register(IEventBus eventBus) {

@@ -16,6 +16,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.custom.CrystalLampBlock;
 import net.thekingskull01.tsotd.block.custom.TakichirumCrop;
+import net.thekingskull01.tsotd.block.custom.TakichirumWorkBenchBlock;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.item.custom.CrystalizedCoalBlock;
 
@@ -35,11 +36,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).explosionResistance(4)));
 
-    //Custom blocks, Custom blocks, Custom blocks, Custom blocks
+    //Lamps, Lamps, Lamps, Lamps, Lamps, Lamps, Lamps
 
     public static final RegistryObject<Block> Crystal_Lamp = registerBlock("crystal_lamp",
             () -> new CrystalLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP).mapColor(MapColor.COLOR_GRAY)
                     .lightLevel(state -> state.getValue(CrystalLampBlock.LIT) || state.getValue(CrystalLampBlock.CLICKED) ? 15 : 0)));
+
+    //WorkBenches
+
+    public static final RegistryObject<Block> Takichirum_Workbench = registerBlock("takichirum_workbench",
+            () -> new TakichirumWorkBenchBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).noOcclusion()));
 
 
     //Ores, Ores, Ores, Ores, Ores, Ores, Ores

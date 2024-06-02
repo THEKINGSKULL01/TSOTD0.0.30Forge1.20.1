@@ -109,6 +109,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Light_Crystal.get());
                         output.accept(ModItems.Takichirum_Ingot.get());
 
+                        //Workbenches
+                        output.accept(ModBlocks.Takichirum_Workbench.get());
+
 
                         //Ores
 

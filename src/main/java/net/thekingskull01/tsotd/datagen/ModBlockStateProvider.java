@@ -151,6 +151,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.Potted_Dancing_Flower_Leaf.get(), models().singleTexture("potted_dancing_flower_leaf",
                 new ResourceLocation("flower_pot_cross"), "plant",blockTexture(ModBlocks.Dancing_Flower_Leaf.get())).renderType("cutout"));
 
+        //Workbenches
+        horizontalBlock(ModBlocks.Takichirum_Workbench.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/takichirum_workbench")));
 
 
 
