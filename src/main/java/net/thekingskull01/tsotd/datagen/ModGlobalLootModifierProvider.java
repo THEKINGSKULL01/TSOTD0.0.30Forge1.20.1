@@ -29,6 +29,8 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         super(output, TSOTD.MOD_ID);
     }
 
+
+
     @Override
     protected void start() {
 
@@ -36,20 +38,23 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("takichirum_seeds_from_dancing_flower_leaf", new AddItemModifer(new LootItemCondition[]{
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.Dancing_Flower_Leaf.get()).build(),
                 LootItemRandomChanceCondition.randomChance(0.15f).build()}, ModItems.Takichirum_Seeds.get()));
-    }
+
 
         //Chest enchantments
 
-    //    add("lifestealer_enchantment_from_desert_pyramid", new AddItemModifer(new LootItemCondition[] {
-    //             new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
-    //            LootItemRandomChanceCondition.randomChance(1f).build()}, lifeStealer().getItem()));
-    //    add("lifestealer_enchantment_from_jungle_temple", new AddItemModifer(new LootItemCondition[] {
-    //             new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
-    //    LootItemRandomChanceCondition.randomChance(1f).build()}, lifeStealer().getItem()));
-    //   }
+        add("lifestealer_enchantment_from_desert_pyramid", new AddItemModifer(new LootItemCondition[]{
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
+                LootItemRandomChanceCondition.randomChance(1f).build()}, new ItemStack(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)).getItem()).getItem()));
+        add("lifestealer_enchantment_from_jungle_temple", new AddItemModifer(new LootItemCondition[]{
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
+                LootItemRandomChanceCondition.randomChance(1f).build()}, new ItemStack(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)).getItem()).getItem()));
+    }
+
+
+
     //private static ItemStack lifeStealer() {
-    //    ItemStack lifeStealer = new ItemStack(Items.ENCHANTED_BOOK);
-    //    EnchantmentHelper.enchantItem(ModEnchantments.LIFE_STEALER.get(), 1);
+    //    ItemStack lifeStealer = new ItemStack(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)));
+//
     //    return lifeStealer;
     //}
 
@@ -74,4 +79,7 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
     //    return pStack;
     //}
 
+
+
 }
+

@@ -6,8 +6,10 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -98,6 +100,11 @@ public class ModEvents {
             trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 32),
                     new ItemStack(Items.NETHERITE_SCRAP, 1), 10, 50, 2f
+            ));
+
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 32),
+                    EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)), 10, 50, 2f
             ));
 
             trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
