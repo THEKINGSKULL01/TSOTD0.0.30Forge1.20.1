@@ -10,6 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
+import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.custom.*;
 
 public class ModItems{
@@ -161,6 +162,10 @@ public class ModItems{
 
     public static final RegistryObject<Item> Takichirum_Seeds = ITEMS.register("takichirum_seeds",
             () -> new ItemNameBlockItem(ModBlocks.Takichirum_Crop.get(), new Item.Properties()));
+            //Seeds
+
+    public static final RegistryObject<Item> Glowstone_Fluid_Bucket = ITEMS.register("glowstone_fluid_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_GLOWSTONE_FLUID, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
             //Enchanted books
 

@@ -17,6 +17,7 @@ import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.custom.CrystalLampBlock;
 import net.thekingskull01.tsotd.block.custom.TakichirumCrop;
 import net.thekingskull01.tsotd.block.custom.TakichirumWorkBenchBlock;
+import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.item.custom.CrystalizedCoalBlock;
 
@@ -168,6 +169,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> Takichirum_Crop = BLOCKS.register("takichirum_crop",
             () -> new TakichirumCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion().randomTicks()));
 
+
     //Flowers, Flowers, Flowers, Flowers, Flowers, Flowers, Flowers
 
     public static final RegistryObject<Block> Dancing_Flower_Leaf = registerBlock("dancing_flower_leaf",
@@ -176,6 +178,10 @@ public class ModBlocks {
             () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.Dancing_Flower_Leaf,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
 
+    //Fluids, Fluids, Fluids, Fluids, Fluids, Fluids, Fluids, Fluids
+
+    public static final RegistryObject<LiquidBlock> Glowstone_Fluid = BLOCKS.register("glowstone_fluid",
+            () -> new LiquidBlock(ModFluids.SOURCE_GLOWSTONE_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     //Extra, Dont touch
 

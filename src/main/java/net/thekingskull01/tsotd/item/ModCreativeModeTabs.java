@@ -128,10 +128,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Darkened_Light_Crystal_Block.get());
                         output.accept(ModBlocks.Takichirum_Block.get());
 
-
                         //Lamps
 
                         output.accept(ModBlocks.Crystal_Lamp.get());
+
+                        //Liquid
+
+                        output.accept(ModItems.Glowstone_Fluid_Bucket.get());
 
                         //Stairs
 

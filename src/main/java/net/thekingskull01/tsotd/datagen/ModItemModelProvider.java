@@ -114,6 +114,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Workbenches
         complexBlock(ModBlocks.Takichirum_Workbench.get());
 
+        //Workbenches
+        simpleItem(ModItems.Glowstone_Fluid_Bucket);
+
 
 
     }

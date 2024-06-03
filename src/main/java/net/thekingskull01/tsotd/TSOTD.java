@@ -2,6 +2,8 @@ package net.thekingskull01.tsotd ;
 
 import com.mojang.logging.LogUtils;
 import net.kaupenjoe.mccourse.potion.BetterBrewingRecipe;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
@@ -21,11 +23,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.effect.ModEffects;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
+import net.thekingskull01.tsotd.fluid.ModFluidTypes;
+import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModCreativeModeTabs;
 import net.thekingskull01.tsotd.item.ModItemProperties;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.loot.ModLootModifers;
 import net.thekingskull01.tsotd.painting.ModPaintings;
+import net.thekingskull01.tsotd.particle.ModParticles;
 import net.thekingskull01.tsotd.potion.ModPotions;
 import net.thekingskull01.tsotd.villager.ModVillagers;
 import org.slf4j.Logger;
@@ -57,6 +62,13 @@ public class TSOTD {
         ModPotions.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+
+
+        ModParticles.register(modEventBus);
+
+
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -96,6 +108,8 @@ public class TSOTD {
             event.enqueueWork(() -> {
                 ModItemProperties.addCustomItemProperties();
 
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_GLOWSTONE_FLUID.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_GLOWSTONE_FLUID.get(), RenderType.translucent());
 
             });
 

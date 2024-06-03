@@ -161,6 +161,9 @@
   "item.minecraft.lingering_potion.effect.tsotd_slimey_potion": "Slippery Slime Lingering Potion",
 
 
+  "item.tsotd.glowstone_fluid_bucket": "Glowstone Bucket",
+
+
   "painting.tsotd.world.title": "Tak~chi",
   "painting.tsotd.world.auther": "THEKINGSKULL01",
 
@@ -175,6 +178,8 @@
 
 
   "entity.minecraft.villager.tsotd.takichirum_maintainer": "Takichirum Maintainer",
+
+
 
 
   "tooltip.tsotd.dark_crystal_detector.tooltip": "Finds Dark Crystal In The End",
