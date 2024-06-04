@@ -23,7 +23,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.effect.ModEffects;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
-import net.thekingskull01.tsotd.fluid.ModFluidTypes;
+import net.thekingskull01.tsotd.fluidtypes.ModFluidTypes;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModCreativeModeTabs;
 import net.thekingskull01.tsotd.item.ModItemProperties;
@@ -67,8 +67,13 @@ public class TSOTD {
         ModParticles.register(modEventBus);
 
 
-        ModFluidTypes.register(modEventBus);
-        ModFluids.register(modEventBus);
+        ModFluids.RECIPE_SERIALIZERS.register(modEventBus);
+        ModFluids.BLOCKS.register(modEventBus);
+        ModFluids.ITEMS.register(modEventBus);
+        ModFluids.FLUIDTYPES.register(modEventBus);
+        ModFluids.FLUIDS.register(modEventBus);
+        ModFluids.ENTITY_TYPES.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 
@@ -108,8 +113,8 @@ public class TSOTD {
             event.enqueueWork(() -> {
                 ModItemProperties.addCustomItemProperties();
 
-                ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_GLOWSTONE_FLUID.get(), RenderType.translucent());
-                ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_GLOWSTONE_FLUID.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.GLOWSTONE.FLUID.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.GLOWSTONE.FLUID_FLOW.get(), RenderType.translucent());
 
             });
 

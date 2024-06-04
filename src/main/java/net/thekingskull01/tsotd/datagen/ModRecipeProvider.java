@@ -7,10 +7,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModItems;
+import net.thekingskull01.tsotd.util.ConsumerWrapperBuilder;
 
 import java.util.Iterator;
 import java.util.List;
@@ -171,6 +175,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_light_crystal_steak",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Light_Crystal_Steak.get()).build()))
                 .save(consumer);
+
+        //Fluid Recipes
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModFluids.GLOWSTONE.FLUID_BUCKET.get())
+                .requires(Blocks.GLOWSTONE)
+                .requires(Items.WATER_BUCKET)
+                .unlockedBy("has_item", has(Items.WATER_BUCKET))
+                .save(ConsumerWrapperBuilder.wrap(ModFluids.CONSUMING_SHAPELESS.get()).build(consumer), getResource("glowstone_bucket"));
 
         //Smelting Items
 
@@ -361,6 +373,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     public static SingleItemRecipeBuilder stonecutting(Ingredient pIngredient, RecipeCategory pCategory, ItemLike pResult) {
         return new SingleItemRecipeBuilder(pCategory, RecipeSerializer.STONECUTTER, pIngredient, pResult, 1);
+    }
+
+    public ResourceLocation getResource(String name) {
+        return new ResourceLocation(TSOTD.MOD_ID, name);
     }
 
 

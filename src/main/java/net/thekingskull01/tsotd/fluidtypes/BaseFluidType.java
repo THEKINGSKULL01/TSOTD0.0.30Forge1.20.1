@@ -1,4 +1,4 @@
-package net.thekingskull01.tsotd.fluid;
+package net.thekingskull01.tsotd.fluidtypes;
 
 import com.mojang.blaze3d.shaders.FogShape;
 import com.mojang.blaze3d.systems.RenderSystem;

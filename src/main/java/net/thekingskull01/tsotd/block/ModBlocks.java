@@ -180,8 +180,8 @@ public class ModBlocks {
 
     //Fluids, Fluids, Fluids, Fluids, Fluids, Fluids, Fluids, Fluids
 
-    public static final RegistryObject<LiquidBlock> Glowstone_Fluid = BLOCKS.register("glowstone_fluid",
-            () -> new LiquidBlock(ModFluids.SOURCE_GLOWSTONE_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+    //public static final RegistryObject<LiquidBlock> Glowstone_Fluid = BLOCKS.register("glowstone_fluid",
+    //        () -> new LiquidBlock(ModFluids.SOURCE_GLOWSTONE_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     //Extra, Dont touch
 

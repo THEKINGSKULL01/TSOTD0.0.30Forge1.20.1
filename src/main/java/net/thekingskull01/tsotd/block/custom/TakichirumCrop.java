@@ -48,7 +48,7 @@ public class TakichirumCrop extends CropBlock {
         if (pLevel.getRawBrightness(pPos, 0) >= 9) {
             int age = this.getAge(pState);
             if (age < this.getMaxAge()) {
-                float growthSpeed = 150.0F;
+                float growthSpeed = 0.5F;
 
                 if (pRandom.nextFloat() < growthSpeed) {
                     pLevel.setBlock(pPos, this.getStateForAge(age + 1), 2);
@@ -80,8 +80,5 @@ public class TakichirumCrop extends CropBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(AGE);
     }
-
-
-
 
 }
