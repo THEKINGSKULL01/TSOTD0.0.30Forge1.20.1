@@ -18,7 +18,7 @@ public class TakichirumCrop extends CropBlock {
     public static final int MAX_AGE = 6;
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0,6);
 
-    protected static float getGrowthSpeed(Block pBlock, BlockGetter pLevel, BlockPos pPos) {
+    public static float getGrowthSpeed(Block pBlock, BlockGetter pLevel, BlockPos pPos) {
         float f = 1.0F;
         BlockPos blockpos = pPos.below();
 

@@ -44,11 +44,17 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
         add("lifestealer_enchantment_from_desert_pyramid", new AddItemModifer(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
-                LootItemRandomChanceCondition.randomChance(1f).build()}, new ItemStack(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)).getItem()).getItem()));
+                LootItemRandomChanceCondition.randomChance(1f).build()},
+                new ItemStack(EnchantedBookItem.createForEnchantment(
+                        new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)).getItem()).getItem()));
+
         add("lifestealer_enchantment_from_jungle_temple", new AddItemModifer(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
-                LootItemRandomChanceCondition.randomChance(1f).build()}, new ItemStack(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)).getItem()).getItem()));
+                LootItemRandomChanceCondition.randomChance(1f).build()},
+                new ItemStack(EnchantedBookItem.createForEnchantment(
+                        new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)).getItem()).getItem()));
     }
+
 
 
 

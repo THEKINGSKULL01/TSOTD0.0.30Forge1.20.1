@@ -29,6 +29,25 @@ public class LifeStealerEnchantment extends Enchantment {
 
     @Override
     public boolean isTradeable() {
-        return false;
+        return true;
     }
+
+    @Override
+    public boolean isDiscoverable() {
+        return true;
+    }
+
+    @Override
+    public int getMinCost(int cost) {
+        return cost * 6;
+    }
+
+    @Override
+    public int getMaxCost(int cost) {
+        return getMinCost(cost) + 10;
+    }
+
+
+
+
 }

@@ -3,6 +3,7 @@ package net.thekingskull01.tsotd.datagen;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -91,18 +92,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModItems.Darkened_Light_Crystal.get())
                 .unlockedBy("has_darkened_light_crystal",
                         inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.Darkened_Light_Crystal.get()).build()))
-                .save(consumer);
+                .save(consumer, new ResourceLocation("tsotd:darkened_light_crystals_to_darken_light_crystal_block"));
 
-        //ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.Darkened_Light_Crystal_Block.get())
-        //        .pattern("121")
-        //        .pattern("232")
-        //        .pattern("121")
-        //        .define('1', ModBlocks.Dark_Crystal_Block.get())
-        //        .define('2', ModBlocks.Light_Crystal_Block.get())
-        //        .define('3', Items.DRAGON_EGG)
-        //        .unlockedBy("has_darkened_light_crystal", inventoryTrigger(ItemPredicate.Builder.item().of
-        //                (ModBlocks.Darkened_Light_Crystal_Block.get()).build()))
-        //        .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.Darkened_Light_Crystal_Block.get())
+                .pattern("121")
+                .pattern("232")
+                .pattern("121")
+                .define('1', ModBlocks.Dark_Crystal_Block.get())
+                .define('2', ModBlocks.Light_Crystal_Block.get())
+                .define('3', Items.DRAGON_EGG)
+                .unlockedBy("has_darkened_light_crystal", inventoryTrigger(ItemPredicate.Builder.item().of
+                        (ModBlocks.Darkened_Light_Crystal_Block.get()).build()))
+                .save(consumer, new ResourceLocation("tsotd:dragon_egg_dark_crystal_light_crystal_block_to_darken_light_crystal_block"));
 
         //Blocks to items
 

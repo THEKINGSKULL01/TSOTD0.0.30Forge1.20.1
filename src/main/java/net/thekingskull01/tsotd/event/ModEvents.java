@@ -25,6 +25,7 @@ import net.thekingskull01.tsotd.enchantment.helper.LifeStealerEnchantmentHelper;
 import net.thekingskull01.tsotd.enchantment.helper.ReacherEnchantmentHelper;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.item.custom.HammerItem;
+import net.thekingskull01.tsotd.particle.ModParticles;
 import net.thekingskull01.tsotd.villager.ModVillagers;
 
 import java.util.HashSet;
@@ -115,6 +116,7 @@ public class ModEvents {
         }
     }
 
+
     @SubscribeEvent
     public static void addCustomWanderingTrades(WandererTradesEvent event) {
         List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
@@ -133,6 +135,9 @@ public class ModEvents {
                 new ItemStack(ModBlocks.Dancing_Flower_Leaf.get(), 1), 10, 15, 0.06f
         ));
     }
+
+
+
 }
 
 
