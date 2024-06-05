@@ -27,7 +27,7 @@ public class TakichirumCrop extends CropBlock {
                 float f1 = 0.0F;
                 BlockState blockstate = pLevel.getBlockState(blockpos.offset(i, 0, j));
                 if (blockstate.canSustainPlant(pLevel, blockpos.offset(i, 0, j), Direction.UP, (IPlantable) pBlock)) {
-                    f1 = 1000.0F;
+                    f1 = 0.5F;
                     if (blockstate.isFertile(pLevel, pPos.offset(i, 0, j))) {
                         f1 = 0.1F;
                     }
@@ -48,7 +48,7 @@ public class TakichirumCrop extends CropBlock {
         if (pLevel.getRawBrightness(pPos, 0) >= 9) {
             int age = this.getAge(pState);
             if (age < this.getMaxAge()) {
-                float growthSpeed = 1000.0F;
+                float growthSpeed = 0.5F;
 
                 if (pRandom.nextFloat() < growthSpeed) {
                     pLevel.setBlock(pPos, this.getStateForAge(age + 1), 2);
