@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_crystal_steak": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tsotd:dark_crystal_steak"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tsotd:dark_crystal_steak"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_crystal_steak",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tsotd:dark_crystal_steak"
+    ]
+  },
+  "sends_telemetry_event": false
+}

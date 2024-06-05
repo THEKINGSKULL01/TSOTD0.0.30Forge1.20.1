@@ -1,0 +1,39 @@
+{
+  "parent": "tsotd:takichirum_block",
+  "criteria": {
+    "has_takichirum_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tsotd:takichirum_paxel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Almost everything at once!?"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "tsotd:takichirum_paxel",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Dig them all!"
+    }
+  },
+  "requirements": [
+    [
+      "has_takichirum_paxel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

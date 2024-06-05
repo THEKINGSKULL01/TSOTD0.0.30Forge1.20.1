@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "tsotd:block/coal_crystal_block"
+  }
+}

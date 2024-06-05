@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tsotd:block/darkened_light_crystal_block"
+  }
+}

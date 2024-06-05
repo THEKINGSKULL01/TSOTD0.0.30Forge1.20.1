@@ -1,0 +1,39 @@
+{
+  "parent": "tsotd:takichirum_block",
+  "criteria": {
+    "has_takichirum_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tsotd:takichirum_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Is this overpowered?"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "tsotd:takichirum_sword",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Worse than MERRRDERRRR"
+    }
+  },
+  "requirements": [
+    [
+      "has_takichirum_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

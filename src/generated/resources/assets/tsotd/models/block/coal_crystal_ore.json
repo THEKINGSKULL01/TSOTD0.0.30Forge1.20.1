@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tsotd:block/coal_crystal_ore"
+  }
+}

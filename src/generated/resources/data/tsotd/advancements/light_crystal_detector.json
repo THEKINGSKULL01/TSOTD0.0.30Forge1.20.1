@@ -1,0 +1,39 @@
+{
+  "parent": "tsotd:crystalized_coal",
+  "criteria": {
+    "has_light_crystal_detector": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tsotd:light_crystal_detector"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "So, into the Light? (A parent to Darken Light Crystal)"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "tsotd:light_crystal_detector",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Raise into the Light"
+    }
+  },
+  "requirements": [
+    [
+      "has_light_crystal_detector"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

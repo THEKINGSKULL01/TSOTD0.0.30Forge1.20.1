@@ -1,0 +1,39 @@
+{
+  "parent": "tsotd:takichirum_block",
+  "criteria": {
+    "has_takichirum_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tsotd:takichirum_hammer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "ITS HAMMER TIME! OHH YEAH!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "tsotd:takichirum_hammer",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Such a bore"
+    }
+  },
+  "requirements": [
+    [
+      "has_takichirum_hammer"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

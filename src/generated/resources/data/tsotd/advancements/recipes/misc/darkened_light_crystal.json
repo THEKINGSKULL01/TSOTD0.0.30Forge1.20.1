@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_darkened_light_crystal_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tsotd:darkened_light_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tsotd:darkened_light_crystal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_darkened_light_crystal_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tsotd:darkened_light_crystal"
+    ]
+  },
+  "sends_telemetry_event": false
+}

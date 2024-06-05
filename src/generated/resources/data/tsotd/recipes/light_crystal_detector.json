@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "tsotd:light_crystal"
+    },
+    "2": {
+      "item": "tsotd:light_stick"
+    },
+    "3": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "pattern": [
+    "1  ",
+    " 23",
+    " 32"
+  ],
+  "result": {
+    "item": "tsotd:light_crystal_detector"
+  },
+  "show_notification": true
+}

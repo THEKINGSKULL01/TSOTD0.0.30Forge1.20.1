@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "tsotd:dark_crystal_block"
+    },
+    "2": {
+      "item": "tsotd:light_crystal_block"
+    },
+    "3": {
+      "item": "minecraft:dragon_egg"
+    }
+  },
+  "pattern": [
+    "121",
+    "232",
+    "121"
+  ],
+  "result": {
+    "item": "tsotd:darkened_light_crystal_block"
+  },
+  "show_notification": true
+}

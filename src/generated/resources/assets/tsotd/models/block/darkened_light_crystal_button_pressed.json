@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "tsotd:block/darkened_light_crystal_block"
+  }
+}

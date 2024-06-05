@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_crystalized_coal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tsotd:crystallized_coal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "tsotd:textures/block/takichirum_block.png",
+    "description": {
+      "text": "Why is this shiny? AND HOT! OUCH!"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "tsotd:crystallized_coal"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Getting started"
+    }
+  },
+  "requirements": [
+    [
+      "has_crystalized_coal"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

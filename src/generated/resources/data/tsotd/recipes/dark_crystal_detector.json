@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "tsotd:dark_crystal"
+    },
+    "2": {
+      "item": "tsotd:dark_stick"
+    },
+    "3": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "pattern": [
+    "1  ",
+    " 23",
+    " 32"
+  ],
+  "result": {
+    "item": "tsotd:dark_crystal_detector"
+  },
+  "show_notification": true
+}

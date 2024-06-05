@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "tsotd:block/darkened_light_crystal_block",
+    "side": "tsotd:block/darkened_light_crystal_block",
+    "top": "tsotd:block/darkened_light_crystal_block"
+  }
+}

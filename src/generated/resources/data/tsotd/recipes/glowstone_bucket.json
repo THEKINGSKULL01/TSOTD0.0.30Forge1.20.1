@@ -1,0 +1,15 @@
+{
+  "type": "tsotd:crafting_shapeless_consuming",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:glowstone"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "tsotd:glowstone_bucket"
+  }
+}
