@@ -17,6 +17,9 @@ import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.loot.AddItemModifer;
 
+import java.util.List;
+import java.util.Set;
+
 
 public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
     public ModGlobalLootModifierProvider(PackOutput output) {
@@ -43,10 +46,10 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         //        new ItemStack(EnchantedBookItem.createForEnchantment(
         //                new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)).getItem()).getItem()));
 
-    //    add("lifestealer_enchantment_from_jungle_temple", new AddItemModifer(new LootItemCondition[]{
-    //            new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
-    //            LootItemRandomChanceCondition.randomChance(1f).build()},
-    //            (EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)))));
+        //add("lifestealer_enchantment_from_jungle_temple", new AddItemModifer(new LootItemCondition[]{
+        //        new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
+        //        LootItemRandomChanceCondition.randomChance(1f).build()},
+        //        EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)));
     }
 
 }

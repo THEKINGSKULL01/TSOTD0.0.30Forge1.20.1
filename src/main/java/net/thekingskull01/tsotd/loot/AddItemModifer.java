@@ -36,7 +36,10 @@ public class AddItemModifer extends LootModifier {
     protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         for (LootItemCondition condition : this.conditions) {
             if (!condition.test(context)) {
-                ItemStack lifeStealer = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1));
+                EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1));
+                EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.AUTO_SMELTING.get(), 1));
+                EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.REACHER.get(), 1));
+                EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIGHTNING_STRIKER.get(), 1));
                 return generatedLoot;
             }
         }
