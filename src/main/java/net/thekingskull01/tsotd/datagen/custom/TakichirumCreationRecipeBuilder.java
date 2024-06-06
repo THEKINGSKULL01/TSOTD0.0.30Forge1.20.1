@@ -59,12 +59,13 @@ public class TakichirumCreationRecipeBuilder implements RecipeBuilder {
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        pFinishedRecipeConsumer.accept(new Result(this.result, this.count, this.left_slot, this.middle_slot, this.right_slot,
+        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.left_slot, this.middle_slot, this.right_slot,
                 this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + pRecipeId.getPath())));
 
     }
 
     public static class Result implements FinishedRecipe {
+        private final ResourceLocation ID;
         private final Item result;
         private final Ingredient left_slot;
         private final Ingredient middle_slot;
@@ -73,7 +74,8 @@ public class TakichirumCreationRecipeBuilder implements RecipeBuilder {
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(Item pResult, int pCount, Ingredient left_slot, Ingredient middle_slot, Ingredient right_slot, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
+        public Result(ResourceLocation ID, Item pResult, int pCount, Ingredient left_slot, Ingredient middle_slot, Ingredient right_slot, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
+            this.ID = ID;
             this.result = pResult;
             this.left_slot = left_slot;
             this.middle_slot = middle_slot;
