@@ -202,14 +202,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.Takichirum_Seeds.get(), 20) //Output
                 .unlockedBy("has_darkened_light_crystal_block", has(ModBlocks.Dark_Crystal_Block.get())).save(consumer);
 
-
-        new TakichirumCreationRecipeBuilder(
-                ModItems.Dark_Crystal.get(), //ingredient 1
-                ModItems.Darkened_Light_Crystal.get(),  //ingredient 2
-                ModItems.Light_Crystal.get(),  //ingredient 3
-                ModItems.Takichirum_Seeds.get(), 20) //Output
-                .unlockedBy("has_darkened_light_crystal_block", has(ModBlocks.Dark_Crystal_Block.get())).save(consumer);
-
         //StoneCutter
 
         //Stairs
