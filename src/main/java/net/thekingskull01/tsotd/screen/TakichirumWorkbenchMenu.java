@@ -11,7 +11,6 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.block.entity.TakichirumWorkbenchBE;
-import org.jetbrains.annotations.Nullable;
 
 public class TakichirumWorkbenchMenu extends AbstractContainerMenu {
     public final TakichirumWorkbenchBE blockEntity;

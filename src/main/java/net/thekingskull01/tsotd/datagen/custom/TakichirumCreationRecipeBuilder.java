@@ -17,18 +17,22 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.recipe.TakichirumCreationRecipe;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
 public class TakichirumCreationRecipeBuilder implements RecipeBuilder {
     private final Item result;
-    private final Ingredient ingredient;
+    private final Ingredient left_slot;
+    private final Ingredient middle_slot;
+    private final Ingredient right_slot;
     private final int count;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public TakichirumCreationRecipeBuilder(ItemLike ingredient, ItemLike result, int count) {
-        this.ingredient = Ingredient.of(ingredient);
+    public TakichirumCreationRecipeBuilder(ItemLike left_slot, ItemLike middle_slot, ItemLike right_slot, ItemLike result, int count) {
+        this.left_slot = Ingredient.of(left_slot);
+        this.middle_slot = Ingredient.of(middle_slot);
+        this.right_slot = Ingredient.of(right_slot);
         this.result = result.asItem();
         this.count = count;
     }
@@ -55,43 +59,47 @@ public class TakichirumCreationRecipeBuilder implements RecipeBuilder {
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient,
-                this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/"
-                + pRecipeId.getPath())));
+        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.left_slot, this.middle_slot, this.right_slot,
+                this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + pRecipeId.getPath())));
 
     }
 
     public static class Result implements FinishedRecipe {
         private final ResourceLocation id;
         private final Item result;
-        private final Ingredient ingredient;
+        private final Ingredient left_slot;
+        private final Ingredient middle_slot;
+        private final Ingredient right_slot;
         private final int count;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Item pResult, int pCount, Ingredient ingredient, Advancement.Builder pAdvancement,
-                      ResourceLocation pAdvancementId) {
+        public Result(ResourceLocation pId, Item pResult, int pCount, Ingredient left_slot, Ingredient middle_slot, Ingredient right_slot, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
             this.id = pId;
             this.result = pResult;
+            this.left_slot = left_slot;
+            this.middle_slot = middle_slot;
+            this.right_slot = right_slot;
             this.count = pCount;
-            this.ingredient = ingredient;
             this.advancement = pAdvancement;
             this.advancementId = pAdvancementId;
         }
 
         @Override
         public void serializeRecipeData(JsonObject pJson) {
-            JsonArray jsonarray = new JsonArray();
-            jsonarray.add(ingredient.toJson());
+            JsonArray jsonArray = new JsonArray();
+            jsonArray.add(left_slot.toJson());
+            jsonArray.add(middle_slot.toJson());
+            jsonArray.add(right_slot.toJson());
 
-            pJson.add("ingredients", jsonarray);
-            JsonObject jsonobject = new JsonObject();
-            jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+            pJson.add("ingredients", jsonArray);
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
             if (this.count > 1) {
-                jsonobject.addProperty("count", this.count);
+                jsonObject.addProperty("count", this.count);
             }
 
-            pJson.add("output", jsonobject);
+            pJson.add("output", jsonObject);
         }
 
         @Override

@@ -13,14 +13,12 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import net.thekingskull01.tsotd.TSOTD;
 
-import javax.annotation.Nullable;
-
-public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
+public class backup implements Recipe<SimpleContainer> {
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
     private final ResourceLocation id;
 
-    public TakichirumCreationRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id) {
+    public backup(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputItems) {
         this.inputItems = inputItems;
         this.output = output;
         this.id = id;
@@ -32,11 +30,13 @@ public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
             return false;
         }
 
-        return inputItems.get(0).test(pContainer.getItem(0));
+        return inputItems.get(0).test(pContainer.getItem(0)) &&
+                inputItems.get(1).test(pContainer.getItem(1)) &&
+                inputItems.get(2).test(pContainer.getItem(2));
     }
 
     @Override
-    public ItemStack assemble(SimpleContainer p_44001_, RegistryAccess p_267165_) {
+    public ItemStack assemble(SimpleContainer container, RegistryAccess registryAccess) {
         return output.copy();
     }
 
@@ -46,7 +46,7 @@ public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem(RegistryAccess pRegistryAccess) {
+    public ItemStack getResultItem(RegistryAccess access) {
         return output.copy();
     }
 
@@ -62,7 +62,7 @@ public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return new Serializer();
+        return Serializer.INSTANCE;
     }
 
     @Override
@@ -70,45 +70,45 @@ public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<TakichirumCreationRecipe> {
+    public static class Type implements RecipeType<backup> {
         private Type() { }
         public static final Type INSTANCE = new Type();
         public static final String ID = "takichirum_creation";
     }
 
-    public static class Serializer implements RecipeSerializer<TakichirumCreationRecipe> {
+    public static class Serializer implements RecipeSerializer<backup> {
         public static final Serializer INSTANCE = new Serializer();
         public static final ResourceLocation ID =
-                new ResourceLocation(TSOTD.MOD_ID, "takichirum_creation");
+                new ResourceLocation(TSOTD.MOD_ID,"takichirum_creation");
 
         @Override
-        public TakichirumCreationRecipe fromJson(ResourceLocation id, JsonObject json) {
+        public backup fromJson(ResourceLocation id, JsonObject json) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
             NonNullList<Ingredient> inputs = NonNullList.withSize(3, Ingredient.EMPTY);
 
-            for (int i = 0; i < inputs.size(); i++){
+            for (int i = 0; i < ingredients.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new TakichirumCreationRecipe(inputs, output, id);
+            return new backup(id, output, inputs);
         }
 
         @Override
-        public @Nullable TakichirumCreationRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
+        public backup fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
             NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
 
-            for (int i = 0; i < inputs.size(); i++){
+            for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromNetwork(buf));
             }
 
             ItemStack output = buf.readItem();
-            return new TakichirumCreationRecipe(inputs, output, id);
+            return new backup(id, output, inputs);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf buf, TakichirumCreationRecipe recipe) {
+        public void toNetwork(FriendlyByteBuf buf, backup recipe) {
             buf.writeInt(recipe.getIngredients().size());
 
             for (Ingredient ing : recipe.getIngredients()) {
@@ -117,5 +117,4 @@ public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
             buf.writeItemStack(recipe.getResultItem(null), false);
         }
     }
-
 }
