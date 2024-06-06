@@ -170,7 +170,7 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
         this.itemHandler.extractItem(RIGHT_INPUT_SLOT, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount()));
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount()+resultItem.getCount()));
     }
 
     private void resetProgress() {

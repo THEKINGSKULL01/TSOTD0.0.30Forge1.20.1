@@ -1,5 +1,6 @@
-// 1.20.1	2024-06-06T14:19:42.630735	Recipes
-6e711a3c61f87bcd2e4f4a782393781d226778c6 data/minecraft/advancements/recipes/takichirum_seeds_from_crystals.json
+// 1.20.1	2024-06-06T16:38:32.9566723	Recipes
+119824b574fd21d2fcea205b90b2a4c0905e6eaf data/minecraft/advancements/recipes/takichirum_netherite_creation.json
+24ebfc09841d455ca2e1091c0245870c998d8c31 data/minecraft/advancements/recipes/takichirum_seeds_from_crystals.json
 d87c244f4c074b2faefb5571c371e9f887514c18 data/tsotd/advancements/recipes/building_blocks/coal_crystal_fence.json
 4559e9769f36066ea7e590c63d519f0edf5ffc42 data/tsotd/advancements/recipes/building_blocks/coal_crystal_fence_gate.json
 f651046d93ba77f8dce64fb21a82bcd4bea04096 data/tsotd/advancements/recipes/building_blocks/coal_crystal_slab.json
@@ -72,4 +73,5 @@ b1b59f3d6c945bc4b3125d8c05a4f7df1e1073b0 data/tsotd/recipes/light_crystal_fence.
 449e9511cda15744053e1b307bcd8656c7ab9139 data/tsotd/recipes/light_crystal_stairs.json
 00b54cf48cf260afe7c53bd969dcc85c7a5a527a data/tsotd/recipes/light_crystal_steak.json
 3a18cca830cee825f0e7d3e7714cc67dd1bf987c data/tsotd/recipes/light_crystal_wall.json
-74e20d89dd74be03b84381d42757e46f7878870d data/tsotd/recipes/takichirum_seeds_from_takichirum_creation.json
+be29c0ae0b477e17d8e424ecc7a82871fe2df720 data/tsotd/recipes/netherite_block_from_takichirum_creation.json
+e551ee10200bad556839686ebeb1e8de4930b12f data/tsotd/recipes/takichirum_seeds_from_takichirum_creation.json
