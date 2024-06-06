@@ -2,6 +2,7 @@ package net.thekingskull01.tsotd ;
 
 import com.mojang.logging.LogUtils;
 import net.kaupenjoe.mccourse.potion.BetterBrewingRecipe;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.Items;
@@ -21,6 +22,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.block.entity.ModBlockEntitys;
 import net.thekingskull01.tsotd.effect.ModEffects;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.fluidtypes.ModFluidTypes;
@@ -32,6 +34,9 @@ import net.thekingskull01.tsotd.loot.ModLootModifers;
 import net.thekingskull01.tsotd.painting.ModPaintings;
 import net.thekingskull01.tsotd.particle.ModParticles;
 import net.thekingskull01.tsotd.potion.ModPotions;
+import net.thekingskull01.tsotd.recipe.ModRecipes;
+import net.thekingskull01.tsotd.screen.ModMenuTypes;
+import net.thekingskull01.tsotd.screen.TakichirumWorkbenchScreen;
 import net.thekingskull01.tsotd.villager.ModVillagers;
 import org.slf4j.Logger;
 
@@ -74,6 +79,11 @@ public class TSOTD {
         ModFluids.FLUIDS.register(modEventBus);
         ModFluids.ENTITY_TYPES.register(modEventBus);
 
+        ModBlockEntitys.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 
@@ -115,6 +125,8 @@ public class TSOTD {
 
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.GLOWSTONE.FLUID.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.GLOWSTONE.FLUID_FLOW.get(), RenderType.translucent());
+
+                MenuScreens.register(ModMenuTypes.TAKICHIRUM_WORKBENCH_MENU.get(), TakichirumWorkbenchScreen::new);
 
             });
 

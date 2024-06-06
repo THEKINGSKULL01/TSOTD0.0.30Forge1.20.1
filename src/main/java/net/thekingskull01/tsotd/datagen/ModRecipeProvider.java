@@ -12,6 +12,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
+import net.thekingskull01.tsotd.datagen.custom.TakichirumCreationRecipeBuilder;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.util.ConsumerWrapperBuilder;
@@ -191,6 +192,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreBlasting(consumer, Dark_Crystal_Smeltables, RecipeCategory.MISC, ModItems.Dark_Crystal.get(), 4.0F, 300, "dark_crystal");
         oreBlasting(consumer, Light_Crystal_Smeltables, RecipeCategory.MISC, ModItems.Light_Crystal.get(), 4.0F, 300, "light_crystal");
+
+        //Takichirum Workbench
+
+        new TakichirumCreationRecipeBuilder(
+                ModItems.Dark_Crystal.get(), //ingredient 1
+                ModItems.Darkened_Light_Crystal.get(),  //ingredient 2
+                ModItems.Light_Crystal.get(),  //ingredient 3
+                ModItems.Takichirum_Seeds.get(), 20) //Output
+                .unlockedBy("has_darkened_light_crystal_block", has(ModBlocks.Dark_Crystal_Block.get())).save(consumer);
+
+
+        new TakichirumCreationRecipeBuilder(
+                ModItems.Dark_Crystal.get(), //ingredient 1
+                ModItems.Darkened_Light_Crystal.get(),  //ingredient 2
+                ModItems.Light_Crystal.get(),  //ingredient 3
+                ModItems.Takichirum_Seeds.get(), 20) //Output
+                .unlockedBy("has_darkened_light_crystal_block", has(ModBlocks.Dark_Crystal_Block.get())).save(consumer);
 
         //StoneCutter
 
