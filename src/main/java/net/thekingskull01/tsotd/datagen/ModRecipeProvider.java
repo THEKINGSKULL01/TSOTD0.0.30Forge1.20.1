@@ -193,49 +193,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //Takichirum Workbench
 
-        //new TakichirumCreationRecipeBuilder.Result(RecipeCategory.MISC, ModItems.Takichirum_Seeds.get(), 20,
-        //        ModItems.Dark_Crystal.get(),
-        //        ModBlocks.Darkened_Light_Crystal_Block.get(),
-        //        ModItems.Light_Crystal.get())
-        //        .unlockedBy("has_darkened_light_crystal_block",
-        //                has(ModBlocks.Darkened_Light_Crystal_Block.get()))
-        //        .save(consumer);
-
-
-
         new TakichirumCreationRecipeBuilder(
                 ModItems.Dark_Crystal.get(),
                 ModBlocks.Darkened_Light_Crystal_Block.get(),
                 ModItems.Light_Crystal.get(),
-                ModItems.Takichirum_Seeds.get(), 20)
-                .unlockedBy("has_darkened_light_crystal_block",
-                        has(ModBlocks.Darkened_Light_Crystal_Block.get()))
-                .save(consumer);
+                ModItems.Takichirum_Seeds.get(), 10)
+                .unlockedBy("has_denim", has(ModBlocks.Dancing_Flower_Leaf.get()))
+                .save(consumer, new ResourceLocation("takichirum_seeds_from_crystals"));
 
-        //new TakichirumCreationRecipeBuilder(
-        //        ModItems.Dark_Crystal.get(),
-        //        ModItems.Darkened_Light_Crystal.get(),
-        //        ModItems.Light_Crystal.get(),
-        //        ModItems.Takichirum_Seeds.get(),10)
-        //        .unlockedBy("has_darkened_light_crystal_block",
-        //                has(ModBlocks.Darkened_Light_Crystal_Block.get()))
-        //        .save(consumer);
 
-        //new TakichirumCreationRecipeBuilder(
-        //        ModItems.Dark_Crystal.get(),
-        //        ModItems.Darkened_Light_Crystal.get(),
-        //        ModItems.Light_Crystal.get(),
-        //        ModItems.Takichirum_Seeds.get(),20)
-        //        .unlockedBy("has_darkened_light_crystal_block",
-        //                has(ModBlocks.Darkened_Light_Crystal_Block.get()))
-        //        .save(consumer, new ResourceLocation("tsotd:takichirum_seed_creation"));
-
-        //new TakichirumCreationRecipeBuilder(
-        //        ModItems.Dark_Crystal.get(), //ingredient 1
-        //        ModItems.Darkened_Light_Crystal.get(),  //ingredient 2
-        //        ModItems.Light_Crystal.get(),  //ingredient 3
-        //        ModItems.Takichirum_Seeds.get(), 20) //Output
-        //        .unlockedBy("has_darkened_light_crystal_block", has(ModBlocks.Dark_Crystal_Block.get())).save(consumer);
 
         //StoneCutter
 

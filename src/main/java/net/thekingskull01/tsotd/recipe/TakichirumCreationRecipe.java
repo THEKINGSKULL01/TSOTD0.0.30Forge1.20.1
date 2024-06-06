@@ -32,11 +32,13 @@ public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
             return false;
         }
 
-        return inputItems.get(0).test(pContainer.getItem(0));
+        return inputItems.get(0).test(pContainer.getItem(0)) &&
+        inputItems.get(1).test(pContainer.getItem(1)) &&
+        inputItems.get(2).test(pContainer.getItem(2));
     }
 
     @Override
-    public ItemStack assemble(SimpleContainer p_44001_, RegistryAccess p_267165_) {
+    public ItemStack assemble(SimpleContainer container, RegistryAccess access) {
         return output.copy();
     }
 
