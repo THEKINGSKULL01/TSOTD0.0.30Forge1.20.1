@@ -18,12 +18,12 @@ import javax.annotation.Nullable;
 public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
-    private final ResourceLocation id;
+    private final ResourceLocation ID;
 
-    public TakichirumCreationRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id) {
+    public TakichirumCreationRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation ID) {
         this.inputItems = inputItems;
         this.output = output;
-        this.id = id;
+        this.ID = ID;
     }
 
     @Override
@@ -59,7 +59,7 @@ public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public ResourceLocation getId() {
-        return id;
+        return ID;
     }
 
     @Override
@@ -80,8 +80,7 @@ public class TakichirumCreationRecipe implements Recipe<SimpleContainer> {
 
     public static class Serializer implements RecipeSerializer<TakichirumCreationRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID =
-                new ResourceLocation(TSOTD.MOD_ID, "takichirum_creation");
+        public static final ResourceLocation ID = new ResourceLocation(TSOTD.MOD_ID, "takichirum_creation");
 
         @Override
         public TakichirumCreationRecipe fromJson(ResourceLocation id, JsonObject json) {
