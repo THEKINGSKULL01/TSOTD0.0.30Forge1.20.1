@@ -198,7 +198,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.Darkened_Light_Crystal_Block.get(),
                 ModItems.Light_Crystal.get(),
                 ModItems.Takichirum_Seeds.get(), 10)
-                .unlockedBy("has_denim", has(ModBlocks.Dancing_Flower_Leaf.get()))
+                .unlockedBy("has_dancing_flower_leaf", has(ModBlocks.Dancing_Flower_Leaf.get()))
                 .save(consumer, new ResourceLocation("takichirum_seeds_from_crystals"));
 
 
