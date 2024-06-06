@@ -1,3 +1,9 @@
-// 1.20.1	2024-06-05T10:25:12.2132205	Global Loot Modifiers : tsotd
-f2595959f9719d970236180737b5a7bc103f6861 data/forge/loot_modifiers/global_loot_modifiers.json
+// 1.20.1	2024-06-06T18:04:34.8683711	Global Loot Modifiers : tsotd
+c1ac5c5c606d80d68add117bde14b42dd6d48943 data/forge/loot_modifiers/global_loot_modifiers.json
+fa1bb1b133e38d7a9eb35d7bfda276d55df37ca6 data/tsotd/loot_modifiers/enchanted_item_from_desert_pyramid1.json
+c5725cde2749634800fe32950c54417bf1da8468 data/tsotd/loot_modifiers/enchanted_item_from_desert_pyramid2.json
+f842673dfe7e647bcc7b982e5e8a79759a3ceda6 data/tsotd/loot_modifiers/enchanted_item_from_desert_pyramid3.json
+1d3473dea8d514cc5692e7ab0f7f0f9dc17e8410 data/tsotd/loot_modifiers/enchanted_item_from_jungle_temple1.json
+37e3447cf33b35bbcab3e9273f7b52c8f9ddcd77 data/tsotd/loot_modifiers/enchanted_item_from_jungle_temple2.json
+baf0077827c45b5b353204f1cdbd11e0a23b0ba1 data/tsotd/loot_modifiers/enchanted_item_from_jungle_temple3.json
 e047d525ee6d8cda62cd8d9fc5092543d83c1d72 data/tsotd/loot_modifiers/takichirum_seeds_from_dancing_flower_leaf.json

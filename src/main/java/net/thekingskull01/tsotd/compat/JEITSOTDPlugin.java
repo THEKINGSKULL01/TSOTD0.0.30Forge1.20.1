@@ -5,11 +5,13 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
+import mezz.jei.api.registration.IRecipeTransferRegistration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.recipe.TakichirumCreationRecipe;
+import net.thekingskull01.tsotd.screen.TakichirumWorkbenchMenu;
 import net.thekingskull01.tsotd.screen.TakichirumWorkbenchScreen;
 
 import java.util.List;
@@ -40,5 +42,11 @@ public class JEITSOTDPlugin implements IModPlugin {
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
         registration.addRecipeClickArea(TakichirumWorkbenchScreen.class, 60, 30, 20,30, TakichirumWorkbenchRecipeCategory.TAKICHIRUM_CREATION_TYPE);
+    }
+
+    @Override
+    public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
+        registration.addRecipeTransferHandler(TakichirumWorkbenchMenu.class, null, TakichirumWorkbenchRecipeCategory.TAKICHIRUM_CREATION_TYPE, 0, 1, 1, 36);
+        IModPlugin.super.registerRecipeTransferHandlers(registration);
     }
 }

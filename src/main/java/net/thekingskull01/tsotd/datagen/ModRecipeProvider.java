@@ -195,7 +195,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         new TakichirumCreationRecipeBuilder(
                 ModItems.Dark_Crystal.get(),
-                ModBlocks.Darkened_Light_Crystal_Block.get(),
+                Items.WITHER_ROSE,
                 ModItems.Light_Crystal.get(),
                 ModBlocks.Dancing_Flower_Leaf.get(), 1)
                 .unlockedBy("has_dancing_flower_leaf", has(ModBlocks.Dancing_Flower_Leaf.get()))

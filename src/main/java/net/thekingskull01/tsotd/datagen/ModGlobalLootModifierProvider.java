@@ -15,6 +15,7 @@ import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.item.ModItems;
+import net.thekingskull01.tsotd.loot.AddEnchantedItemModifier;
 import net.thekingskull01.tsotd.loot.AddItemModifer;
 
 import java.util.List;
@@ -38,18 +39,40 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
 
 
-        //Chest enchantments
+        //Jungle Chests
 
-        //add("lifestealer_enchantment_from_desert_pyramid", new AddItemModifer(new LootItemCondition[]{
-        //        new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
-        //        LootItemRandomChanceCondition.randomChance(1f).build()},
-        //        new ItemStack(EnchantedBookItem.createForEnchantment(
-        //                new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)).getItem()).getItem()));
+        this.add("enchanted_item_from_jungle_temple1", new AddEnchantedItemModifier(new LootItemCondition[]
+                { new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
+                        LootItemRandomChanceCondition.randomChance(0.2f).build()},
+                Items.ENCHANTED_BOOK, ModEnchantments.LIFE_STEALER.get(), 1));
 
-        //add("lifestealer_enchantment_from_jungle_temple", new AddItemModifer(new LootItemCondition[]{
-        //        new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
-        //        LootItemRandomChanceCondition.randomChance(1f).build()},
-        //        EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ModEnchantments.LIFE_STEALER.get(), 1)));
+        this.add("enchanted_item_from_jungle_temple2", new AddEnchantedItemModifier(new LootItemCondition[]
+                { new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
+                        LootItemRandomChanceCondition.randomChance(0.15f).build() },
+                Items.ENCHANTED_BOOK, ModEnchantments.LIFE_STEALER.get(), 2));
+
+        this.add("enchanted_item_from_jungle_temple3", new AddEnchantedItemModifier(new LootItemCondition[]
+                { new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
+                        LootItemRandomChanceCondition.randomChance(0.1f).build() },
+                Items.ENCHANTED_BOOK, ModEnchantments.LIFE_STEALER.get(), 3));
+
+        //Desert Chests
+
+        this.add("enchanted_item_from_desert_pyramid1", new AddEnchantedItemModifier(new LootItemCondition[]
+                { new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
+                        LootItemRandomChanceCondition.randomChance(0.25f).build() },
+                Items.ENCHANTED_BOOK, ModEnchantments.LIFE_STEALER.get(), 1));
+
+        this.add("enchanted_item_from_desert_pyramid2", new AddEnchantedItemModifier(new LootItemCondition[]
+                { new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
+                        LootItemRandomChanceCondition.randomChance(0.2f).build() },
+                Items.ENCHANTED_BOOK, ModEnchantments.LIFE_STEALER.get(), 2));
+
+        this.add("enchanted_item_from_desert_pyramid3", new AddEnchantedItemModifier(new LootItemCondition[]
+                { new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
+                        LootItemRandomChanceCondition.randomChance(0.15f).build() },
+                Items.ENCHANTED_BOOK, ModEnchantments.LIFE_STEALER.get(), 3));
+
     }
 
 }

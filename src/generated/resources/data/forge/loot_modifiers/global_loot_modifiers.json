@@ -1,6 +1,12 @@
 {
   "entries": [
-    "tsotd:takichirum_seeds_from_dancing_flower_leaf"
+    "tsotd:takichirum_seeds_from_dancing_flower_leaf",
+    "tsotd:enchanted_item_from_jungle_temple3",
+    "tsotd:enchanted_item_from_desert_pyramid1",
+    "tsotd:enchanted_item_from_jungle_temple1",
+    "tsotd:enchanted_item_from_desert_pyramid3",
+    "tsotd:enchanted_item_from_jungle_temple2",
+    "tsotd:enchanted_item_from_desert_pyramid2"
   ],
   "replace": false
 }
