@@ -197,7 +197,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.Dark_Crystal.get(),
                 ModBlocks.Darkened_Light_Crystal_Block.get(),
                 ModItems.Light_Crystal.get(),
-                ModItems.Takichirum_Seeds.get(), 3)
+                ModBlocks.Dancing_Flower_Leaf.get(), 1)
                 .unlockedBy("has_dancing_flower_leaf", has(ModBlocks.Dancing_Flower_Leaf.get()))
                 .save(consumer, new ResourceLocation("takichirum_seeds_from_crystals"));
 
@@ -205,7 +205,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.Takichirum_Ingot.get(),
                 ModBlocks.Darkened_Light_Crystal_Block.get(),
                 Items.NETHERITE_INGOT,
-                Blocks.NETHERITE_BLOCK, 16)
+                Blocks.NETHERITE_BLOCK, 1)
                 .unlockedBy("has_darkened_light_crystal_block", has(ModBlocks.Darkened_Light_Crystal_Block.get()))
                 .save(consumer, new ResourceLocation("takichirum_netherite_creation"));
 
