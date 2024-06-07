@@ -25,9 +25,7 @@ import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.block.entity.ModBlockEntitys;
 import net.thekingskull01.tsotd.effect.ModEffects;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
-import net.thekingskull01.tsotd.fluidtypes.ModFluidTypes;
 import net.thekingskull01.tsotd.fluid.ModFluids;
-import net.thekingskull01.tsotd.item.ModCreativeModeTabs;
 import net.thekingskull01.tsotd.item.ModItemProperties;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.loot.ModLootModifers;
@@ -52,7 +50,7 @@ public class TSOTD {
     public TSOTD() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModCreativeModeTabs.register(modEventBus);
+        CreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

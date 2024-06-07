@@ -39,6 +39,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
     blockWithItem(ModBlocks.Darkened_Light_Crystal_Block);
     blockWithItem(ModBlocks.Takichirum_Block);
 
+        //WoodTypes
+
+        blockItem(ModBlocks.Zomblie_Log);
+        blockItem(ModBlocks.Zomblie_Wood);
+        blockItem(ModBlocks.Stripped_Zomblie_Log);
+        blockItem(ModBlocks.Stripped_Zomblie_Wood);
+
+        blockWithItem(ModBlocks.Zomblie_Planks);
+
+        leavesBlock(ModBlocks.Zomblie_Leaves);
+        saplingBlock(ModBlocks.Zomblie_Sapling);
+
+    logBlock(((RotatedPillarBlock) ModBlocks.Zomblie_Log.get()));
+    axisBlock(((RotatedPillarBlock) ModBlocks.Zomblie_Log.get()), blockTexture(ModBlocks.Zomblie_Log.get()), blockTexture(ModBlocks.Zomblie_Log.get()));
+    axisBlock((RotatedPillarBlock) ModBlocks.Stripped_Zomblie_Wood.get(), new ResourceLocation(TSOTD.MOD_ID, "block/stripped_zomblie_log"),
+            new ResourceLocation(TSOTD.MOD_ID, "block/stripped_zomblie_log_top"));
+    axisBlock((RotatedPillarBlock) ModBlocks.Stripped_Zomblie_Wood.get(), new ResourceLocation(TSOTD.MOD_ID, "block/stripped_zomblie_log"),
+            new ResourceLocation(TSOTD.MOD_ID, "block/stripped_zomblie_log"));
+
+
 
         //Stairs
 
@@ -173,6 +193,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         customLamp();
+    }
+
+    private void leavesBlock(RegistryObject<Block>blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cubeAll(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(RegistryObject<Block>blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     private void customLamp() {

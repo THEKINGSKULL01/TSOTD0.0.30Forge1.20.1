@@ -37,6 +37,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.Darkened_Light_Crystal);
         simpleItem(ModItems.Takichirum_Ingot);
 
+        //Sappling
+
+        saplingItem(ModBlocks.Zomblie_Sapling);
+
+
+
         //Parts
 
         simpleItem(ModItems.Dark_Stick);
@@ -125,6 +131,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
 
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(TSOTD.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder complexBlock(Block block) {

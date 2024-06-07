@@ -120,6 +120,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.Coal_Crystal_Fence_Gate.get())
                 .add(ModBlocks.Darkened_Light_Crystal_Fence_Gate.get());
 
+        //Logs That burn
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.Zomblie_Log.get())
+                .add(ModBlocks.Zomblie_Wood.get())
+                .add(ModBlocks.Stripped_Zomblie_Log.get())
+                .add(ModBlocks.Stripped_Zomblie_Wood.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.Zomblie_Planks.get());
+
 
     }
 

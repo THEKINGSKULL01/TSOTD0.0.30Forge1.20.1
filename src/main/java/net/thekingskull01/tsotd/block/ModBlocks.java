@@ -1,12 +1,16 @@
 package net.thekingskull01.tsotd.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,9 +19,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.custom.CrystalLampBlock;
+import net.thekingskull01.tsotd.block.custom.ModFlammableRotatedPillarBlock;
 import net.thekingskull01.tsotd.block.custom.TakichirumCrop;
 import net.thekingskull01.tsotd.block.custom.TakichirumWorkBenchBlock;
-import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.item.custom.CrystalizedCoalBlock;
 
@@ -28,7 +32,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TSOTD.MOD_ID);
 
 
-    //Blocks, Blocks, Blocks, Blocks, Blocks
+    //Mineral Blocks, Mineral Blocks, Mineral Blocks, Mineral Blocks
 
     public static final RegistryObject<Block> Coal_Crystal_Block = registerBlock("coal_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK).strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).explosionResistance(4)));
@@ -40,6 +44,56 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
     public static final RegistryObject<Block> Takichirum_Block = registerBlock("takichirum_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.ANCIENT_DEBRIS)));
+
+    //Wood Blocks, Wood Blocks, Wood Blocks, Wood Blocks, Wood Blocks
+
+    public static final RegistryObject<Block> Zomblie_Log = registerBlock("zomblie_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM)));
+    public static final RegistryObject<Block> Zomblie_Wood = registerBlock("zomblie_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE)));
+    public static final RegistryObject<Block> Stripped_Zomblie_Log = registerBlock("stripped_zomblie_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_STEM)));
+    public static final RegistryObject<Block> Stripped_Zomblie_Wood = registerBlock("stripped_zomblie_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE)));
+
+    public static final RegistryObject<Block> Zomblie_Sapling = registerBlock("zomblie_sapling",
+            () -> new SaplingBlock(null, BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> Zomblie_Planks = registerBlock("zomblie_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+
+    public static final RegistryObject<Block> Zomblie_Leaves = registerBlock("zomblie_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
 
     //Lamps, Lamps, Lamps, Lamps, Lamps, Lamps, Lamps
 

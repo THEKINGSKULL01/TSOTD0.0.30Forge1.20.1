@@ -1,18 +1,16 @@
-package net.thekingskull01.tsotd.item;
+package net.thekingskull01.tsotd;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
-import net.thekingskull01.tsotd.enchantment.ModEnchantments;
+import net.thekingskull01.tsotd.item.ModItems;
 
-public class ModCreativeModeTabs {
+public class CreativeModeTabs {
     public static DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TSOTD.MOD_ID);
 
@@ -133,6 +131,22 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.Light_Crystal_Block.get());
                         output.accept(ModBlocks.Darkened_Light_Crystal_Block.get());
                         output.accept(ModBlocks.Takichirum_Block.get());
+
+                        //WoodBlocks
+
+                        output.accept(ModBlocks.Zomblie_Sapling.get());
+
+                        output.accept(ModBlocks.Zomblie_Log.get());
+
+                        output.accept(ModBlocks.Zomblie_Wood.get());
+
+                        output.accept(ModBlocks.Stripped_Zomblie_Wood.get());
+
+                        output.accept(ModBlocks.Stripped_Zomblie_Wood.get());
+
+                        output.accept(ModBlocks.Zomblie_Planks.get());
+
+                        output.accept(ModBlocks.Zomblie_Leaves.get());
 
                         //Lamps
 

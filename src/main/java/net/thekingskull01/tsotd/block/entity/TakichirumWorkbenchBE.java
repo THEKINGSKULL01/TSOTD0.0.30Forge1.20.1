@@ -40,6 +40,7 @@ import net.thekingskull01.tsotd.util.ModEnergyStorage;
 import net.thekingskull01.tsotd.util.WrappedHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.lwjgl.system.windows.INPUT;
 
 import java.util.Map;
 import java.util.Optional;
@@ -49,6 +50,9 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if (!level.isClientSide()) {
+                level.sendBlockUpdated(getBlockPos(),getBlockState(),getBlockState(), 3);
+            }
         }
 
         @Override
@@ -119,6 +123,15 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
                 getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
         };
+    }
+
+    public ItemStack getRenderStack() {
+        ItemStack stack = itemHandler.getStackInSlot(OUTPUT_SLOT);
+
+        if (stack.isEmpty()) {
+            stack = itemHandler.getStackInSlot(MIDDLE_INPUT_SLOT);
+        }
+        return stack;
     }
 
 

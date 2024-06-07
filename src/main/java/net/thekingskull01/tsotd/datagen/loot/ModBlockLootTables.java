@@ -39,6 +39,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.Darkened_Light_Crystal_Block.get());
         this.dropSelf(ModBlocks.Takichirum_Block.get());
 
+
+        //Wood Types
+
+        this.dropSelf(ModBlocks.Zomblie_Log.get());
+        this.dropSelf(ModBlocks.Zomblie_Wood.get());
+        this.dropSelf(ModBlocks.Stripped_Zomblie_Log.get());
+        this.dropSelf(ModBlocks.Stripped_Zomblie_Wood.get());
+        this.dropSelf(ModBlocks.Zomblie_Planks.get());
+        this.dropSelf(ModBlocks.Zomblie_Sapling.get());
+
+        this.add(ModBlocks.Zomblie_Leaves.get(), block ->
+                createLeavesDrops(block, ModBlocks.Zomblie_Sapling.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
         //Lamps
         this.dropSelf(ModBlocks.Crystal_Lamp.get());
 
