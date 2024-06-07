@@ -3,7 +3,11 @@ package net.thekingskull01.tsotd.block.entity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -18,15 +22,22 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.energy.IEnergyStorage;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.thekingskull01.tsotd.block.custom.TakichirumWorkBenchBlock;
+import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.recipe.TakichirumCreationRecipe;
 import net.thekingskull01.tsotd.screen.TakichirumWorkbenchMenu;
 import net.thekingskull01.tsotd.util.InventoryDirectionEntry;
 import net.thekingskull01.tsotd.util.InventoryDirectionWrapper;
+import net.thekingskull01.tsotd.util.ModEnergyStorage;
 import net.thekingskull01.tsotd.util.WrappedHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -45,8 +56,8 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0, 1, 2 -> true;
-                case 3 -> stack.getItem() == ModItems.Glowstone_Fluid_Bucket.get(); //   Energy
-                case 4 -> stack.getItem() == ModItems.Glowstone_Fluid_Bucket.get(); //   Fluid
+                case 3 -> stack.getItem() == ModItems.Darkened_Light_Crystal.get(); //   Energy
+                case 4 -> stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent(); //   Fluid
                 case 5 -> false; //   Output
                 default -> super.isItemValid(slot, stack);
             };
@@ -71,13 +82,45 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
                     new InventoryDirectionEntry(Direction.EAST, RIGHT_INPUT_SLOT, true),
                     new InventoryDirectionEntry(Direction.WEST, LEFT_INPUT_SLOT, true)).directionsMap;
 
+    private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.empty();
+    private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
+
 
 
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 100;
 
+    
+    private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
+    private final FluidTank FLUID_TANK = createFluidTank();
 
+    private FluidTank createFluidTank() {
+        return new FluidTank(150000) {
+            @Override
+            protected void onContentsChanged() {
+                setChanged();
+                if (!level.isClientSide()) {
+                    level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+                }
+            }
+
+            @Override
+            public boolean isFluidValid(FluidStack stack) {
+                return stack.getFluid() == ModFluids.GLOWSTONE.FLUID.get();
+            }
+        };
+    }
+
+    private ModEnergyStorage createEnergyStorage() {
+        return new ModEnergyStorage(150000, 750) {
+            @Override
+            public void onEnergyChanged() {
+                setChanged();
+                getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
+        };
+    }
 
 
     public TakichirumWorkbenchBE(BlockPos pPos, BlockState pBlockState) {
@@ -107,6 +150,16 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
         };
     }
 
+
+    public IEnergyStorage getEnergyStorage() {
+        return this.ENERGY_STORAGE;
+    }
+
+    public FluidStack getFluid() {
+        return FLUID_TANK.getFluid();
+    }
+
+
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
         for (int i = 0; i < itemHandler.getSlots(); i++) {
@@ -128,6 +181,14 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
+        if (cap == ForgeCapabilities.ENERGY) {
+            return lazyEnergyHandler.cast();
+        }
+
+        if (cap == ForgeCapabilities.FLUID_HANDLER) {
+            return lazyFluidHandler.cast();
+        }
+
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
             if (side == null) {
                 return lazyItemHandler.cast();
@@ -159,17 +220,24 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
     public void onLoad() {
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
+        lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
+        lazyFluidHandler = LazyOptional.of(() -> FLUID_TANK);
     }
 
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
         lazyItemHandler.invalidate();
+        lazyEnergyHandler.invalidate();
+        lazyFluidHandler.invalidate();
     }
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
+        pTag.putInt("takichirum_workbench_progress", progress);
+        pTag.putInt("energy", ENERGY_STORAGE.getEnergyStored());
+        pTag = FLUID_TANK.writeToNBT(pTag);
 
         super.saveAdditional(pTag);
     }
@@ -179,22 +247,79 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
         super.load(pTag);
 
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
+        progress = pTag.getInt("takichirum_workbench_progress");
+        ENERGY_STORAGE.setEnergy(pTag.getInt("energy"));
+        FLUID_TANK.readFromNBT(pTag);
     }
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
 
+        fillUpOnEnergy(); //This is pretty much a "placeholder" for getting energy though pipes/wires/duct/anything similar
+        fillupOnFluid();
+
         if (isOutputSlotEmptyOrReceivable() && hasRecipe()) {
             increaseCraftingProcess();
+            extractEnergy();
             setChanged(level, pPos, pState);
 
             if (hasProgressFinished()) {
                 craftItem();
+                extractFluid();
                 resetProgress();
             }
 
         } else {
             resetProgress();
         }
+    }
+
+    private void extractFluid() {
+        this.FLUID_TANK.drain(1000, IFluidHandler.FluidAction.EXECUTE);
+    }
+
+    private void fillupOnFluid() {
+        if (hasFluidSourceInSlot(FLUID_SLOT)) {
+            transferItemFluidToTank(FLUID_SLOT);
+        }
+    }
+
+    private void transferItemFluidToTank(int fluidSlot) {
+        this.itemHandler.getStackInSlot(fluidSlot).getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).ifPresent(iFluidHandlerItem -> {
+            int drainAmount = Math.min(this.FLUID_TANK.getSpace(), 1000);
+
+            FluidStack stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
+            if (stack.getFluid() == ModFluids.GLOWSTONE.FLUID.get()) {
+                stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
+                fillTankWithFluid(stack, iFluidHandlerItem.getContainer());
+            }
+        });
+    }
+
+    private void fillTankWithFluid(FluidStack stack, ItemStack container) {
+        this.FLUID_TANK.fill(new FluidStack(stack.getFluid(), stack.getAmount()), IFluidHandler.FluidAction.EXECUTE);
+
+        this.itemHandler.extractItem(FLUID_SLOT, 1, false);
+        this.itemHandler.insertItem(FLUID_SLOT, container, false);
+    }
+
+    private boolean hasFluidSourceInSlot(int fluidSlot) {
+        return this.itemHandler.getStackInSlot(fluidSlot).getCount() > 0 &&
+                this.itemHandler.getStackInSlot(fluidSlot).getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
+    }
+
+    private void extractEnergy() {
+        this.ENERGY_STORAGE.extractEnergy( 1000, false);
+    }
+
+    private void fillUpOnEnergy() {
+        if (hasEnergyItemInSlot(ENERGY_INPUT_SLOT)) {
+            this.ENERGY_STORAGE.receiveEnergy(8000, false);
+        }
+    }
+
+    private boolean hasEnergyItemInSlot(int energyInputSlot) {
+        return !this.itemHandler.getStackInSlot(energyInputSlot).isEmpty() &&
+                this.itemHandler.getStackInSlot(energyInputSlot).getItem() == ModItems.Glowstone_Fluid_Bucket.get();
     }
 
     private void craftItem() {
@@ -229,7 +354,16 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
         return canInsertAmountIntoOutputSlot(resultItem.getCount())
-                && canInsertItemIntoOutputSlot(resultItem.getItem());
+                && canInsertItemIntoOutputSlot(resultItem.getItem()) && hasEnoughEnergyToCraft()
+                && hasEnoughFluidToCraft();
+    }
+
+    private boolean hasEnoughFluidToCraft() {
+        return this.FLUID_TANK.getFluidAmount() >= 1000;
+    }
+
+    private boolean hasEnoughEnergyToCraft() {
+        return this.ENERGY_STORAGE.getEnergyStored() >= 200 * maxProgress;
     }
 
     private Optional<TakichirumCreationRecipe> getCurrentRecipe() {
@@ -254,6 +388,23 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
     private boolean isOutputSlotEmptyOrReceivable() {
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ||
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() < this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+    }
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
+    }
+
+    @Override
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+        super.onDataPacket(net, pkt);
     }
 
 

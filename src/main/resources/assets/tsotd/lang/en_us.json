@@ -180,6 +180,9 @@
   "entity.minecraft.villager.tsotd.takichirum_maintainer": "Takichirum Maintainer",
 
 
+  "tsotd.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "tsotd.tooltip.liquid.amount": "%s mB",
+
 
 
   "tooltip.tsotd.dark_crystal_detector.tooltip": "Finds Dark Crystal In The End",
