@@ -26,6 +26,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Minerals
         simpleItem(ModItems.Crystallized_Coal);
+        simpleItem(ModItems.Yellow_Crystal);
+        simpleItem(ModItems.Red_Crystal);
+        simpleItem(ModItems.Purple_Crystal);
+        simpleItem(ModItems.Blue_Crystal);
+        simpleItem(ModItems.LightBlue_Crystal);
+        simpleItem(ModItems.Green_Crystal);
         simpleItem(ModItems.Dark_Crystal);
         simpleItem(ModItems.Light_Crystal);
         simpleItem(ModItems.Darkened_Light_Crystal);

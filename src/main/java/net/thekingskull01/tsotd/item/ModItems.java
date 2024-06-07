@@ -22,6 +22,18 @@ public class ModItems{
 
     public static final RegistryObject<Item> Crystallized_Coal = ITEMS.register("crystallized_coal",
                     () -> new FuelItem(new Item.Properties(), 8000));
+    public static final RegistryObject<Item> Yellow_Crystal = ITEMS.register("yellow_crystal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> Red_Crystal = ITEMS.register("red_crystal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> Purple_Crystal = ITEMS.register("purple_crystal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> Blue_Crystal = ITEMS.register("blue_crystal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LightBlue_Crystal = ITEMS.register("lightblue_crystal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> Green_Crystal = ITEMS.register("green_crystal",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Dark_Crystal = ITEMS.register("dark_crystal",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Light_Crystal = ITEMS.register("light_crystal",

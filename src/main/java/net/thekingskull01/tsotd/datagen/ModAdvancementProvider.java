@@ -30,12 +30,72 @@ public class ModAdvancementProvider implements ForgeAdvancementProvider.Advancem
                 .save(saver, new ResourceLocation(TSOTD.MOD_ID, "crystalized_coal"), existingFileHelper);
 
 
+        Advancement yellowCrystalObtained = Advancement.Builder.advancement()
+                .display(new DisplayInfo(new ItemStack(ModItems.Yellow_Crystal.get()),
+                        Component.literal("Stage 1"), Component.literal("Yikes.. A ugly color.."),
+                        null, FrameType.TASK,
+                        true, true, false))
+                .parent(rootAdvancement)
+                .addCriterion("has_yellow_crystal", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.Yellow_Crystal.get()))
+                .save(saver, new ResourceLocation(TSOTD.MOD_ID, "yellow_crystal"), existingFileHelper);
+
+
+        Advancement redCrystalObtained = Advancement.Builder.advancement()
+                .display(new DisplayInfo(new ItemStack(ModItems.Red_Crystal.get()),
+                        Component.literal("Blood Crystal"), Component.literal("The blood, Crystalized?"),
+                        null, FrameType.TASK,
+                        true, true, false))
+                .parent(yellowCrystalObtained)
+                .addCriterion("has_red_crystal", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.Red_Crystal.get()))
+                .save(saver, new ResourceLocation(TSOTD.MOD_ID, "red_crystal"), existingFileHelper);
+
+
+        Advancement purpleCrystalObtained = Advancement.Builder.advancement()
+                .display(new DisplayInfo(new ItemStack(ModItems.Purple_Crystal.get()),
+                        Component.literal("Endering Eye"), Component.literal("The end, has crystallized into a nice piece of glass"),
+                        null, FrameType.TASK,
+                        true, true, false))
+                .parent(redCrystalObtained)
+                .addCriterion("has_purple_crystal", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.Purple_Crystal.get()))
+                .save(saver, new ResourceLocation(TSOTD.MOD_ID, "purple_crystal"), existingFileHelper);
+
+
+        Advancement blueCrystalObtained = Advancement.Builder.advancement()
+                .display(new DisplayInfo(new ItemStack(ModItems.Blue_Crystal.get()),
+                        Component.literal("Darkest Depths"), Component.literal("This, is a dark soul of the Warden"),
+                        null, FrameType.TASK,
+                        true, true, false))
+                .parent(purpleCrystalObtained)
+                .addCriterion("has_blue_crystal", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.Blue_Crystal.get()))
+                .save(saver, new ResourceLocation(TSOTD.MOD_ID, "blue_crystal"), existingFileHelper);
+
+
+        Advancement lightBlueObtained = Advancement.Builder.advancement()
+                .display(new DisplayInfo(new ItemStack(ModItems.LightBlue_Crystal.get()),
+                        Component.literal("Aqua"), Component.literal("Is this made from the ocean?"),
+                        null, FrameType.TASK,
+                        true, true, false))
+                .parent(blueCrystalObtained)
+                .addCriterion("has_lightblue_crystal", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.LightBlue_Crystal.get()))
+                .save(saver, new ResourceLocation(TSOTD.MOD_ID, "lightblue_crystal"), existingFileHelper);
+
+
+        Advancement greenCrystalObtained = Advancement.Builder.advancement()
+                .display(new DisplayInfo(new ItemStack(ModItems.Green_Crystal.get()),
+                        Component.literal("Best one out there"), Component.literal("Its the best color out there!!"),
+                        null, FrameType.TASK,
+                        true, true, false))
+                .parent(lightBlueObtained)
+                .addCriterion("has_green_crystal", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.Green_Crystal.get()))
+                .save(saver, new ResourceLocation(TSOTD.MOD_ID, "green_crystal"), existingFileHelper);
+
+
         Advancement darkCrystalDetector = Advancement.Builder.advancement()
                 .display(new DisplayInfo(new ItemStack(ModItems.Dark_Crystal_Detector.get()),
                         Component.literal("Searching the Darkness"), Component.literal("The Dark side you shall go? (A parent to Darken Light Crystal)"),
                         null, FrameType.TASK,
                         true, true, false))
-                .parent(rootAdvancement)
+                .parent(greenCrystalObtained)
                 .addCriterion("has_dark_crystal_detector", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.Dark_Crystal_Detector.get()))
                 .save(saver, new ResourceLocation(TSOTD.MOD_ID, "dark_crystal_detector"), existingFileHelper);
 
@@ -45,7 +105,7 @@ public class ModAdvancementProvider implements ForgeAdvancementProvider.Advancem
                         Component.literal("Raise into the Light"), Component.literal("So, into the Light? (A parent to Darken Light Crystal)"),
                         null, FrameType.TASK,
                         true,true,false))
-                .parent(rootAdvancement)
+                .parent(greenCrystalObtained)
                 .addCriterion("has_light_crystal_detector", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.Light_Crystal_Detector.get()))
                 .save(saver, new ResourceLocation(TSOTD.MOD_ID, "light_crystal_detector"), existingFileHelper);
 

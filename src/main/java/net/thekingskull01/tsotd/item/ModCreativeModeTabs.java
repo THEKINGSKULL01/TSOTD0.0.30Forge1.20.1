@@ -105,6 +105,12 @@ public class ModCreativeModeTabs {
                         //Minerals
 
                         output.accept(ModItems.Crystallized_Coal.get());
+                        output.accept(ModItems.Yellow_Crystal.get());
+                        output.accept(ModItems.Red_Crystal.get());
+                        output.accept(ModItems.Purple_Crystal.get());
+                        output.accept(ModItems.Blue_Crystal.get());
+                        output.accept(ModItems.LightBlue_Crystal.get());
+                        output.accept(ModItems.Green_Crystal.get());
                         output.accept(ModItems.Dark_Crystal.get());
                         output.accept(ModItems.Light_Crystal.get());
                         output.accept(ModItems.Darkened_Light_Crystal.get());

@@ -74,6 +74,12 @@
 
 
   "item.tsotd.crystallized_coal": "Crystallized Coal",
+  "item.tsotd.yellow_crystal": "Yellow Crystal",
+  "item.tsotd.red_crystal": "Red Crystal",
+  "item.tsotd.purple_crystal": "Purple Crystal",
+  "item.tsotd.blue_crystal": "Blue Crystal",
+  "item.tsotd.lightblue_crystal": "Light Blue Crystal",
+  "item.tsotd.green_crystal": "Green Crystal",
   "item.tsotd.dark_crystal": "Dark Crystal",
   "item.tsotd.light_crystal": "Light Crystal",
   "item.tsotd.darkened_light_crystal": "Darkened Light Crystal",

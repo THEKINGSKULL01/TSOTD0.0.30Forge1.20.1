@@ -1,5 +1,5 @@
 {
-  "parent": "tsotd:crystalized_coal",
+  "parent": "tsotd:green_crystal",
   "criteria": {
     "has_light_crystal_detector": {
       "conditions": {
