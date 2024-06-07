@@ -191,7 +191,7 @@ public class FluidTankRenderer {
                 tooltip.add(amountString.withStyle(ChatFormatting.GRAY));
             }
         } catch (RuntimeException e) {
-            //TSOTD.LOGGER.error("Failed to get tooltip for fluid: " + e);
+            TSOTD.LOGGER.error("Failed to get tooltip for fluid: " + e);
         }
 
         return tooltip;

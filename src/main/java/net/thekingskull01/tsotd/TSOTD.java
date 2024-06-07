@@ -47,7 +47,7 @@ public class TSOTD {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "tsotd";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public TSOTD() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

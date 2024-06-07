@@ -186,6 +186,9 @@
   "entity.minecraft.villager.tsotd.takichirum_maintainer": "Takichirum Maintainer",
 
 
+  "fluid_type.tsotd.glowstone": "Liquidized Glowstone",
+
+
   "tsotd.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "tsotd.tooltip.liquid.amount": "%s mB",
 

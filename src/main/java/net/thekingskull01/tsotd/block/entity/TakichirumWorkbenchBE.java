@@ -22,7 +22,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.fluids.FluidStack;
@@ -55,9 +54,9 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
-                case 0, 1, 2 -> true;
-                case 3 -> stack.getItem() == ModItems.Darkened_Light_Crystal.get(); //   Energy
-                case 4 -> stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent(); //   Fluid
+                case 0, 1, 2, 3, 4 -> true;
+                //case 3 -> stack.getItem() == ModItems.Darkened_Light_Crystal.get(); //   Energy
+                //case 4 -> stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent(); //   Fluid
                 case 5 -> false; //   Output
                 default -> super.isItemValid(slot, stack);
             };
@@ -308,18 +307,18 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
     }
 
     private void extractEnergy() {
-        this.ENERGY_STORAGE.extractEnergy( 1000, false);
+        this.ENERGY_STORAGE.extractEnergy( 100, false); //The transfer of energy from the item
     }
 
     private void fillUpOnEnergy() {
         if (hasEnergyItemInSlot(ENERGY_INPUT_SLOT)) {
-            this.ENERGY_STORAGE.receiveEnergy(8000, false);
+            this.ENERGY_STORAGE.receiveEnergy(3200, false); //Will suck the energy the number of times thats there
         }
     }
 
     private boolean hasEnergyItemInSlot(int energyInputSlot) {
         return !this.itemHandler.getStackInSlot(energyInputSlot).isEmpty() &&
-                this.itemHandler.getStackInSlot(energyInputSlot).getItem() == ModItems.Glowstone_Fluid_Bucket.get();
+                this.itemHandler.getStackInSlot(energyInputSlot).getItem() == ModItems.Darkened_Light_Crystal.get();
     }
 
     private void craftItem() {
@@ -330,7 +329,7 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
         this.itemHandler.extractItem(RIGHT_INPUT_SLOT, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount()+resultItem.getCount()));
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
     }
 
     private void resetProgress() {
@@ -363,7 +362,7 @@ public class TakichirumWorkbenchBE extends BlockEntity implements MenuProvider {
     }
 
     private boolean hasEnoughEnergyToCraft() {
-        return this.ENERGY_STORAGE.getEnergyStored() >= 200 * maxProgress;
+        return this.ENERGY_STORAGE.getEnergyStored() >= 100 * maxProgress; //The transfer from when the item is being crafted
     }
 
     private Optional<TakichirumCreationRecipe> getCurrentRecipe() {
