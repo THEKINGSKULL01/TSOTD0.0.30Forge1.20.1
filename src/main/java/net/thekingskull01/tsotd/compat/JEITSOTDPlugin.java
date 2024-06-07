@@ -41,12 +41,6 @@ public class JEITSOTDPlugin implements IModPlugin {
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
-        registration.addRecipeClickArea(TakichirumWorkbenchScreen.class, 60, 30, 20,30, TakichirumWorkbenchRecipeCategory.TAKICHIRUM_CREATION_TYPE);
-    }
-
-    @Override
-    public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
-        registration.addRecipeTransferHandler(TakichirumWorkbenchMenu.class, null, TakichirumWorkbenchRecipeCategory.TAKICHIRUM_CREATION_TYPE, 0, 1, 1, 36);
-        IModPlugin.super.registerRecipeTransferHandlers(registration);
+        registration.addRecipeClickArea(TakichirumWorkbenchScreen.class, 85, 28, 6,18, TakichirumWorkbenchRecipeCategory.TAKICHIRUM_CREATION_TYPE);
     }
 }
