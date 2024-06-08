@@ -22,6 +22,7 @@ import net.thekingskull01.tsotd.block.custom.*;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.item.custom.CrystalizedCoalBlock;
 import net.thekingskull01.tsotd.util.ModWoodTypes;
+import net.thekingskull01.tsotd.worldgen.tree.ZomblieTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -55,7 +56,7 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE)));
 
     public static final RegistryObject<Block> Zomblie_Sapling = registerBlock("zomblie_sapling",
-            () -> new SaplingBlock(null, BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(new ZomblieTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> Zomblie_Planks = registerBlock("zomblie_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)) {
