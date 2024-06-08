@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.thekingskull01.tsotd.TSOTD;
+import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
@@ -37,6 +38,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.Takichirum_Boots.get(),
                 ModItems.Dark_Crystal_Boots.get(),
                 ModItems.Light_Crystal_Boots.get());
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.Zomblie_Log.get().asItem())
+                .add(ModBlocks.Zomblie_Wood.get().asItem())
+                .add(ModBlocks.Stripped_Zomblie_Log.get().asItem())
+                .add(ModBlocks.Stripped_Zomblie_Wood.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.Zomblie_Planks.get().asItem());
 
 
 

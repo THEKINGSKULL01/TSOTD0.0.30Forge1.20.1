@@ -140,7 +140,7 @@ public class CreativeModeTabs {
 
                         output.accept(ModBlocks.Zomblie_Wood.get());
 
-                        output.accept(ModBlocks.Stripped_Zomblie_Wood.get());
+                        output.accept(ModBlocks.Stripped_Zomblie_Log.get());
 
                         output.accept(ModBlocks.Stripped_Zomblie_Wood.get());
 

@@ -1,8 +1,10 @@
-// 1.20.1	2024-06-02T17:19:00.0879719	Block Tags
+// 1.20.1	2024-06-07T22:18:03.9128257	Block Tags
 49c7b4f7734ed491472d0acfa2847ca0b4041aa0 data/forge/tags/blocks/needs_netherite_tool.json
 1553b98051380330af9f4035b26967279a02d715 data/minecraft/tags/blocks/fences.json
 d6622c5de9d5acaedd5b261744e974bce52efffe data/minecraft/tags/blocks/fence_gates.json
+ad66d6e26aec79168596b540e722cf339fada8e2 data/minecraft/tags/blocks/logs_that_burn.json
 49c7b4f7734ed491472d0acfa2847ca0b4041aa0 data/minecraft/tags/blocks/mineable/pickaxe.json
+4f51b4e9a4906b2df2516aee631caedcee7427bc data/minecraft/tags/blocks/planks.json
 725791acca181a6148410313b2296a30671fd494 data/minecraft/tags/blocks/walls.json
 0e214f15ecdc4292a67717a5c660bd3a00bd61b3 data/tsotd/tags/blocks/dark_crystal_detector_valuables.json
 479d0b53e1dbe8ae0f783b4a9dcdcf59c2413182 data/tsotd/tags/blocks/light_crystal_detector_valuables.json
