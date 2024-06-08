@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-08T10:48:20.510178	Loot Tables
+// 1.20.1	2024-06-08T17:08:24.4168803	Loot Tables
 05a22a98d44a7e027735f4334a4fd50997f888e6 data/tsotd/loot_tables/blocks/coal_crystal_block.json
 7486092aa08dbb37cc1f664b009f0d742aa5476a data/tsotd/loot_tables/blocks/coal_crystal_button.json
 2a82d4a7b2fc4c621c1806a4e1ccd8b15b980dd8 data/tsotd/loot_tables/blocks/coal_crystal_door.json
@@ -31,6 +31,7 @@ ccc6a224799a88645ac099ae1f3e7d241157aaa3 data/tsotd/loot_tables/blocks/dark_crys
 2c29afb72c2a8fb89d583422529b85bbcc65419c data/tsotd/loot_tables/blocks/dark_crystal_stairs.json
 4d01e0bce2eb8479f846cb4cd7cc1c6362c70a6b data/tsotd/loot_tables/blocks/dark_crystal_trapdoor.json
 d9be8e8efc85fa6259b9a687cb03d06d8df800d5 data/tsotd/loot_tables/blocks/dark_crystal_wall.json
+214cca5950b5ef806c7c255106db38c77d7ba91b data/tsotd/loot_tables/blocks/green_crystal_block.json
 bb42e622f3e373d4fffb70386e69242d7f16a1c7 data/tsotd/loot_tables/blocks/light_crystal_block.json
 d8712fd3b086a34ef0abe1b5988828ad4d1b8ba6 data/tsotd/loot_tables/blocks/light_crystal_button.json
 f5c90c2335e7632bf0f9100c42a7ef8e9b227566 data/tsotd/loot_tables/blocks/light_crystal_door.json

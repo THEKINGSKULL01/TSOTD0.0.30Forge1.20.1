@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-08T10:56:58.9358364	Block States: tsotd
+// 1.20.1	2024-06-08T17:08:24.4118826	Block States: tsotd
 dcbb3353ffc60d3664ad939c9e3501913e1a41cc assets/tsotd/blockstates/coal_crystal_block.json
 ab4e34223db0361f2a07260afde32c850cd3e9a9 assets/tsotd/blockstates/coal_crystal_button.json
 7a7b3c839fc8a86a3d447f4140549775c7a413b0 assets/tsotd/blockstates/coal_crystal_door.json
@@ -31,6 +31,7 @@ af84ddc63bdcca160483f5d974634abebb4e47c0 assets/tsotd/blockstates/dark_crystal_f
 2a31a30b34c3435eccebd209db90fbc46af56c9d assets/tsotd/blockstates/dark_crystal_stairs.json
 aadd41d0524b567e156673e8a63b1d38ea96126a assets/tsotd/blockstates/dark_crystal_trapdoor.json
 2346b4a42944c4d31befb973aa0db517a740daff assets/tsotd/blockstates/dark_crystal_wall.json
+3e85b6541c0d1c27ac731516ef1bcef1d6e0975e assets/tsotd/blockstates/green_crystal_block.json
 64ad3a83b8c6d9c92ffb57da2eb38e5f7650b74d assets/tsotd/blockstates/light_crystal_block.json
 2f0f84da068cdd22d00c0dc3622855fc06d3c735 assets/tsotd/blockstates/light_crystal_button.json
 2d45b276ffcb3618d982b27691b7168790fb799d assets/tsotd/blockstates/light_crystal_door.json
@@ -141,6 +142,7 @@ c0c7c6391ccf5a33216c01e80a01fed8072d724e assets/tsotd/models/block/dark_crystal_
 9bd3a2043cddbf48cfc6bfc06b57b24886d509ea assets/tsotd/models/block/dark_crystal_wall_post.json
 73df407e7505351026758c4da3228613ef19a78c assets/tsotd/models/block/dark_crystal_wall_side.json
 15c1cbd56ff7fd5d1bfa583ac6b187ed59c07ed1 assets/tsotd/models/block/dark_crystal_wall_side_tall.json
+701d8cbb7e3f931c4dd0fc37f8449efdf67f40d2 assets/tsotd/models/block/green_crystal_block.json
 af6bb8935dcca6ef769c4293e11c52396cb6d4c4 assets/tsotd/models/block/light_crystal_block.json
 5ddaceabaf980824a4f37396544608f25ddc756c assets/tsotd/models/block/light_crystal_button.json
 22c34158c6ef6209549bed8035640b94ce13ef0a assets/tsotd/models/block/light_crystal_button_pressed.json
@@ -215,6 +217,7 @@ e1e846031707b1d38a31382f17374b32adb0af76 assets/tsotd/models/item/dark_crystal_p
 55f7e0ad56f43c651918374ea3c9dcf6e2758a8a assets/tsotd/models/item/dark_crystal_slab.json
 74d24dd1bbfbe8d1b5eaea0403e78df2c8b9a717 assets/tsotd/models/item/dark_crystal_stairs.json
 c987b99179a3296af91113729164d2e243c6950e assets/tsotd/models/item/dark_crystal_trapdoor.json
+b080d0b293387857d88947cabb3141df6244942b assets/tsotd/models/item/green_crystal_block.json
 e172bdc5025923519b8cd0372518fad504353afe assets/tsotd/models/item/light_crystal_block.json
 95d6555b241d5e124baebbbf05964cc3b248bfc0 assets/tsotd/models/item/light_crystal_fence_gate.json
 a826b46c9ca8a311cc0d4a5189f0fc2cc7a3fe42 assets/tsotd/models/item/light_crystal_ore.json

@@ -39,6 +39,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.Light_Crystal_Block.get(),
                         ModBlocks.Coal_Crystal_Ore.get(),
                         ModBlocks.Coal_Crystal_Block.get(),
+                        ModBlocks.Green_Crystal_Block.get(),
 
                 //Slab
 
@@ -53,12 +54,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
         //Takichirum Paxel
-        this.tag(ModTags.Blocks.PAXEL_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL, BlockTags.MINEABLE_WITH_HOE);
+        this.tag(ModTags.Blocks.PAXEL_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL, BlockTags.MINEABLE_WITH_HOE)
+                .add(ModBlocks.Green_Crystal_Block.get());
 
 
 
         //Takichirum Hammer
-        this.tag(ModTags.Blocks.HAMMER_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_SHOVEL);
+        this.tag(ModTags.Blocks.HAMMER_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.Green_Crystal_Block.get());
 
 
 
@@ -82,6 +85,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.Light_Crystal_Block.get(),
                         ModBlocks.Coal_Crystal_Ore.get(),
                         ModBlocks.Coal_Crystal_Block.get(),
+                        ModBlocks.Green_Crystal_Block.get(),
 
                 //Slab
 

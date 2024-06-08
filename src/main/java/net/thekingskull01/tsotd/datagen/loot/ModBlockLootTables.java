@@ -35,6 +35,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Blocks
 
         this.dropSelf(ModBlocks.Coal_Crystal_Block.get());
+        this.dropSelf(ModBlocks.Green_Crystal_Block.get());
         this.dropSelf(ModBlocks.Dark_Crystal_Block.get());
         this.dropSelf(ModBlocks.Light_Crystal_Block.get());
         this.dropSelf(ModBlocks.Darkened_Light_Crystal_Block.get());

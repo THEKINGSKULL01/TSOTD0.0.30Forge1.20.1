@@ -127,6 +127,7 @@ public class CreativeModeTabs {
                         //Blocks
 
                         output.accept(ModBlocks.Coal_Crystal_Block.get());
+                        output.accept(ModBlocks.Green_Crystal_Block.get());
                         output.accept(ModBlocks.Dark_Crystal_Block.get());
                         output.accept(ModBlocks.Light_Crystal_Block.get());
                         output.accept(ModBlocks.Darkened_Light_Crystal_Block.get());

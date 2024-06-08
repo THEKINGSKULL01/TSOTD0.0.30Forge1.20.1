@@ -1,6 +1,7 @@
 {
   "values": [
     "#minecraft:mineable/pickaxe",
-    "#minecraft:mineable/shovel"
+    "#minecraft:mineable/shovel",
+    "tsotd:green_crystal_block"
   ]
 }
