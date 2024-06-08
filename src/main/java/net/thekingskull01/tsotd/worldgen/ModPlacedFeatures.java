@@ -10,9 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
 
@@ -23,7 +21,9 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> CRYSTALIZED_COAL_ORE_PLACED_KEY = registerKey("nether_crystalized_coal_ore_placed");
     public static final ResourceKey<PlacedFeature> DARK_CRYSTAL_ORE_PLACED_KEY = registerKey("end_dark_crystal_ore_placed");
-    public static final ResourceKey<PlacedFeature> LIGHT_CRYSTAL_ORE_PLACED_KEY = registerKey("end_light_crystal_ore_placed");
+    public static final ResourceKey<PlacedFeature> LIGHT_CRYSTAL_ORE_PLACED_KEY = registerKey("end_light_crystal_ore_placed")
+            ;
+    public static final ResourceKey<PlacedFeature> DANCING_FLOWER_LEAF_PLACED_KEY = registerKey("end_dancing_flower_leaf_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -42,6 +42,9 @@ public class ModPlacedFeatures {
         register(context, LIGHT_CRYSTAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_LIGHT_CRYSTAL_ORE_KEY),
                 ModOrePlacement.rareOrePlacement(2,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-128), VerticalAnchor.absolute(128))));
+
+        register(context, DANCING_FLOWER_LEAF_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DANCING_FLOWER_LEAF_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(8), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
     }
 

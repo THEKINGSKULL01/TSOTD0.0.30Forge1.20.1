@@ -20,6 +20,8 @@ public class ModBiomeModifers {
     public static final ResourceKey<BiomeModifier> ADD_END_DARK_CRYSTAL_ORE = registerKey("add_end_dark_crystal_ore");
     public static final ResourceKey<BiomeModifier> ADD_END_LIGHT_CRYSTAL_ORE = registerKey("add_end_light_crystal_ore");
 
+    public static final ResourceKey<BiomeModifier> ADD_END_DANCING_FLOWER_LEAF = registerKey("add_end_dancing_flower_leaf");
+
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -42,6 +44,11 @@ public class ModBiomeModifers {
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LIGHT_CRYSTAL_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_END_DANCING_FLOWER_LEAF, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_DENSE_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DANCING_FLOWER_LEAF_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
 
 
 

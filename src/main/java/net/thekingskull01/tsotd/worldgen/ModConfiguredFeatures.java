@@ -2,6 +2,7 @@ package net.thekingskull01.tsotd.worldgen;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -9,9 +10,7 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.*;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -35,6 +34,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_DARK_CRYSTAL_ORE_KEY = registerKey("end_dark_crystal_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_LIGHT_CRYSTAL_ORE_KEY = registerKey("end_light_crystal_ore");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DANCING_FLOWER_LEAF_KEY = registerKey("dancing_flower_leaf");
+
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
@@ -55,6 +56,10 @@ public class ModConfiguredFeatures {
                 ModBlocks.Dark_Crystal_Ore.get().defaultBlockState(), 6));
         register(context, END_LIGHT_CRYSTAL_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
                 ModBlocks.Light_Crystal_Ore.get().defaultBlockState(), 6));
+
+        register(context, DANCING_FLOWER_LEAF_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(26, 3,3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.Dancing_Flower_Leaf.get())))));
     }
 
 
