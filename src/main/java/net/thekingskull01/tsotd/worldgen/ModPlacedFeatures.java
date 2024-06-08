@@ -8,7 +8,9 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.thekingskull01.tsotd.TSOTD;
@@ -19,12 +21,27 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ZOMBLIE_PLACED_KEY = registerKey("zomblie_placed");
 
+    public static final ResourceKey<PlacedFeature> CRYSTALIZED_COAL_ORE_PLACED_KEY = registerKey("nether_crystalized_coal_ore_placed");
+    public static final ResourceKey<PlacedFeature> DARK_CRYSTAL_ORE_PLACED_KEY = registerKey("end_dark_crystal_ore_placed");
+    public static final ResourceKey<PlacedFeature> LIGHT_CRYSTAL_ORE_PLACED_KEY = registerKey("end_light_crystal_ore_placed");
+
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ZOMBLIE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ZOMBLIE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 2),
                         ModBlocks.Zomblie_Sapling.get()));
+
+        register(context, CRYSTALIZED_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_CRYSTALIZED_COAL_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(8,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
+
+        register(context, DARK_CRYSTAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_DARK_CRYSTAL_ORE_KEY),
+                ModOrePlacement.rareOrePlacement(2,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-128), VerticalAnchor.absolute(128))));
+        register(context, LIGHT_CRYSTAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_LIGHT_CRYSTAL_ORE_KEY),
+                ModOrePlacement.rareOrePlacement(2,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-128), VerticalAnchor.absolute(128))));
 
     }
 
