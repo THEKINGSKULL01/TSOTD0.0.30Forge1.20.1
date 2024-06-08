@@ -47,7 +47,7 @@ public class ModConfiguredFeatures {
                 new ForkingTrunkPlacer(4, 3, 4),
                 BlockStateProvider.simple(ModBlocks.Zomblie_Leaves.get()),
                 new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), 2),
-                new TwoLayersFeatureSize(4, 2, 1)).build());
+                new TwoLayersFeatureSize(4, 2, 1)).dirt(BlockStateProvider.simple(Blocks.END_STONE)).build());
 
         register(context, NETHER_CRYSTALIZED_COAL_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
                 ModBlocks.Coal_Crystal_Ore.get().defaultBlockState(), 10));

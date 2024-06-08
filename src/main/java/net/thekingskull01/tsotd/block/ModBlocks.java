@@ -56,7 +56,7 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE)));
 
     public static final RegistryObject<Block> Zomblie_Sapling = registerBlock("zomblie_sapling",
-            () -> new SaplingBlock(new ZomblieTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            () -> new ModSaplingBlock(new ZomblieTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> Zomblie_Planks = registerBlock("zomblie_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)) {

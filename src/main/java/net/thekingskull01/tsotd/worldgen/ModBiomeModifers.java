@@ -27,7 +27,7 @@ public class ModBiomeModifers {
         var biomes = context.lookup(Registries.BIOME);
 
         context.register(ADD_TREE_ZOMBLIE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ZOMBLIE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 

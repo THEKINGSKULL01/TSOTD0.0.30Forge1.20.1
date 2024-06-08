@@ -29,7 +29,7 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ZOMBLIE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ZOMBLIE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 2),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.01f, 0),
                         ModBlocks.Zomblie_Sapling.get()));
 
         register(context, CRYSTALIZED_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_CRYSTALIZED_COAL_ORE_KEY),
