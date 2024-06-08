@@ -5,6 +5,7 @@ import net.kaupenjoe.mccourse.potion.BetterBrewingRecipe;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
@@ -22,7 +23,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thekingskull01.tsotd.block.ModBlocks;
-import net.thekingskull01.tsotd.block.entity.ModBlockEntitys;
+import net.thekingskull01.tsotd.block.entity.ModBlockEntities;
 import net.thekingskull01.tsotd.effect.ModEffects;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.fluid.ModFluids;
@@ -35,6 +36,7 @@ import net.thekingskull01.tsotd.potion.ModPotions;
 import net.thekingskull01.tsotd.recipe.ModRecipes;
 import net.thekingskull01.tsotd.screen.ModMenuTypes;
 import net.thekingskull01.tsotd.screen.TakichirumWorkbenchScreen;
+import net.thekingskull01.tsotd.util.ModWoodTypes;
 import net.thekingskull01.tsotd.villager.ModVillagers;
 import org.slf4j.Logger;
 
@@ -77,7 +79,7 @@ public class TSOTD {
         ModFluids.FLUIDS.register(modEventBus);
         ModFluids.ENTITY_TYPES.register(modEventBus);
 
-        ModBlockEntitys.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
@@ -119,6 +121,8 @@ public class TSOTD {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                Sheets.addWoodType(ModWoodTypes.ZOMBLIE);
+
                 ModItemProperties.addCustomItemProperties();
 
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.GLOWSTONE.FLUID.get(), RenderType.translucent());

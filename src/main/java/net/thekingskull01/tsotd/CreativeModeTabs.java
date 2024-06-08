@@ -148,6 +148,11 @@ public class CreativeModeTabs {
 
                         output.accept(ModBlocks.Zomblie_Leaves.get());
 
+                        //Signs
+
+                        output.accept(ModItems.Zomblie_Sign.get());
+                        output.accept(ModItems.Zomblie_Hanging_Sign.get());
+
                         //Lamps
 
                         output.accept(ModBlocks.Crystal_Lamp.get());

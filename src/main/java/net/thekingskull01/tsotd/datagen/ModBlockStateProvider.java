@@ -58,6 +58,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     leavesBlock(ModBlocks.Zomblie_Leaves);
     saplingBlock(ModBlocks.Zomblie_Sapling);
 
+        //Signs
+
+        signBlock(((StandingSignBlock) ModBlocks.Zomblie_Sign.get()), ((WallSignBlock) ModBlocks.Zomblie_Wall_Sign.get()),
+                blockTexture(ModBlocks.Zomblie_Planks.get()));
+
+        hangingSignBlock(ModBlocks.Zomblie_Hanging_Sign.get(), ModBlocks.Zomblie_Wall_Hanging_Sign.get(),
+                blockTexture(ModBlocks.Zomblie_Planks.get()));
+
 
 
         //Stairs
@@ -112,47 +120,47 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Doors
 
-        doorBlockWithRenderType((DoorBlock)ModBlocks.Dark_Crystal_Door.get(),
-                modLoc("block/dark_crystal_door_bottom"),
-                modLoc("block/dark_crystal_door_top"), "cutout");
-        doorBlockWithRenderType((DoorBlock)ModBlocks.Light_Crystal_Door.get(),
-                modLoc("block/light_crystal_door_bottom"),
-                modLoc("block/light_crystal_door_top"), "cutout");
-        doorBlockWithRenderType((DoorBlock)ModBlocks.Coal_Crystal_Door.get(),
-                modLoc("block/coal_crystal_door_bottom"),
-                modLoc("block/coal_crystal_door_top"), "cutout");
+    doorBlockWithRenderType((DoorBlock)ModBlocks.Dark_Crystal_Door.get(),
+            modLoc("block/dark_crystal_door_bottom"),
+            modLoc("block/dark_crystal_door_top"), "cutout");
+    doorBlockWithRenderType((DoorBlock)ModBlocks.Light_Crystal_Door.get(),
+            modLoc("block/light_crystal_door_bottom"),
+            modLoc("block/light_crystal_door_top"), "cutout");
+    doorBlockWithRenderType((DoorBlock)ModBlocks.Coal_Crystal_Door.get(),
+            modLoc("block/coal_crystal_door_bottom"),
+            modLoc("block/coal_crystal_door_top"), "cutout");
 
         //trapdoors
 
-        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Dark_Crystal_Trapdoor.get(),
-                modLoc("block/dark_crystal_trapdoor"), true, "cutout");
-        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Light_Crystal_Trapdoor.get(),
-                modLoc("block/light_crystal_trapdoor"), true, "cutout");
-        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Coal_Crystal_Trapdoor.get(),
-                modLoc("block/coal_crystal_trapdoor"), true, "cutout");
+    trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Dark_Crystal_Trapdoor.get(),
+            modLoc("block/dark_crystal_trapdoor"), true, "cutout");
+    trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Light_Crystal_Trapdoor.get(),
+            modLoc("block/light_crystal_trapdoor"), true, "cutout");
+    trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.Coal_Crystal_Trapdoor.get(),
+            modLoc("block/coal_crystal_trapdoor"), true, "cutout");
 
         //Stairs blockItem
 
-        blockItem(ModBlocks.Dark_Crystal_Stairs);
-        blockItem(ModBlocks.Light_Crystal_Stairs);
-        blockItem(ModBlocks.Coal_Crystal_Stairs);
-        blockItem(ModBlocks.Darkened_Light_Crystal_Stairs);
+    blockItem(ModBlocks.Dark_Crystal_Stairs);
+    blockItem(ModBlocks.Light_Crystal_Stairs);
+    blockItem(ModBlocks.Coal_Crystal_Stairs);
+    blockItem(ModBlocks.Darkened_Light_Crystal_Stairs);
 
         //Slab blockItem
 
-        blockItem(ModBlocks.Dark_Crystal_Slab);
-        blockItem(ModBlocks.Light_Crystal_Slab);
-        blockItem(ModBlocks.Coal_Crystal_Slab);
-        blockItem(ModBlocks.Darkened_Light_Crystal_Slab);
+    blockItem(ModBlocks.Dark_Crystal_Slab);
+    blockItem(ModBlocks.Light_Crystal_Slab);
+    blockItem(ModBlocks.Coal_Crystal_Slab);
+    blockItem(ModBlocks.Darkened_Light_Crystal_Slab);
 
         //Button "blockItem" is in the "Mod-Item-Model-Provider"
 
         //PressurePlate blockItem
 
-        blockItem(ModBlocks.Dark_Crystal_Pressure_Plate);
-        blockItem(ModBlocks.Light_Crystal_Pressure_Plate);
-        blockItem(ModBlocks.Coal_Crystal_Pressure_Plate);
-        blockItem(ModBlocks.Darkened_Light_Crystal_Pressure_Plate);
+    blockItem(ModBlocks.Dark_Crystal_Pressure_Plate);
+    blockItem(ModBlocks.Light_Crystal_Pressure_Plate);
+    blockItem(ModBlocks.Coal_Crystal_Pressure_Plate);
+    blockItem(ModBlocks.Darkened_Light_Crystal_Pressure_Plate);
 
         //Walls are in ModItemModelProvider for the "blockItem"
 
@@ -161,38 +169,56 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //FenceGate
 
-        blockItem(ModBlocks.Dark_Crystal_Fence_Gate);
-        blockItem(ModBlocks.Light_Crystal_Fence_Gate);
-        blockItem(ModBlocks.Coal_Crystal_Fence_Gate);
-        blockItem(ModBlocks.Darkened_Light_Crystal_Fence_Gate);
+    blockItem(ModBlocks.Dark_Crystal_Fence_Gate);
+    blockItem(ModBlocks.Light_Crystal_Fence_Gate);
+    blockItem(ModBlocks.Coal_Crystal_Fence_Gate);
+    blockItem(ModBlocks.Darkened_Light_Crystal_Fence_Gate);
 
         //Doors are in ModItemModelProvider for the "blockItem"
 
         //Trapdoors
 
-        blockItem(ModBlocks.Dark_Crystal_Trapdoor,"_bottom");
-        blockItem(ModBlocks.Light_Crystal_Trapdoor,"_bottom");
-        blockItem(ModBlocks.Coal_Crystal_Trapdoor,"_bottom");
+    blockItem(ModBlocks.Dark_Crystal_Trapdoor,"_bottom");
+    blockItem(ModBlocks.Light_Crystal_Trapdoor,"_bottom");
+    blockItem(ModBlocks.Coal_Crystal_Trapdoor,"_bottom");
 
         //Crops
 
-        makeCrop(((TakichirumCrop) ModBlocks.Takichirum_Crop.get()), "takichirum_stage", "takichirum_stage");
+    makeCrop(((TakichirumCrop) ModBlocks.Takichirum_Crop.get()), "takichirum_stage", "takichirum_stage");
 
         //Flowers
 
-        simpleBlockWithItem(ModBlocks.Dancing_Flower_Leaf.get(), models().cross(blockTexture(ModBlocks.Dancing_Flower_Leaf.get()).getPath(),
-                blockTexture(ModBlocks.Dancing_Flower_Leaf.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.Potted_Dancing_Flower_Leaf.get(), models().singleTexture("potted_dancing_flower_leaf",
-                new ResourceLocation("flower_pot_cross"), "plant",blockTexture(ModBlocks.Dancing_Flower_Leaf.get())).renderType("cutout"));
+    simpleBlockWithItem(ModBlocks.Dancing_Flower_Leaf.get(), models().cross(blockTexture(ModBlocks.Dancing_Flower_Leaf.get()).getPath(),
+            blockTexture(ModBlocks.Dancing_Flower_Leaf.get())).renderType("cutout"));
+    simpleBlockWithItem(ModBlocks.Potted_Dancing_Flower_Leaf.get(), models().singleTexture("potted_dancing_flower_leaf",
+            new ResourceLocation("flower_pot_cross"), "plant",blockTexture(ModBlocks.Dancing_Flower_Leaf.get())).renderType("cutout"));
 
-        //Workbenches
-        horizontalBlock(ModBlocks.Takichirum_Workbench.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/takichirum_workbench")));
+    //Workbenches
+    horizontalBlock(ModBlocks.Takichirum_Workbench.get(),
+            new ModelFile.UncheckedModelFile(modLoc("block/takichirum_workbench")));
 
 
 
 
         customLamp();
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {

@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-07T22:42:12.7883227	Block States: tsotd
+// 1.20.1	2024-06-08T10:56:58.9358364	Block States: tsotd
 dcbb3353ffc60d3664ad939c9e3501913e1a41cc assets/tsotd/blockstates/coal_crystal_block.json
 ab4e34223db0361f2a07260afde32c850cd3e9a9 assets/tsotd/blockstates/coal_crystal_button.json
 7a7b3c839fc8a86a3d447f4140549775c7a413b0 assets/tsotd/blockstates/coal_crystal_door.json
@@ -48,10 +48,14 @@ ad8c687afffe4aac779cbd1d92d9d6f6775bd57c assets/tsotd/blockstates/light_crystal_
 96d29a334d14bdd44671a9dcd914e2376f3b4a81 assets/tsotd/blockstates/takichirum_block.json
 33a81b519cc78cba7f815f5fd5651d1daac95692 assets/tsotd/blockstates/takichirum_crop.json
 196eec94932395461687b5a62bfdd0ed13221c80 assets/tsotd/blockstates/takichirum_workbench.json
+015b0b5bede3fef456ece694f9ff89dbb95ee2f4 assets/tsotd/blockstates/zomblie_hanging_sign.json
 81265795b5bd2aa9f7c0a6d3c38ed6e150ffcd19 assets/tsotd/blockstates/zomblie_leaves.json
 72ccb6d0d853b7d95aa7be87fae26ea6f690a340 assets/tsotd/blockstates/zomblie_log.json
 406251132468a420ebc4e34858f9dd85e8822db7 assets/tsotd/blockstates/zomblie_planks.json
 b180468f946dcb704f2e96a2559d0b7be856b06c assets/tsotd/blockstates/zomblie_sapling.json
+eda4909b44fec566e7b37e0ce92f3c9b2b937862 assets/tsotd/blockstates/zomblie_sign.json
+015b0b5bede3fef456ece694f9ff89dbb95ee2f4 assets/tsotd/blockstates/zomblie_wall_hanging_sign.json
+eda4909b44fec566e7b37e0ce92f3c9b2b937862 assets/tsotd/blockstates/zomblie_wall_sign.json
 68c75be9c2083948b7ba3d805284d63dd39cd841 assets/tsotd/blockstates/zomblie_wood.json
 79b48e75b184bbe7db714e2df8f2c22c3090d120 assets/tsotd/models/block/coal_crystal_block.json
 1bb9d29b8a11ae025653fc337584dc2ceb8daf2d assets/tsotd/models/block/coal_crystal_button.json
@@ -181,11 +185,13 @@ bd016d342ba292e6735dfe167e74beb844b68d5b assets/tsotd/models/block/takichirum_st
 95baacc50ef282b626617657e3120321ef88498f assets/tsotd/models/block/takichirum_stage4.json
 a19b3e40de206048f9aa551728babf02f0918cde assets/tsotd/models/block/takichirum_stage5.json
 c07d9f2b066568f1e90815d1a92288aebe71d688 assets/tsotd/models/block/takichirum_stage6.json
+0b0e6e8a25d12892f09469381a7deab5c15c7788 assets/tsotd/models/block/zomblie_hanging_sign.json
 65d918b4340889a9a3057e026c751c4bcfeb697d assets/tsotd/models/block/zomblie_leaves.json
 6ac655a47853994dce2c15f49d83d08618b1390f assets/tsotd/models/block/zomblie_log.json
 52a2912ee531f52741d82be7de2a4b31e68f38d2 assets/tsotd/models/block/zomblie_log_horizontal.json
 6d1700b508f400351f525a28743c5b6e72f6d574 assets/tsotd/models/block/zomblie_planks.json
 2f71ab935ff5ceb56d34610fd3f55e6cb0b98cfa assets/tsotd/models/block/zomblie_sapling.json
+0b0e6e8a25d12892f09469381a7deab5c15c7788 assets/tsotd/models/block/zomblie_sign.json
 2d09c47e60624eebc990071705b6a5681d444bdd assets/tsotd/models/block/zomblie_wood.json
 d1ba4b7e9678f2d3729105cc62c9b2335fb00c9c assets/tsotd/models/block/zomblie_wood_horizontal.json
 deefe3cf166f519ecf9f92748765b035e57f7cc6 assets/tsotd/models/item/coal_crystal_block.json

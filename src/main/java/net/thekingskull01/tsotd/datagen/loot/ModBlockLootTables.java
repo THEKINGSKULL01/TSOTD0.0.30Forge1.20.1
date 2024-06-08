@@ -19,6 +19,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.block.custom.TakichirumCrop;
 import net.thekingskull01.tsotd.item.ModItems;
+import org.checkerframework.common.returnsreceiver.qual.This;
 
 import java.util.Set;
 
@@ -146,6 +147,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Workbenches
         this.dropSelf(ModBlocks.Takichirum_Workbench.get());
+
+        //Signs
+        this.add(ModBlocks.Zomblie_Sign.get(), block ->
+                createSingleItemTable(ModItems.Zomblie_Sign.get()));
+        this.add(ModBlocks.Zomblie_Wall_Sign.get(), block ->
+                createSingleItemTable(ModItems.Zomblie_Sign.get()));
+        this.add(ModBlocks.Zomblie_Hanging_Sign.get(), block ->
+                createSingleItemTable(ModItems.Zomblie_Hanging_Sign.get()));
+        this.add(ModBlocks.Zomblie_Wall_Hanging_Sign.get(), block ->
+                createSingleItemTable(ModItems.Zomblie_Hanging_Sign.get()));
+
 
     }
 

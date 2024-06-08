@@ -18,12 +18,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
-import net.thekingskull01.tsotd.block.custom.CrystalLampBlock;
-import net.thekingskull01.tsotd.block.custom.ModFlammableRotatedPillarBlock;
-import net.thekingskull01.tsotd.block.custom.TakichirumCrop;
-import net.thekingskull01.tsotd.block.custom.TakichirumWorkBenchBlock;
+import net.thekingskull01.tsotd.block.custom.*;
 import net.thekingskull01.tsotd.item.ModItems;
 import net.thekingskull01.tsotd.item.custom.CrystalizedCoalBlock;
+import net.thekingskull01.tsotd.util.ModWoodTypes;
 
 import java.util.function.Supplier;
 
@@ -94,6 +92,18 @@ public class ModBlocks {
                     return 30;
                 }
             });
+
+    //Signs, Signs, Signs, Signs, Signs, Signs, Signs, Signs
+
+    public static final RegistryObject<Block> Zomblie_Sign = BLOCKS.register("zomblie_sign",
+            () -> new ModStandingSign(BlockBehaviour.Properties.copy(Blocks.WARPED_SIGN), ModWoodTypes.ZOMBLIE));
+    public static final RegistryObject<Block> Zomblie_Wall_Sign = BLOCKS.register("zomblie_wall_sign",
+            () -> new ModWallSign(BlockBehaviour.Properties.copy(Blocks.WARPED_WALL_SIGN), ModWoodTypes.ZOMBLIE));
+
+    public static final RegistryObject<Block> Zomblie_Hanging_Sign = BLOCKS.register("zomblie_hanging_sign",
+            () -> new ModHangingSign(BlockBehaviour.Properties.copy(Blocks.WARPED_HANGING_SIGN), ModWoodTypes.ZOMBLIE));
+    public static final RegistryObject<Block> Zomblie_Wall_Hanging_Sign = BLOCKS.register("zomblie_wall_hanging_sign",
+            () -> new ModWallHangingSign(BlockBehaviour.Properties.copy(Blocks.WARPED_WALL_HANGING_SIGN), ModWoodTypes.ZOMBLIE));
 
     //Lamps, Lamps, Lamps, Lamps, Lamps, Lamps, Lamps
 

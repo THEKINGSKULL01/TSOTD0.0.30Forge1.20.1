@@ -41,6 +41,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.Zomblie_Sapling);
 
+        //Signs
+
+        simpleItem(ModItems.Zomblie_Sign);
+        simpleItem(ModItems.Zomblie_Hanging_Sign);
+
 
 
         //Parts

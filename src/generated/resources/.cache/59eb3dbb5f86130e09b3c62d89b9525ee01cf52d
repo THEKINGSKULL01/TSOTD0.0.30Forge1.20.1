@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-07T22:18:03.9138257	Loot Tables
+// 1.20.1	2024-06-08T10:48:20.510178	Loot Tables
 05a22a98d44a7e027735f4334a4fd50997f888e6 data/tsotd/loot_tables/blocks/coal_crystal_block.json
 7486092aa08dbb37cc1f664b009f0d742aa5476a data/tsotd/loot_tables/blocks/coal_crystal_button.json
 2a82d4a7b2fc4c621c1806a4e1ccd8b15b980dd8 data/tsotd/loot_tables/blocks/coal_crystal_door.json
@@ -48,8 +48,12 @@ d312577771a5cc5ff4aefe6201de708f5f7961a3 data/tsotd/loot_tables/blocks/light_cry
 5a8bf3f32a74446139d46828a0043da68101bb98 data/tsotd/loot_tables/blocks/takichirum_block.json
 e73d0f010868e7b7120126e6c1d00ee9fc1e9cf0 data/tsotd/loot_tables/blocks/takichirum_crop.json
 6cd777e63e714665e123238f8ca098511c002dec data/tsotd/loot_tables/blocks/takichirum_workbench.json
+37c2f5e831be214006beeafdadbaf4891bb2bdd8 data/tsotd/loot_tables/blocks/zomblie_hanging_sign.json
 8d0b04278a5714b3ce00b137eb2dcd35a1729f2a data/tsotd/loot_tables/blocks/zomblie_leaves.json
 3546849d8ef7c5478c08b1682e0a1901438bdb7f data/tsotd/loot_tables/blocks/zomblie_log.json
 b78a14a02b8d63436a539b73e0d09823047fb4f7 data/tsotd/loot_tables/blocks/zomblie_planks.json
 c112ac5ac82948dcc3341f639485d88d9dc9e83d data/tsotd/loot_tables/blocks/zomblie_sapling.json
+ae93708633402c31a8ffc2a0cc456e41ba513061 data/tsotd/loot_tables/blocks/zomblie_sign.json
+791e8f66afbd428d324a8169314c30290d056678 data/tsotd/loot_tables/blocks/zomblie_wall_hanging_sign.json
+bb782038693701149e30fb921278f62b8b2e6e11 data/tsotd/loot_tables/blocks/zomblie_wall_sign.json
 b0f9af2b5fb9a0c448811eda79a39d254f608ad9 data/tsotd/loot_tables/blocks/zomblie_wood.json

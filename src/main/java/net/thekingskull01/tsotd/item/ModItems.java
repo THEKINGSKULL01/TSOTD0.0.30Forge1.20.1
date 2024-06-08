@@ -180,10 +180,15 @@ public class ModItems{
     public static final RegistryObject<Item> Glowstone_Fluid_Bucket = ITEMS.register("glowstone_fluid_bucket",
             () -> new BucketItem(ModFluids.GLOWSTONE.FLUID, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
-            //Enchanted books
+            //Signs
 
-    //public static final RegistryObject<Item> Life_Stealer_Book = ITEMS.register("life_stealer_book",
-    //        () -> new EnchantedBookItem(new Item.Properties()));
+    public static final RegistryObject<Item> Zomblie_Sign = ITEMS.register("zomblie_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.Zomblie_Sign.get(), ModBlocks.Zomblie_Wall_Sign.get()));
+    public static final RegistryObject<Item> Zomblie_Hanging_Sign = ITEMS.register("zomblie_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.Zomblie_Hanging_Sign.get(), ModBlocks.Zomblie_Wall_Hanging_Sign.get(),
+                    new Item.Properties().stacksTo(16)));
+
+
 
 
     public static void  register(IEventBus eventBus) {
