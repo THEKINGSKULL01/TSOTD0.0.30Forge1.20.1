@@ -46,7 +46,7 @@ public class ModBiomeModifers {
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_END_DANCING_FLOWER_LEAF, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_DENSE_END),
+                biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DANCING_FLOWER_LEAF_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
