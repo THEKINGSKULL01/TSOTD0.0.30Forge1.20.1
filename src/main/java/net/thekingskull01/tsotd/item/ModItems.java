@@ -195,6 +195,9 @@ public class ModItems{
     public static final RegistryObject<Item> Sculvort_Spawn_Egg = ITEMS.register("sculvort_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.Sculvort, 0x292929, 0xfb00ff,
                     new Item.Properties()));
+    public static final RegistryObject<Item> Feathda_Spawn_Egg = ITEMS.register("feathda_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.Feathda, 0xbd0000, 0xfff566,
+                    new Item.Properties()));
 
 
 

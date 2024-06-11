@@ -8,4 +8,8 @@ public class ModModelLayers {
     public static final ModelLayerLocation SCULVORT_LAYER = new ModelLayerLocation(
             new ResourceLocation(TSOTD.MOD_ID, "sculvort_layer"), "sculvort_layer"
     );
+
+    public static final ModelLayerLocation FEATHDA_LAYER = new ModelLayerLocation(
+            new ResourceLocation(TSOTD.MOD_ID, "feathda_layer"), "feathda_layer"
+    );
 }

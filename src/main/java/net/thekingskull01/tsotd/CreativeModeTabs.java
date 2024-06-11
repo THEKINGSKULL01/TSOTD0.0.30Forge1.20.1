@@ -244,6 +244,7 @@ public class CreativeModeTabs {
                         //Eggs
 
                         output.accept(ModItems.Sculvort_Spawn_Egg.get());
+                        output.accept(ModItems.Feathda_Spawn_Egg.get());
 
 
 

@@ -28,6 +28,7 @@ import net.thekingskull01.tsotd.block.entity.ModBlockEntities;
 import net.thekingskull01.tsotd.effect.ModEffects;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.entity.ModEntities;
+import net.thekingskull01.tsotd.entity.client.FeathdaRenderer;
 import net.thekingskull01.tsotd.entity.client.SculvortRenderer;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModItemProperties;
@@ -136,6 +137,7 @@ public class TSOTD {
                 MenuScreens.register(ModMenuTypes.TAKICHIRUM_WORKBENCH_MENU.get(), TakichirumWorkbenchScreen::new);
 
                 EntityRenderers.register(ModEntities.Sculvort.get(), SculvortRenderer::new);
+                EntityRenderers.register(ModEntities.Feathda.get(), FeathdaRenderer::new);
 
             });
 

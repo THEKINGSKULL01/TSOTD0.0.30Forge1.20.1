@@ -136,6 +136,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Spawn eggs
         withExistingParent(ModItems.Sculvort_Spawn_Egg.getId().getPath(),mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.Feathda_Spawn_Egg.getId().getPath(),mcLoc("item/template_spawn_egg"));
 
 
     }

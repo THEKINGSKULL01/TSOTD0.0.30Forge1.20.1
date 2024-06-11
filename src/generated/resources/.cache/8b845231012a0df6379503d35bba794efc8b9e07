@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-10T01:48:22.2316408	Item Models: tsotd
+// 1.20.1	2024-06-11T01:09:08.9165877	Item Models: tsotd
 2d3689024c8a4b50533bd76b06524f612e1505da assets/tsotd/models/item/blue_crystal.json
 e454f095c0defc490971cfce5a699c86c839591f assets/tsotd/models/item/coal_crystal_button.json
 2d794b9e80013498576641ec205d7956fd1cd12c assets/tsotd/models/item/coal_crystal_door.json
@@ -24,6 +24,7 @@ dba3e9687aefd1208f746d7003b2c31a21b3ed35 assets/tsotd/models/item/dark_crystal_s
 7399f15656a63d09175e07e22450444a3bf8cd55 assets/tsotd/models/item/dark_crystal_sword.json
 85317b9de1a3526939c9a51108e60b0a67d2e24f assets/tsotd/models/item/dark_crystal_wall.json
 619aa2455a8bab2d7b3daeddc1d41dc4c185b5a4 assets/tsotd/models/item/dark_stick.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tsotd/models/item/feathda_spawn_egg.json
 d05236e60f9b402d878ed8164a4a00b5a00be3bd assets/tsotd/models/item/glowstone_fluid_bucket.json
 4f64370d90fef8d8fa09dd54efd9f508d68a8cc7 assets/tsotd/models/item/green_crystal.json
 56e0760ab781bd260e9742e71d28fb6a01bbe58a assets/tsotd/models/item/lightblue_crystal.json
