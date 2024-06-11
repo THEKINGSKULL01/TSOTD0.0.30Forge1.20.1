@@ -134,6 +134,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Workbenches
         simpleItem(ModItems.Glowstone_Fluid_Bucket);
 
+        //Spawn eggs
+        withExistingParent(ModItems.Sculvort_Spawn_Egg.getId().getPath(),mcLoc("item/template_spawn_egg"));
 
 
     }

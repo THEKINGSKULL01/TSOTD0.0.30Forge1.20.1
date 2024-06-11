@@ -3,6 +3,7 @@ package net.thekingskull01.tsotd.item;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -10,6 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
+import net.thekingskull01.tsotd.entity.ModEntities;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.fluidtypes.ModFluidTypes;
 import net.thekingskull01.tsotd.item.custom.*;
@@ -187,6 +189,13 @@ public class ModItems{
     public static final RegistryObject<Item> Zomblie_Hanging_Sign = ITEMS.register("zomblie_hanging_sign",
             () -> new HangingSignItem(ModBlocks.Zomblie_Hanging_Sign.get(), ModBlocks.Zomblie_Wall_Hanging_Sign.get(),
                     new Item.Properties().stacksTo(16)));
+
+            //Eggs
+
+    public static final RegistryObject<Item> Sculvort_Spawn_Egg = ITEMS.register("sculvort_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.Sculvort, 0x292929, 0xfb00ff,
+                    new Item.Properties()));
+
 
 
 

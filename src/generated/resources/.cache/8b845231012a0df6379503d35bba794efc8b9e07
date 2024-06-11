@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-08T10:48:20.5091759	Item Models: tsotd
+// 1.20.1	2024-06-10T01:48:22.2316408	Item Models: tsotd
 2d3689024c8a4b50533bd76b06524f612e1505da assets/tsotd/models/item/blue_crystal.json
 e454f095c0defc490971cfce5a699c86c839591f assets/tsotd/models/item/coal_crystal_button.json
 2d794b9e80013498576641ec205d7956fd1cd12c assets/tsotd/models/item/coal_crystal_door.json
@@ -43,6 +43,7 @@ d09c7f9720a95ca423d471074a767e756eae6b49 assets/tsotd/models/item/light_crystal_
 bd68aba0de1968e27a085e6d59d940bdfcc2197d assets/tsotd/models/item/light_stick.json
 336995adc399c50d4a0010f9919399501eeae457 assets/tsotd/models/item/purple_crystal.json
 22b60d3a6402b9eea965b547e6624ad46f82d974 assets/tsotd/models/item/red_crystal.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tsotd/models/item/sculvort_spawn_egg.json
 c3d93629ed2e8e4e87995dd5d9e18742af292a66 assets/tsotd/models/item/takichirum_hammer.json
 3695bac593a84fba41d7f7a806eb1a1299f7884c assets/tsotd/models/item/takichirum_horse_armor.json
 ea85594571b1ca99980ee2da8211c0650fdafc7c assets/tsotd/models/item/takichirum_ingot.json

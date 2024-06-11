@@ -241,6 +241,10 @@ public class CreativeModeTabs {
 
                         output.accept(ModBlocks.Dancing_Flower_Leaf.get());
 
+                        //Eggs
+
+                        output.accept(ModItems.Sculvort_Spawn_Egg.get());
+
 
 
                         //Enchants

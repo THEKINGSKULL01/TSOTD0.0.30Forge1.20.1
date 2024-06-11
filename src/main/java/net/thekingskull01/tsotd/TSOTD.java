@@ -6,6 +6,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
@@ -26,6 +27,8 @@ import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.block.entity.ModBlockEntities;
 import net.thekingskull01.tsotd.effect.ModEffects;
 import net.thekingskull01.tsotd.enchantment.ModEnchantments;
+import net.thekingskull01.tsotd.entity.ModEntities;
+import net.thekingskull01.tsotd.entity.client.SculvortRenderer;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModItemProperties;
 import net.thekingskull01.tsotd.item.ModItems;
@@ -84,6 +87,8 @@ public class TSOTD {
 
         ModRecipes.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 
@@ -129,6 +134,8 @@ public class TSOTD {
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.GLOWSTONE.FLUID_FLOW.get(), RenderType.translucent());
 
                 MenuScreens.register(ModMenuTypes.TAKICHIRUM_WORKBENCH_MENU.get(), TakichirumWorkbenchScreen::new);
+
+                EntityRenderers.register(ModEntities.Sculvort.get(), SculvortRenderer::new);
 
             });
 
