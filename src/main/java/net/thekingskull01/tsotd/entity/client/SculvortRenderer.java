@@ -13,7 +13,7 @@ public class SculvortRenderer extends MobRenderer<SculvortEntity, SculvortModel<
     private static final ResourceLocation SCULVORT_LOCATION = new ResourceLocation(TSOTD.MOD_ID, "textures/entity/sculvort.png");
 
     public SculvortRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new SculvortModel<>(pContext.bakeLayer(ModModelLayers.SCULVORT_LAYER)), 1f);
+        super(pContext, new SculvortModel<>(pContext.bakeLayer(ModModelLayers.SCULVORT_LAYER)), 0.5f);
     }
 
     @Override

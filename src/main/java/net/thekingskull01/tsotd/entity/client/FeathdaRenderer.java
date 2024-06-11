@@ -14,7 +14,7 @@ public class FeathdaRenderer extends MobRenderer<FeathdaEntity, FeathdaModel<Fea
     private static final ResourceLocation FEATHDA_LOCATION = new ResourceLocation(TSOTD.MOD_ID, "textures/entity/feathda_ver1.png");
 
     public FeathdaRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new FeathdaModel<>(pContext.bakeLayer(ModModelLayers.FEATHDA_LAYER)), 1.5f);
+        super(pContext, new FeathdaModel<>(pContext.bakeLayer(ModModelLayers.FEATHDA_LAYER)), 0.25f);
     }
 
     @Override

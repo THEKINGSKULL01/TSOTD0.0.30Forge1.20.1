@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -20,6 +21,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.ForgeEventFactory;
@@ -200,7 +202,7 @@ public class FeathdaEntity extends TamableAnimal implements PlayerRideable{
                 float newSpeed = (float) this.getAttributeValue(Attributes.MOVEMENT_SPEED);
                 // increasing speed by 100% if the spring key is held down (number for testing purposes)
                 if(Minecraft.getInstance().options.keySprint.isDown()) {
-                    newSpeed *= 1.5f;
+                    newSpeed *= 1.25f;
                 }
 
                 this.setSpeed(newSpeed);
@@ -242,5 +244,15 @@ public class FeathdaEntity extends TamableAnimal implements PlayerRideable{
     @Override
     public boolean isFood(ItemStack pStack) {
         return pStack.is(ModItems.Takichirum_Seeds.get());
+    }
+
+
+    public static boolean checkSpawnRules(EntityType<FeathdaEntity> pAnimal, LevelAccessor pLevel, MobSpawnType pSpawnType, BlockPos pPos, RandomSource pRandom) {
+        return true;
+    }
+
+    @Override
+    public boolean checkSpawnRules(LevelAccessor pLevel, MobSpawnType pSpawnReason) {
+        return true;
     }
 }

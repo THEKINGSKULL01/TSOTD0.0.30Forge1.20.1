@@ -16,7 +16,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<SculvortEntity>> Sculvort =
             ENTITY_TYPES.register("sculvort", () -> EntityType.Builder.of(SculvortEntity::new, MobCategory.CREATURE)
-                    .sized(1f, 1f).build("sculvort"));
+                    .sized(0.75f, 0.75f).build("sculvort"));
 
     public static final RegistryObject<EntityType<FeathdaEntity>> Feathda =
             ENTITY_TYPES.register("feathda", () -> EntityType.Builder.of(FeathdaEntity::new, MobCategory.CREATURE)

@@ -34,6 +34,6 @@ public class ModEventBusEvents {
         event.register(ModEntities.Sculvort.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
         event.register(ModEntities.Feathda.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+                FeathdaEntity::checkSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
     }
 }

@@ -63,8 +63,8 @@ public class ModBiomeModifers {
                 List.of(new MobSpawnSettings.SpawnerData(ModEntities.Sculvort.get(), 3, 1, 1))));
 
         context.register(SPAWN_FEATHDA, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_END),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.Feathda.get(), 500, 3, 10))));
+                HolderSet.direct(biomes.getOrThrow(Biomes.THE_END)),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.Feathda.get(), 100, 3, 6))));
 
 
 
