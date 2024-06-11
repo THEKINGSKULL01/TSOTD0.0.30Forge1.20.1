@@ -1,11 +1,15 @@
 package net.thekingskull01.tsotd.entity.custom;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -29,6 +33,9 @@ public class SculvortEntity extends Zombie {
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 
+    private final ServerBossEvent bossEvent =
+            new ServerBossEvent(Component.literal("Sculvort"), BossEvent.BossBarColor.PURPLE, BossEvent.BossBarOverlay.NOTCHED_6);
+
     public SculvortEntity(EntityType<? extends Zombie> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
@@ -38,8 +45,6 @@ public class SculvortEntity extends Zombie {
         this.goalSelector.addGoal(0, new FloatGoal(this));
 
         this.goalSelector.addGoal(1, new SculvortAttackGoal(this, 1.0D, true));
-
-        //this.goalSelector.addGoal(1, new FollowParentGoal(this, 1.1d));
 
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, false));
 
@@ -145,5 +150,23 @@ public class SculvortEntity extends Zombie {
     @Override
     protected SoundEvent getStepSound() {
         return SoundEvents.IRON_GOLEM_STEP;
+    }
+
+    @Override
+    public void startSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.startSeenByPlayer(pServerPlayer);
+        this.bossEvent.addPlayer(pServerPlayer);
+    }
+
+    @Override
+    public void stopSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.stopSeenByPlayer(pServerPlayer);
+        this.bossEvent.removePlayer(pServerPlayer);
+    }
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
     }
 }
