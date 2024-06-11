@@ -28,6 +28,7 @@ public class ModBiomeModifers {
     public static final ResourceKey<BiomeModifier> ADD_END_DANCING_FLOWER_LEAF = registerKey("add_end_dancing_flower_leaf");
 
     public static final ResourceKey<BiomeModifier> SPAWN_SCULVORT = registerKey("spawn_sculvort");
+    public static final ResourceKey<BiomeModifier> SPAWN_FEATHDA = registerKey("spawn_feathda");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -59,7 +60,11 @@ public class ModBiomeModifers {
 
         context.register(SPAWN_SCULVORT, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.Sculvort.get(), 5, 1, 2))));
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.Sculvort.get(), 3, 1, 1))));
+
+        context.register(SPAWN_FEATHDA, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.Feathda.get(), 500, 3, 10))));
 
 
 
