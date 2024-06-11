@@ -6,12 +6,17 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.thekingskull01.tsotd.TSOTD;
+import net.thekingskull01.tsotd.entity.ModEntities;
+
+import java.util.List;
 
 public class ModBiomeModifers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_ZOMBLIE = registerKey("add_tree_zomblie");
@@ -21,6 +26,8 @@ public class ModBiomeModifers {
     public static final ResourceKey<BiomeModifier> ADD_END_LIGHT_CRYSTAL_ORE = registerKey("add_end_light_crystal_ore");
 
     public static final ResourceKey<BiomeModifier> ADD_END_DANCING_FLOWER_LEAF = registerKey("add_end_dancing_flower_leaf");
+
+    public static final ResourceKey<BiomeModifier> SPAWN_SCULVORT = registerKey("spawn_sculvort");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -50,7 +57,9 @@ public class ModBiomeModifers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DANCING_FLOWER_LEAF_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-
+        context.register(SPAWN_SCULVORT, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.Sculvort.get(), 5, 1, 2))));
 
 
 
