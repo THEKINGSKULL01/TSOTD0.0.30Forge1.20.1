@@ -13,6 +13,7 @@ public class ModTags {
 
     public static class Blocks {
 
+
         public static final TagKey<Block> DARK_CRYSTAL_DETECTOR_VALUABLES = tag("dark_crystal_detector_valuables");
         public static final TagKey<Block> LIGHT_CRYSTAL_DETECTOR_VALUABLES = tag("light_crystal_detector_valuables");
 

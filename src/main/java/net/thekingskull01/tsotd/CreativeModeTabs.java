@@ -29,6 +29,14 @@ public class CreativeModeTabs {
                         output.accept(ModItems.Dark_Crystal_Memory_Orb.get());
                         output.accept(ModItems.Light_Crystal_Memory_Orb.get());
 
+                        //Spears
+
+                        output.accept(ModItems.Diamond_Spear.get());
+
+                        //Scythes
+
+                        output.accept(ModItems.Diamond_Scythe.get());
+
                         //Swords
 
                         output.accept(ModItems.Dark_Crystal_Sword.get());

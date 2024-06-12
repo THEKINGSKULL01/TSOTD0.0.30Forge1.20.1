@@ -10,10 +10,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
-import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.entity.ModEntities;
 import net.thekingskull01.tsotd.fluid.ModFluids;
-import net.thekingskull01.tsotd.fluidtypes.ModFluidTypes;
 import net.thekingskull01.tsotd.item.custom.*;
 
 public class ModItems{
@@ -100,6 +98,16 @@ public class ModItems{
             () -> new BowItem(new Item.Properties().stacksTo(1).durability(4500)));
     public static final RegistryObject<Item> Light_Crystal_Bow = ITEMS.register("light_crystal_bow",
             () -> new BowItem(new Item.Properties().stacksTo(1).durability(4500)));
+
+            //Spear
+
+    public static final RegistryObject<Item> Diamond_Spear = ITEMS.register("diamond_spear",
+            () -> new DiamondSpearItem(new Item.Properties().stacksTo(1).durability(1561)));
+
+            //Scythe
+
+    public static final RegistryObject<Item> Diamond_Scythe = ITEMS.register("diamond_scythe",
+            () -> new DiamondScytheItem(new Item.Properties().stacksTo(1).durability(1561)));
 
             //Pickaxes
 

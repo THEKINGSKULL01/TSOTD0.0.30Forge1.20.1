@@ -86,6 +86,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.Light_Crystal_Door);
         simpleBlockItem(ModBlocks.Coal_Crystal_Door);
 
+        //Spears
+
+        handheldItem(ModItems.Diamond_Spear);
+
+        //Scythes
+        handheldItem(ModItems.Diamond_Scythe);
+
         //Swords
 
         handheldItem(ModItems.Dark_Crystal_Sword);
