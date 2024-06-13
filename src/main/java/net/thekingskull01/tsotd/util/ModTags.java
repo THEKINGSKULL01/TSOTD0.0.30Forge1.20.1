@@ -20,7 +20,7 @@ public class ModTags {
 
 
         //public static final TagKey<Block> NEEDS_YELLOW_CRYSTAL_TOOL = tag("needs_yellow_crystal_tool");
-        //public static final TagKey<Block> NEEDS_RED_CRYSTAL_TOOL = tag("needs_red_crystal_tool");
+        public static final TagKey<Block> NEEDS_RED_CRYSTAL_TOOL = tag("needs_red_crystal_tool");
         //public static final TagKey<Block> NEEDS_PURPLE_CRYSTAL_TOOL = tag("needs_purple_crystal_tool");
         //public static final TagKey<Block> NEEDS_BLUE_CRYSTAL_TOOL = tag("needs_blue_crystal_tool");
         //public static final TagKey<Block> NEEDS_LIGHT_BLUE_CRYSTAL_TOOL = tag("needs_light_blue_crystal_tool");
