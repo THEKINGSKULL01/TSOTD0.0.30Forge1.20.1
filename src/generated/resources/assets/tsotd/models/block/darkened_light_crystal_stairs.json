@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "tsotd:block/darkened_light_crystal_block",
-    "side": "tsotd:block/darkened_light_crystal_block",
-    "top": "tsotd:block/darkened_light_crystal_block"
-  }
-}

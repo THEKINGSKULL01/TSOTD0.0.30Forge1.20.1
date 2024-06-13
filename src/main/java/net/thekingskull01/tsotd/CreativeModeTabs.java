@@ -31,11 +31,12 @@ public class CreativeModeTabs {
 
                         //Spears
 
-                        output.accept(ModItems.Diamond_Spear.get());
+                        output.accept(ModItems.DIAMOND_SPEAR.get());
 
                         //Scythes
 
-                        output.accept(ModItems.Diamond_Scythe.get());
+                        output.accept(ModItems.DIAMOND_SCYTHE.get());
+                        output.accept(ModItems.RED_CRYSTAL_SCYTHE.get());
 
                         //Swords
 

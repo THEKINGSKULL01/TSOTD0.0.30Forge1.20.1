@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "cross": "tsotd:block/dancing_flower_leaf"
-  }
-}

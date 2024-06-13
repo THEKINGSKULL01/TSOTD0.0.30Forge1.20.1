@@ -13,13 +13,21 @@ public class ModTags {
 
     public static class Blocks {
 
+        public static final TagKey<Block> NEEDS_STRUCTURED_COMBAT_TOOL = tag("needs_structured_combat_tool");
 
         public static final TagKey<Block> DARK_CRYSTAL_DETECTOR_VALUABLES = tag("dark_crystal_detector_valuables");
         public static final TagKey<Block> LIGHT_CRYSTAL_DETECTOR_VALUABLES = tag("light_crystal_detector_valuables");
 
 
+        //public static final TagKey<Block> NEEDS_YELLOW_CRYSTAL_TOOL = tag("needs_yellow_crystal_tool");
+        //public static final TagKey<Block> NEEDS_RED_CRYSTAL_TOOL = tag("needs_red_crystal_tool");
+        //public static final TagKey<Block> NEEDS_PURPLE_CRYSTAL_TOOL = tag("needs_purple_crystal_tool");
+        //public static final TagKey<Block> NEEDS_BLUE_CRYSTAL_TOOL = tag("needs_blue_crystal_tool");
+        //public static final TagKey<Block> NEEDS_LIGHT_BLUE_CRYSTAL_TOOL = tag("needs_light_blue_crystal_tool");
+        //public static final TagKey<Block> NEEDS_GREEN_CRYSTAL_TOOL = tag("needs_green_crystal_tool");
         public static final TagKey<Block> NEEDS_DARK_CRYSTAL_TOOL = tag("needs_dark_crystal_tool");
         public static final TagKey<Block> NEEDS_LIGHT_CRYSTAL_TOOL = tag("needs_light_crystal_tool");
+        public static final TagKey<Block> NEEDS_DARKENED_LIGHT_CRYSTAL_TOOL = tag("needs_darkened_light_crystal_tool");
         public static final TagKey<Block> NEEDS_TAKICHIRUM_TOOL = tag("needs_takichirum_tool");
 
 

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_wall_post",
-  "textures": {
-    "wall": "tsotd:block/darkened_light_crystal_block"
-  }
-}

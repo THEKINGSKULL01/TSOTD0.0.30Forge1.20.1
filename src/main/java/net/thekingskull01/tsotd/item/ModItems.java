@@ -11,6 +11,9 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.entity.ModEntities;
+import net.thekingskull01.tsotd.entity.custom.entities.DiamondScytheProjectileEntity;
+import net.thekingskull01.tsotd.entity.custom.entities.DiamondSpearProjectileEntity;
+import net.thekingskull01.tsotd.entity.custom.entities.RedCrystalScytheProjectileEntity;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.custom.*;
 
@@ -101,13 +104,18 @@ public class ModItems{
 
             //Spear
 
-    public static final RegistryObject<Item> Diamond_Spear = ITEMS.register("diamond_spear",
-            () -> new DiamondSpearItem(new Item.Properties().stacksTo(1).durability(1561)));
+    public static RegistryObject<Item> DIAMOND_SPEAR = ITEMS.register("diamond_spear",
+            ()-> new SpearItem(ModToolTiers.DIAMOND, DiamondSpearProjectileEntity::new, new Item.Properties().durability(1558)));
 
             //Scythe
 
-    public static final RegistryObject<Item> Diamond_Scythe = ITEMS.register("diamond_scythe",
-            () -> new DiamondScytheItem(new Item.Properties().stacksTo(1).durability(1561)));
+    public static RegistryObject<Item> DIAMOND_SCYTHE = ITEMS.register("diamond_scythe",
+            ()-> new ScytheItem(ModToolTiers.DIAMOND, DiamondScytheProjectileEntity::new, new Item.Properties().durability(1558)));
+
+    public static RegistryObject<Item> RED_CRYSTAL_SCYTHE = ITEMS.register("red_crystal_scythe",
+            ()-> new ScytheItem(ModToolTiers.RED_CRYSTAL, RedCrystalScytheProjectileEntity::new, new Item.Properties().durability(1558)));
+
+
 
             //Pickaxes
 
