@@ -7,7 +7,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.thekingskull01.tsotd.entity.ModEntities;
 
-public class RedCrystalScytheProjectileEntity extends ScytheProjectileEntity {
+public class RedCrystalScytheProjectileEntity extends ScytheProjectile {
     public RedCrystalScytheProjectileEntity(Level pLevel, LivingEntity pShooter, ItemStack pStack) {
         super(pLevel, pShooter, pStack, ModEntities.RED_CRYSTAL_SCYTHE.get());
     }

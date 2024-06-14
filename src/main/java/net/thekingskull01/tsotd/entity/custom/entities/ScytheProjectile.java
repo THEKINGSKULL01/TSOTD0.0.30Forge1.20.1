@@ -21,19 +21,19 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
-public class SpearProjectileEntity extends AbstractArrow {
+public class ScytheProjectile extends AbstractArrow {
     private static final EntityDataAccessor<Byte> LOYALTYID;
-    private ItemStack spearItem;
+    private ItemStack scytheItem;
     private boolean dealtDamage;
     private int clientSideReturnTridentTickCount;
 
-    public SpearProjectileEntity(Level pLevel, LivingEntity pShooter, ItemStack pStack, EntityType<? extends SpearProjectileEntity> dagger) {
+    public ScytheProjectile(Level pLevel, LivingEntity pShooter, ItemStack pStack, EntityType<? extends ScytheProjectile> dagger) {
         super(dagger, pShooter, pLevel);
-        this.spearItem = pStack.copy();
+        this.scytheItem = pStack.copy();
         this.entityData.set(LOYALTYID, (byte)pStack.getEnchantmentLevel(Enchantments.LOYALTY));
     }
 
-    public SpearProjectileEntity(EntityType<? extends SpearProjectileEntity> entity, Level pLevel){
+    public ScytheProjectile(EntityType<? extends ScytheProjectile> entity, Level pLevel){
         super(entity, pLevel);
     }
 
@@ -68,7 +68,7 @@ public class SpearProjectileEntity extends AbstractArrow {
                 double scale_factor = 0.05 * (double)recall_data;
                 this.setDeltaMovement(this.getDeltaMovement().scale(0.95).add(owner_pos.normalize().scale(scale_factor)));
                 if (this.clientSideReturnTridentTickCount == 0) {
-                    this.playSound(SoundEvents.TRIDENT_RETURN, 10.0F, 1.2F);
+                    this.playSound(SoundEvents.TRIDENT_RETURN, 10.0F, 0.4F);
                 }
 
                 ++this.clientSideReturnTridentTickCount;
@@ -124,7 +124,7 @@ public class SpearProjectileEntity extends AbstractArrow {
 
     @Override
     protected @NotNull ItemStack getPickupItem() {
-        return this.spearItem.copy();
+        return this.scytheItem.copy();
     }
 
     @Override
@@ -135,7 +135,7 @@ public class SpearProjectileEntity extends AbstractArrow {
     @Override
     public void readAdditionalSaveData(@NotNull CompoundTag pCompound) {
         super.readAdditionalSaveData(pCompound);
-        this.entityData.set(LOYALTYID, ((byte) spearItem.getEnchantmentLevel(Enchantments.LOYALTY)));
+        this.entityData.set(LOYALTYID, ((byte) scytheItem.getEnchantmentLevel(Enchantments.LOYALTY)));
     }
 
     @Override
@@ -147,6 +147,6 @@ public class SpearProjectileEntity extends AbstractArrow {
     }
 
     static {
-        LOYALTYID = SynchedEntityData.defineId(SpearProjectileEntity.class, EntityDataSerializers.BYTE);
+        LOYALTYID = SynchedEntityData.defineId(ScytheProjectile.class, EntityDataSerializers.BYTE);
     }
 }

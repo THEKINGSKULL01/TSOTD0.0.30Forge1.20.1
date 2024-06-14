@@ -2,7 +2,9 @@ package net.thekingskull01.tsotd.item.custom;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -18,15 +20,18 @@ import net.minecraft.world.entity.projectile.AbstractArrow.Pickup;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.thekingskull01.tsotd.entity.custom.entities.ScytheProjectileEntity;
+import net.thekingskull01.tsotd.entity.custom.entities.ScytheProjectile;
 import net.thekingskull01.tsotd.item.ModItems;
 import org.apache.commons.lang3.function.TriFunction;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ScytheItem extends SwordItem {
-    private final TriFunction<Level, Player, ItemStack, ScytheProjectileEntity> constructor;
+    private final TriFunction<Level, Player, ItemStack, ScytheProjectile> constructor;
 
-    public ScytheItem(Tier pTier, TriFunction<Level, Player, ItemStack, ScytheProjectileEntity> constructor, Properties pProperties) {
+    public ScytheItem(Tier pTier, TriFunction<Level, Player, ItemStack, ScytheProjectile> constructor, Properties pProperties) {
         super(pTier, 0, 0, pProperties);
         this.constructor = constructor;
     }
@@ -55,23 +60,34 @@ public class ScytheItem extends SwordItem {
         if (slot == EquipmentSlot.MAINHAND) {
             attributeBuilder(builder, stack, ModItems.DIAMOND_SCYTHE.get(), 14, -3.6f);
             attributeBuilder(builder, stack, ModItems.RED_CRYSTAL_SCYTHE.get(), 17, -3.3f);
-
         }
         return builder.build();
     }
 
-    public void attributeBuilder(ImmutableMultimap.Builder<Attribute, AttributeModifier> builder, ItemStack stack, Item item ,double dmg, double spd){
-        if(stack.is(item)){
+    public void attributeBuilder(ImmutableMultimap.Builder<Attribute, AttributeModifier> builder, ItemStack stack, Item item, double dmg, double spd) {
+        if (stack.is(item)) {
             builder.put(Attributes.ATTACK_DAMAGE, attributeDmg(dmg));
             builder.put(Attributes.ATTACK_SPEED, attributeSpd(spd));
             builder.build();
         }
     }
-    public AttributeModifier attributeDmg(double amountDmg){
+
+    public AttributeModifier attributeDmg(double amountDmg) {
         return new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", amountDmg, AttributeModifier.Operation.ADDITION);
     }
-    public AttributeModifier attributeSpd(double amountSpd){
+
+    public AttributeModifier attributeSpd(double amountSpd) {
         return new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", amountSpd, AttributeModifier.Operation.ADDITION);
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> pTooltipComponents, @NotNull TooltipFlag pIsAdvanced) {
+        if (Screen.hasShiftDown()) {
+            pTooltipComponents.add(Component.translatable("tooltip.structuredcombat.spear.tooltip"));
+        } else {
+            pTooltipComponents.add(Component.translatable("tooltip.structuredcombat.shift.tooltip"));
+            super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+        }
     }
 
     @Override
@@ -86,14 +102,14 @@ public class ScytheItem extends SwordItem {
             if (duration >= 10) {
                 if (!pLevel.isClientSide()) {
                     stack.hurtAndBreak(1, player, (broadcastPlayer) -> broadcastPlayer.broadcastBreakEvent(pEntityLiving.getUsedItemHand()));
-                    if(stack.is(this)){
-                        ScytheProjectileEntity scythe = this.constructor.apply(pLevel, player, stack);
-                        scythe.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.0F, 3.0F);
+                    if (stack.is(this)) {
+                        ScytheProjectile scythe = this.constructor.apply(pLevel, player, stack);
+                        scythe.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.5F, 1.0F);
                         if (player.getAbilities().instabuild) {
                             scythe.pickup = Pickup.CREATIVE_ONLY;
                         }
                         pLevel.addFreshEntity(scythe);
-                        pLevel.playSound(null, scythe, SoundEvents.TRIDENT_THROW, SoundSource.PLAYERS, 1.0F, 0.4F);
+                        pLevel.playSound(null, scythe, SoundEvents.TRIDENT_THROW, SoundSource.PLAYERS, 1.0F, 1.0F);
                     }
                     if (!player.getAbilities().instabuild) {
                         player.getInventory().removeItem(stack);
@@ -106,9 +122,9 @@ public class ScytheItem extends SwordItem {
 
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level pLevel, Player pPlayer, @NotNull InteractionHand pHand) {
-        ItemStack scythe = pPlayer.getItemInHand(pHand);
+        ItemStack spear = pPlayer.getItemInHand(pHand);
         pPlayer.startUsingItem(pHand);
-        return InteractionResultHolder.success(scythe);
+        return InteractionResultHolder.success(spear);
     }
 
     @Override
@@ -120,5 +136,5 @@ public class ScytheItem extends SwordItem {
     public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
         return true;
     }
-
 }
+

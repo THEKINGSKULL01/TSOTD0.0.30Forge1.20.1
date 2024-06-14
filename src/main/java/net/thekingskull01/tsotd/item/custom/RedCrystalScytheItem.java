@@ -18,15 +18,15 @@ import net.minecraft.world.entity.projectile.AbstractArrow.Pickup;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.thekingskull01.tsotd.entity.custom.entities.SpearProjectile;
+import net.thekingskull01.tsotd.entity.custom.entities.RedCrystalScytheProjectileEntity;
 import net.thekingskull01.tsotd.item.ModItems;
 import org.apache.commons.lang3.function.TriFunction;
 import org.jetbrains.annotations.NotNull;
 
-public class SpearItem extends SwordItem {
-    private final TriFunction<Level, Player, ItemStack, SpearProjectile> constructor;
+public class RedCrystalScytheItem extends SwordItem {
+    private final TriFunction<Level, Player, ItemStack, RedCrystalScytheProjectileEntity> constructor;
 
-    public SpearItem(Tier pTier, TriFunction<Level, Player, ItemStack, SpearProjectile> constructor, Properties pProperties) {
+    public RedCrystalScytheItem(Tier pTier, TriFunction<Level, Player, ItemStack, RedCrystalScytheProjectileEntity> constructor, Properties pProperties) {
         super(pTier, 0, 0, pProperties);
         this.constructor = constructor;
     }
@@ -53,7 +53,8 @@ public class SpearItem extends SwordItem {
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         if (slot == EquipmentSlot.MAINHAND) {
-            attributeBuilder(builder, stack, ModItems.DIAMOND_SPEAR.get(), 8, -1);
+            attributeBuilder(builder, stack, ModItems.RED_CRYSTAL_SCYTHE.get(), 17, -3.3f);
+
         }
         return builder.build();
     }
@@ -85,13 +86,13 @@ public class SpearItem extends SwordItem {
                 if (!pLevel.isClientSide()) {
                     stack.hurtAndBreak(1, player, (broadcastPlayer) -> broadcastPlayer.broadcastBreakEvent(pEntityLiving.getUsedItemHand()));
                     if(stack.is(this)){
-                        SpearProjectile spear = this.constructor.apply(pLevel, player, stack);
-                        spear.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 4F, 0.5F);
+                        RedCrystalScytheProjectileEntity scythe = this.constructor.apply(pLevel, player, stack);
+                        scythe.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.0F, 3.0F);
                         if (player.getAbilities().instabuild) {
-                            spear.pickup = Pickup.CREATIVE_ONLY;
+                            scythe.pickup = Pickup.CREATIVE_ONLY;
                         }
-                        pLevel.addFreshEntity(spear);
-                        pLevel.playSound(null, spear, SoundEvents.TRIDENT_THROW, SoundSource.PLAYERS, 1.0F, 2.0F);
+                        pLevel.addFreshEntity(scythe);
+                        pLevel.playSound(null, scythe, SoundEvents.TRIDENT_THROW, SoundSource.PLAYERS, 1.0F, 0.4F);
                     }
                     if (!player.getAbilities().instabuild) {
                         player.getInventory().removeItem(stack);
@@ -104,9 +105,9 @@ public class SpearItem extends SwordItem {
 
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level pLevel, Player pPlayer, @NotNull InteractionHand pHand) {
-        ItemStack spear = pPlayer.getItemInHand(pHand);
+        ItemStack scythe = pPlayer.getItemInHand(pHand);
         pPlayer.startUsingItem(pHand);
-        return InteractionResultHolder.success(spear);
+        return InteractionResultHolder.success(scythe);
     }
 
     @Override
@@ -118,4 +119,5 @@ public class SpearItem extends SwordItem {
     public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
         return true;
     }
+
 }
