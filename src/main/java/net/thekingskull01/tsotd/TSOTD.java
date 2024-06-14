@@ -1,4 +1,4 @@
-package net.thekingskull01.tsotd ;
+package net.thekingskull01.tsotd;
 
 import com.mojang.logging.LogUtils;
 import net.kaupenjoe.mccourse.potion.BetterBrewingRecipe;
@@ -30,9 +30,9 @@ import net.thekingskull01.tsotd.enchantment.ModEnchantments;
 import net.thekingskull01.tsotd.entity.ModEntities;
 import net.thekingskull01.tsotd.entity.client.FeathdaRenderer;
 import net.thekingskull01.tsotd.entity.client.SculvortRenderer;
-import net.thekingskull01.tsotd.entity.client.spear.DiamondScytheRenderer;
+import net.thekingskull01.tsotd.entity.client.scythe.DiamondScytheRenderer;
+import net.thekingskull01.tsotd.entity.client.scythe.RedCrystalScytheRenderer;
 import net.thekingskull01.tsotd.entity.client.spear.DiamondSpearRenderer;
-import net.thekingskull01.tsotd.entity.client.spear.RedCrystalScytheRenderer;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.ModItemProperties;
 import net.thekingskull01.tsotd.item.ModItems;
@@ -143,6 +143,7 @@ public class TSOTD {
                 EntityRenderers.register(ModEntities.Feathda.get(), FeathdaRenderer::new);
 
                 EntityRenderers.register(ModEntities.DIAMOND_SPEAR.get(), DiamondSpearRenderer::new);
+
                 EntityRenderers.register(ModEntities.DIAMOND_SCYTHE.get(), DiamondScytheRenderer::new);
                 EntityRenderers.register(ModEntities.RED_CRYSTAL_SCYTHE.get(), RedCrystalScytheRenderer::new);
 

@@ -1,4 +1,4 @@
-package net.thekingskull01.tsotd.entity.client.spear;
+package net.thekingskull01.tsotd.entity.client.scythe;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -13,10 +13,8 @@ import net.minecraft.util.Mth;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.thekingskull01.tsotd.TSOTD;
-import net.thekingskull01.tsotd.entity.custom.entities.DiamondScytheProjectileEntity;
 import net.thekingskull01.tsotd.entity.custom.entities.RedCrystalScytheProjectileEntity;
 import net.thekingskull01.tsotd.entity.layers.ModModelLayers;
-import net.thekingskull01.tsotd.entity.models.DiamondScytheModel;
 import net.thekingskull01.tsotd.entity.models.RedCrystalScytheModel;
 import org.jetbrains.annotations.NotNull;
 

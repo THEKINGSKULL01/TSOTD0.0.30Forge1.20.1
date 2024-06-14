@@ -19,7 +19,6 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.thekingskull01.tsotd.entity.custom.entities.ScytheProjectileEntity;
-import net.thekingskull01.tsotd.entity.custom.entities.SpearProjectileEntity;
 import net.thekingskull01.tsotd.item.ModItems;
 import org.apache.commons.lang3.function.TriFunction;
 import org.jetbrains.annotations.NotNull;

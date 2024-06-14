@@ -13,6 +13,7 @@ import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.entity.ModEntities;
 import net.thekingskull01.tsotd.entity.custom.entities.DiamondScytheProjectileEntity;
 import net.thekingskull01.tsotd.entity.custom.entities.DiamondSpearProjectileEntity;
+//import net.thekingskull01.tsotd.entity.custom.entities.RedCrystalScytheProjectileEntity;
 import net.thekingskull01.tsotd.entity.custom.entities.RedCrystalScytheProjectileEntity;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.custom.*;

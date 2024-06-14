@@ -16,6 +16,6 @@ public class DiamondSpearProjectileEntity extends SpearProjectileEntity {
     }
     @Override
     public float damage() {
-        return 11f;
+        return 8f;
     }
 }

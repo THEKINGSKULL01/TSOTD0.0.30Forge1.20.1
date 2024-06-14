@@ -29,7 +29,7 @@ public class ModToolTiers {
 //
     public static final Tier RED_CRYSTAL = TierSortingRegistry.registerTier(
             new ForgeTier(6, 4000, 14f, 6.0f, 19,
-                    ModTags.Blocks.NEEDS_RED_CRYSTAL_TOOL, () -> Ingredient.of(ModItems.Red_Crystal.get())),
+                    ModTags.Blocks.NEEDS_STRUCTURED_COMBAT_TOOL, () -> Ingredient.of(ModItems.Red_Crystal.get())),
             new ResourceLocation(TSOTD.MOD_ID, "red_crystal"), List.of(Tiers.NETHERITE), List.of());
 
     //public static final Tier PURPLE_CRYSTAL = TierSortingRegistry.registerTier(

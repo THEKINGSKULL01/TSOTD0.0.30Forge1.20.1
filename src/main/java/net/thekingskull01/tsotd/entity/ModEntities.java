@@ -33,12 +33,13 @@ public class ModEntities {
     public static RegistryObject<EntityType<DiamondScytheProjectileEntity>> DIAMOND_SCYTHE =
             ENTITY_TYPES.register("diamond_scythe" , ()-> EntityType.Builder.
                             <DiamondScytheProjectileEntity>of(DiamondScytheProjectileEntity::new , MobCategory.MISC)
-                    .sized(0.35f , 0.35f).build("diamond_scythe"));
+                    .sized(0.35f , 0.35f).build("diamond_scythe"))    ;
 
     public static RegistryObject<EntityType<RedCrystalScytheProjectileEntity>> RED_CRYSTAL_SCYTHE =
             ENTITY_TYPES.register("red_crystal_scythe" , ()-> EntityType.Builder.
                             <RedCrystalScytheProjectileEntity>of(RedCrystalScytheProjectileEntity::new , MobCategory.MISC)
                     .sized(0.35f , 0.35f).build("red_crystal_scythe"));
+
 
 
 

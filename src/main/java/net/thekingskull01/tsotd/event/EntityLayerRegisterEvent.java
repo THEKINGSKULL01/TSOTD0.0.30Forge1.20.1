@@ -8,6 +8,7 @@ import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.entity.layers.ModModelLayers;
 import net.thekingskull01.tsotd.entity.models.DiamondScytheModel;
 import net.thekingskull01.tsotd.entity.models.DiamondSpearModel;
+import net.thekingskull01.tsotd.entity.models.RedCrystalScytheModel;
 
 
 @Mod.EventBusSubscriber(modid = TSOTD.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -25,7 +26,7 @@ public class EntityLayerRegisterEvent {
 
         //Scythes
         event.registerLayerDefinition(ModModelLayers.DIAMOND_SCYTHE_LAYER, DiamondScytheModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.RED_CRYSTAL_SCYTHE_LAYER, DiamondScytheModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.RED_CRYSTAL_SCYTHE_LAYER, RedCrystalScytheModel::createBodyLayer);
 
     }
 }

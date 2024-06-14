@@ -1,4 +1,4 @@
-package net.thekingskull01.tsotd.entity.client.spear;
+package net.thekingskull01.tsotd.entity.client.scythe;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;

@@ -16,6 +16,6 @@ public class RedCrystalScytheProjectileEntity extends ScytheProjectileEntity {
     }
     @Override
     public float damage() {
-        return 15f;
+        return 17f;
     }
 }

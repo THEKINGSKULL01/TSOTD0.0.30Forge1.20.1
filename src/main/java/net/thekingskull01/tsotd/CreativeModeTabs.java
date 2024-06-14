@@ -36,7 +36,7 @@ public class CreativeModeTabs {
                         //Scythes
 
                         output.accept(ModItems.DIAMOND_SCYTHE.get());
-                        output.accept(ModItems.RED_CRYSTAL_SCYTHE.get());
+                        //output.accept(ModItems.RED_CRYSTAL_SCYTHE.get());
 
                         //Swords
 

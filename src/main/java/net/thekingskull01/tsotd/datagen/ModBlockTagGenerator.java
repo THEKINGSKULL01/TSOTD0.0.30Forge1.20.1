@@ -9,6 +9,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.thekingskull01.tsotd.TSOTD;
 import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.util.ModTags;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -20,7 +21,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.@NotNull Provider provider) {
+
+        this.tag(ModTags.Blocks.NEEDS_STRUCTURED_COMBAT_TOOL);
+
 
         this.tag(ModTags.Blocks.DARK_CRYSTAL_DETECTOR_VALUABLES)
                 .add(ModBlocks.Dark_Crystal_Ore.get());
@@ -54,14 +58,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
         //Takichirum Paxel
-        this.tag(ModTags.Blocks.PAXEL_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL, BlockTags.MINEABLE_WITH_HOE)
-                .add(ModBlocks.Green_Crystal_Block.get());
+        //this.tag(ModTags.Blocks.PAXEL_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL, BlockTags.MINEABLE_WITH_HOE)
+        //        .add(ModBlocks.Green_Crystal_Block.get());
 
 
 
         //Takichirum Hammer
-        this.tag(ModTags.Blocks.HAMMER_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.Green_Crystal_Block.get());
+        //this.tag(ModTags.Blocks.HAMMER_MINEABLE).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_SHOVEL)
+        //        .add(ModBlocks.Green_Crystal_Block.get());
 
 
 
@@ -136,7 +140,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.Zomblie_Planks.get());
 
 
+
     }
+
 
     @Override
     public String getName() {

@@ -16,6 +16,6 @@ public class DiamondScytheProjectileEntity extends ScytheProjectileEntity {
     }
     @Override
     public float damage() {
-        return 15f;
+        return 14f;
     }
 }
