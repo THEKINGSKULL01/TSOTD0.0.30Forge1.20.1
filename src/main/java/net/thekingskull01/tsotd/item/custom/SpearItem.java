@@ -62,7 +62,6 @@ public class SpearItem extends SwordItem {
         if(stack.is(item)){
             builder.put(Attributes.ATTACK_DAMAGE, attributeDmg(dmg));
             builder.put(Attributes.ATTACK_SPEED, attributeSpd(spd));
-            builder.build();
         }
     }
     public AttributeModifier attributeDmg(double amountDmg){

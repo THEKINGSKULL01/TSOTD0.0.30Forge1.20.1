@@ -13,7 +13,6 @@ import net.thekingskull01.tsotd.block.ModBlocks;
 import net.thekingskull01.tsotd.entity.ModEntities;
 import net.thekingskull01.tsotd.entity.custom.entities.DiamondScytheProjectileEntity;
 import net.thekingskull01.tsotd.entity.custom.entities.DiamondSpearProjectileEntity;
-//import net.thekingskull01.tsotd.entity.custom.entities.RedCrystalScytheProjectileEntity;
 import net.thekingskull01.tsotd.entity.custom.entities.RedCrystalScytheProjectileEntity;
 import net.thekingskull01.tsotd.fluid.ModFluids;
 import net.thekingskull01.tsotd.item.custom.*;
@@ -114,7 +113,7 @@ public class ModItems{
             ()-> new ScytheItem(ModToolTiers.DIAMOND, DiamondScytheProjectileEntity::new, new Item.Properties().durability(1558)));
 
     public static RegistryObject<Item> RED_CRYSTAL_SCYTHE = ITEMS.register("red_crystal_scythe",
-            ()-> new RedCrystalScytheItem(ModToolTiers.RED_CRYSTAL, RedCrystalScytheProjectileEntity::new, new Item.Properties().durability(1558)));
+            ()-> new ScytheItem(ModToolTiers.RED_CRYSTAL, RedCrystalScytheProjectileEntity::new, new Item.Properties().durability(1558)));
 
 
 

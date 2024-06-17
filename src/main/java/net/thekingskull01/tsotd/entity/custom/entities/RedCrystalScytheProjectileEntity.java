@@ -11,11 +11,13 @@ public class RedCrystalScytheProjectileEntity extends ScytheProjectile {
     public RedCrystalScytheProjectileEntity(Level pLevel, LivingEntity pShooter, ItemStack pStack) {
         super(pLevel, pShooter, pStack, ModEntities.RED_CRYSTAL_SCYTHE.get());
     }
+
     public RedCrystalScytheProjectileEntity(EntityType<RedCrystalScytheProjectileEntity> entityType, Level level) {
         super(entityType, level);
     }
+
     @Override
     public float damage() {
-        return 17f;
+        return 17F;
     }
 }
