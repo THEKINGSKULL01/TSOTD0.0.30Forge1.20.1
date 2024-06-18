@@ -2,9 +2,7 @@ package net.thekingskull01.tsotd.item.custom;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -24,14 +22,11 @@ import net.thekingskull01.tsotd.entity.custom.entities.ScytheProjectile;
 import net.thekingskull01.tsotd.item.ModItems;
 import org.apache.commons.lang3.function.TriFunction;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
-public class ScytheItem extends SwordItem {
+public class RedCrystalScytheItem extends SwordItem {
     private final TriFunction<Level, Player, ItemStack, ScytheProjectile> constructor;
 
-    public ScytheItem(Tier pTier, TriFunction<Level, Player, ItemStack, ScytheProjectile> constructor, Properties pProperties) {
+    public RedCrystalScytheItem(Tier pTier, TriFunction<Level, Player, ItemStack, ScytheProjectile> constructor, Properties pProperties) {
         super(pTier, 0, 0, pProperties);
         this.constructor = constructor;
     }
@@ -58,7 +53,7 @@ public class ScytheItem extends SwordItem {
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         if (slot == EquipmentSlot.MAINHAND) {
-            attributeBuilder(builder, stack, ModItems.DIAMOND_SCYTHE.get(), 5, -2.2);
+            attributeBuilder(builder, stack, ModItems.RED_CRYSTAL_SCYTHE.get(), 6.5, -2.2);
         }
         return builder.build();
     }

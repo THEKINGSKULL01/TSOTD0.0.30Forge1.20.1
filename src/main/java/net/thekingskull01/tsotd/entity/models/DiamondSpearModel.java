@@ -13,11 +13,11 @@ import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
 public class DiamondSpearModel extends Model {
-    private final ModelPart spear;
+    private final ModelPart diamond_spear;
 
     public DiamondSpearModel(ModelPart root) {
         super(RenderType::entitySolid);
-        this.spear = root;
+        this.diamond_spear = root.getChild("diamond_spear");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -120,7 +120,7 @@ public class DiamondSpearModel extends Model {
                 .texOffs(28, 30).addBox(-1.0F, -15.0F, -11.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(24, 26).addBox(-1.0F, -16.0F, -11.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(20, 26).addBox(-1.0F, -16.0F, -10.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-                .texOffs(24, 26).addBox(-1.0F, -16.0F, -9.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(20, 26).addBox(-1.0F, -16.0F, -9.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(20, 30).addBox(-1.0F, -16.0F, -8.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(28, 30).addBox(-1.0F, -16.0F, -12.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(28, 26).addBox(-1.0F, -17.0F, -12.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
@@ -148,6 +148,6 @@ public class DiamondSpearModel extends Model {
 
     @Override
     public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        spear.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+        diamond_spear.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 }

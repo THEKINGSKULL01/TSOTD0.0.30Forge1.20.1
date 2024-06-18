@@ -39,6 +39,6 @@ public class DiamondScytheRenderer extends EntityRenderer<DiamondScytheProjectil
 
     @Override
     public @NotNull ResourceLocation getTextureLocation(@NotNull DiamondScytheProjectileEntity diamondScytheProjectileEntity) {
-        return new ResourceLocation(TSOTD.MOD_ID, "textures/item/scythes/diamond_scythe.png");
+        return new ResourceLocation(TSOTD.MOD_ID, "textures/entity/scythes/diamond_scythe.png");
     }
 }

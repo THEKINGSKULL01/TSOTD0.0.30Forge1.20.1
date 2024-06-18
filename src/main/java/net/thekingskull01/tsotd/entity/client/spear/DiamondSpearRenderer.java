@@ -39,6 +39,6 @@ public class DiamondSpearRenderer extends EntityRenderer<DiamondSpearProjectileE
 
     @Override
     public @NotNull ResourceLocation getTextureLocation(@NotNull DiamondSpearProjectileEntity diamondSpearProjectileEntity) {
-        return new ResourceLocation(TSOTD.MOD_ID, "textures/item/spears/diamond_spear.png");
+        return new ResourceLocation(TSOTD.MOD_ID, "textures/entity/spears/diamond_spear.png");
     }
 }

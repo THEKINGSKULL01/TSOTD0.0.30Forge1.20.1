@@ -27,8 +27,8 @@ public class ScytheProjectile extends AbstractArrow {
     private boolean dealtDamage;
     private int clientSideReturnTridentTickCount;
 
-    public ScytheProjectile(Level pLevel, LivingEntity pShooter, ItemStack pStack, EntityType<? extends ScytheProjectile> dagger) {
-        super(dagger, pShooter, pLevel);
+    public ScytheProjectile(Level pLevel, LivingEntity pShooter, ItemStack pStack, EntityType<? extends ScytheProjectile> scythe) {
+        super(scythe, pShooter, pLevel);
         this.scytheItem = pStack.copy();
         this.entityData.set(LOYALTYID, (byte)pStack.getEnchantmentLevel(Enchantments.LOYALTY));
     }

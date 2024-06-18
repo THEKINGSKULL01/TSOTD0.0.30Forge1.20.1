@@ -1,6 +1,5 @@
 package net.thekingskull01.tsotd.entity.custom.entities;
 
-
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -18,6 +17,6 @@ public class RedCrystalScytheProjectileEntity extends ScytheProjectile {
 
     @Override
     public float damage() {
-        return 17F;
+        return 5F;
     }
 }

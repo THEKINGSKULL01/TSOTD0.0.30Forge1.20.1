@@ -9,17 +9,18 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
 public class RedCrystalScytheModel extends Model {
-    private final ModelPart redcrystalscythe;
+    private final ModelPart scythe;
 
     public RedCrystalScytheModel(ModelPart root) {
         super(RenderType::entitySolid);
-        this.redcrystalscythe = root;
+        this.scythe = root;
     }
 
-    public static LayerDefinition createBodyLayer() {
+    public static LayerDefinition createLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
@@ -286,7 +287,6 @@ public class RedCrystalScytheModel extends Model {
 		.texOffs(12, 30).addBox(-0.5F, -22.0F, 16.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 		.texOffs(12, 30).addBox(0.5F, -21.0F, 8.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 		.texOffs(20, 24).addBox(1.5F, -21.0F, 9.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(1, 31).addBox(0.5F, -20.0F, 12.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 		.texOffs(20, 24).addBox(1.5F, -21.0F, 13.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 		.texOffs(20, 26).mirror().addBox(0.5F, -21.0F, 14.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
 		.texOffs(28, 26).mirror().addBox(0.5F, -21.0F, 15.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
@@ -349,7 +349,6 @@ public class RedCrystalScytheModel extends Model {
 		.texOffs(16, 28).mirror().addBox(-0.5F, -20.0F, 10.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
 		.texOffs(16, 28).mirror().addBox(-0.5F, -20.0F, 11.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
 		.texOffs(16, 30).mirror().addBox(-0.5F, -21.0F, 13.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
-		.texOffs(1, 31).addBox(0.5F, -21.0F, 13.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 		.texOffs(16, 30).mirror().addBox(-0.5F, -20.0F, 12.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
 		.texOffs(16, 26).mirror().addBox(-0.5F, -22.0F, 8.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
 		.texOffs(16, 26).mirror().addBox(-0.5F, -21.0F, 9.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
@@ -508,11 +507,11 @@ public class RedCrystalScytheModel extends Model {
 		.texOffs(20, 24).mirror().addBox(-2.5F, -25.0F, 11.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(0.0F, 24.0F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 32, 32);
-
     }
+
+
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        redcrystalscythe.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+    public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+        scythe.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 }
-

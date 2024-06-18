@@ -29,8 +29,8 @@ public class RedCrystalScytheRenderer extends EntityRenderer<RedCrystalScythePro
     @Override
     public void render(RedCrystalScytheProjectileEntity pEntity, float pEntityYaw, float pPartialTicks, PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight) {
         pMatrixStack.pushPose();
-        pMatrixStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(pPartialTicks, pEntity.yRotO, pEntity.getYRot()) - 0.0F));
-        pMatrixStack.mulPose(Axis.XP.rotationDegrees(Mth.lerp(pPartialTicks, pEntity.xRotO, pEntity.getXRot()) + 200.0F));
+        pMatrixStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(pPartialTicks, pEntity.yRotO, pEntity.getYRot()) - 90.0F));
+        pMatrixStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(pPartialTicks, pEntity.xRotO, pEntity.getXRot()) + 90.0F));
         VertexConsumer $$6 = ItemRenderer.getFoilBufferDirect(pBuffer, this.model.renderType(this.getTextureLocation(pEntity)), false, false);
         this.model.renderToBuffer(pMatrixStack, $$6, pPackedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         pMatrixStack.popPose();
@@ -39,6 +39,6 @@ public class RedCrystalScytheRenderer extends EntityRenderer<RedCrystalScythePro
 
     @Override
     public @NotNull ResourceLocation getTextureLocation(@NotNull RedCrystalScytheProjectileEntity redCrystalScytheProjectileEntity) {
-        return new ResourceLocation(TSOTD.MOD_ID, "textures/item/scythes/red_crystal_scythe.png");
+        return new ResourceLocation(TSOTD.MOD_ID, "textures/entity/scythe/red_crystal_scythe.png");
     }
 }

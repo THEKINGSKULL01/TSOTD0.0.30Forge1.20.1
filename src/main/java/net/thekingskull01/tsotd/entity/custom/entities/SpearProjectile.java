@@ -27,8 +27,8 @@ public class SpearProjectile extends AbstractArrow {
     private boolean dealtDamage;
     private int clientSideReturnTridentTickCount;
 
-    public SpearProjectile(Level pLevel, LivingEntity pShooter, ItemStack pStack, EntityType<? extends SpearProjectile> dagger) {
-        super(dagger, pShooter, pLevel);
+    public SpearProjectile(Level pLevel, LivingEntity pShooter, ItemStack pStack, EntityType<? extends SpearProjectile> spear) {
+        super(spear, pShooter, pLevel);
         this.spearItem = pStack.copy();
         this.entityData.set(LOYALTYID, (byte)pStack.getEnchantmentLevel(Enchantments.LOYALTY));
     }

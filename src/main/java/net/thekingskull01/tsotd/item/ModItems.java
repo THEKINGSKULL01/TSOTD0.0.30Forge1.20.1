@@ -113,7 +113,7 @@ public class ModItems{
             ()-> new ScytheItem(ModToolTiers.DIAMOND, DiamondScytheProjectileEntity::new, new Item.Properties().durability(1558)));
 
     public static RegistryObject<Item> RED_CRYSTAL_SCYTHE = ITEMS.register("red_crystal_scythe",
-            ()-> new ScytheItem(ModToolTiers.RED_CRYSTAL, RedCrystalScytheProjectileEntity::new, new Item.Properties().durability(1558)));
+            ()-> new RedCrystalScytheItem(ModToolTiers.RED_CRYSTAL, RedCrystalScytheProjectileEntity::new, new Item.Properties()));
 
 
 

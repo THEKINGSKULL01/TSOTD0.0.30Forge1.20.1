@@ -22,6 +22,5 @@ public class ModModelLayers {
     );
 
     public static final ModelLayerLocation RED_CRYSTAL_SCYTHE_LAYER = new ModelLayerLocation(
-            new ResourceLocation(TSOTD.MOD_ID, "red_crystal_scythe"), "red_crystal_scythe"
-    );
+            new ResourceLocation(TSOTD.MOD_ID, "red_crystal_scythe"), "red_crystal_scythe");
 }
